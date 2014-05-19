@@ -6,11 +6,12 @@
     width:100%;
     background-image:url('images/star.png');
     margin-top:-40px;
-    border-bottom:solid thick #2c3e50;
+    padding-top:20px;
 }
 #profile>svg{
     width:16%;
     margin-left:42%;
+    height:16%;
 }
 #main{
     width:80%;
