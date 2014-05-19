@@ -148,7 +148,7 @@ function close_frame(frame){
 
 
 
-$("#profile>img").hover(function(){
+$("#profile>svg").hover(function(){
 	if(current === 0){
 		close_frame(current);
 	}
