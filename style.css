@@ -39,3 +39,10 @@ body{
 #dino{
     width:16%;
 }
+.proj{
+    width:100%;
+    margin-left:0;
+}
+.proj>img{
+    width:100%;
+}
