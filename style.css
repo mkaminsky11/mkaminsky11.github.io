@@ -22,3 +22,19 @@
 body{
     padding-bottom:10%;
 }
+#time{
+    list-style-type: none;
+}
+#js{
+    color:#1abc9c;
+}
+#css{
+    color:#f1c40f;
+}
+#html{
+    color:#e74c3c;
+}
+#sql{
+    color:#2ecc71;
+}
+}
