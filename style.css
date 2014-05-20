@@ -78,4 +78,19 @@ body{
 #brand:hover{
     color:white;
 }
+#quote{
+    color:white;
+}
+#quote:hover{
+    color:white;
+}
+#gplus{
+    margin:5px;
+    color:white;
+    background-color:#e74c3c;
+}
+#gplus:hover{
+    color:white;
+    background-color:#c0392b;
+}
 
