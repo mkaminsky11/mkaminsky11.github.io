@@ -94,4 +94,8 @@ body{
     color:white;
     background-color:#c0392b;
 }
+#code, .CodeMirror{
+	width: 100%;
+	height:300px;
+}
 

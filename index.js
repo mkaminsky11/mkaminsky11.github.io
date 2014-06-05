@@ -158,3 +158,12 @@ $("#profile>svg").hover(function(){
 },function(){
 	
 });
+
+var editor = CodeMirror(document.getElementById("code"),{
+    lineNumbers: true,
+    mode: "swift",
+    theme: "pastel-on-dark",
+    lineWrapping: false, 
+    indentUnit: 4, 
+    indentWithTabs: true
+});
