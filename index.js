@@ -167,3 +167,14 @@ var editor = CodeMirror(document.getElementById("code"),{
     indentUnit: 4, 
     indentWithTabs: true
 });
+
+txtFile.open("GET", "lib/intro.swift", true);
+txtFile.onreadystatechange = function()
+{
+	if (txtFile.readyState === 4) {  // document is ready to parse.
+		if (txtFile.status === 200) {  // file is found
+			var allText = txtFile.responseText; 
+			editor.setValue(allText);
+		}
+	}
+}
