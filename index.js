@@ -167,7 +167,7 @@ var editor = CodeMirror(document.getElementById("code"),{
     indentUnit: 4, 
     indentWithTabs: true
 });
-
+var txtFile = new XMLHttpRequest();
 txtFile.open("GET", "lib/intro.swift", true);
 txtFile.onreadystatechange = function()
 {
