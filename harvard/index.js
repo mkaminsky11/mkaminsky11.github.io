@@ -5,19 +5,16 @@ $("img").hover(function(){
 });
 
 function slide_away(){
-	var current_left = Number($("img").css("margin-left").replace("px",""));
-	var goal = current_left + 195 + "px";
 	$("#desc").animate({
-		left: goal
+		width: 'toggle'
 	}, 1000, function(){
 		
 	});
 }
 
 function slide_back(){
-	var goal = $("img").css("margin-left");
 	$("#desc").animate({
-		left: goal
+		width: 'toggle'
 	}, 1000, function(){
 		
 	});
