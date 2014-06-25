@@ -15,7 +15,7 @@ function slide_away(){
 }
 
 function slide_back(){
-	var goal = $("img").css("magin-left");
+	var goal = $("img").css("margin-left");
 	$("#desc").animate({
 		left: goal
 	}, 1000, function(){
