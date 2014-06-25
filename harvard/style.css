@@ -32,7 +32,7 @@ img{
 	margin-top: -440px;
 	left: calc(50% - 100px);
 	z-index: -1;
-	display: none;
+	padding: 20px;
 }
 #desc p{
 	color: white;

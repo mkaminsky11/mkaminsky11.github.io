@@ -6,7 +6,7 @@ $("img").hover(function(){
 
 function slide_away(){
 	$("#desc").animate({
-		marginLeft: "200px"
+		marginLeft: "190px"
 	}, 1000, function(){
 		
 	});
