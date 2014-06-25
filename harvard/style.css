@@ -10,3 +10,11 @@
 #main h3{
 	text-align: center;
 }
+#gplus{
+	padding: 10px;
+	margin-top:5px;
+}
+#gplus:hover{
+	background-color:#C0392B;
+	color:white;
+}
