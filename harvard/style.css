@@ -30,7 +30,7 @@ img{
 	z-index: 99;
 	position: absolute;
 	margin-top: -440px;
-	left: calc(50% + 200px);
+	left: calc(50% + 100px);
 	z-index: -1;
 	display: none;
 }
