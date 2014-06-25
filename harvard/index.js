@@ -6,7 +6,7 @@ $("img").hover(function(){
 
 function slide_away(){
 	$("#desc").animate({
-		width: 'toggle'
+		marginLeft: "200px"
 	}, 1000, function(){
 		
 	});
@@ -14,7 +14,7 @@ function slide_away(){
 
 function slide_back(){
 	$("#desc").animate({
-		width: 'toggle'
+		marginLeft: "0"
 	}, 1000, function(){
 		
 	});
