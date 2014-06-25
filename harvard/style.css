@@ -55,4 +55,5 @@ small{
 	width: 600px;
 	border: solid thick #2C3E50;
 	margin: 20px;
+	margin-left: calc(50% - 300px);
 }
