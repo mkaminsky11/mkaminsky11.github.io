@@ -22,3 +22,14 @@ img{
 	margin-left: calc(50% - 100px);
 	border: solid thick #2C3E50;
 }
+#desc{
+	width: 200px;
+	height: 440px;
+	left: 15px;
+	background-color: #34495E;
+	z-index: 99;
+	position: absolute;
+	margin-top: -440px;
+	left: calc(50% - 100px);
+	z-index: -1;
+}
