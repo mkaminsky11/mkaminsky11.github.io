@@ -57,3 +57,8 @@ small{
 	margin: 20px;
 	margin-left: calc(50% - 300px);
 }
+
+footer{
+	text-align: center;
+	padding: 20px;
+}
