@@ -7,7 +7,7 @@
 #google-plus{
 	margin-right: 30px;
 }
-#main h3{
+#main h3, #main small{
 	text-align: center;
 }
 #gplus{
@@ -36,4 +36,11 @@ img{
 }
 #desc p{
 	color: white;
+}
+
+small{
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	background-color:#BDC3C7;
 }
