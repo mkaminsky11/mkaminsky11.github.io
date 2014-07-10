@@ -79,3 +79,28 @@ body{
 .side-item core-icon{
 	margin-right: 10px;
 }
+.contact_i{
+    font-size:50px;
+}
+
+#email_div{
+    color:#2c3e50;    
+}
+#github_div{
+    color:#3498db;
+}
+#github_div:hover{
+    color:#2980b9;
+}
+#dribbble_div{
+    color:#9b59b6;
+}
+#dribbble_div:hover{
+    color:#8e44ad;
+}
+#google_div{
+    color:#e74c3c;
+}
+#google_div:hover{
+    color:#c0392b;
+}
