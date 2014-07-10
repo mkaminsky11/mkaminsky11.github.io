@@ -18,3 +18,8 @@ body{
 	text-align: center;
 	font-family: 'Roboto-Thin' !important;
 }
+.desc{
+	text-align: center;
+	font-family: 'Roboto-Light' !important;
+	color: #37474f;
+}
