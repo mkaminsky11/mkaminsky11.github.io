@@ -23,3 +23,13 @@ body{
 	font-family: 'Roboto-Light' !important;
 	color: #37474f;
 }
+.desc-left{
+	text-align: left;
+	font-family: 'Roboto-Light' !important;
+	color: #37474f;	
+}
+.header-left{
+	color:#00e5ff;
+	text-align: left;
+	font-family: 'Roboto-Thin' !important;
+}
