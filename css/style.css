@@ -12,3 +12,9 @@ body{
 	padding: 20px;
 	padding-top: 54px;
 }
+
+.header{
+	color:#607d8b;
+	text-align: center;
+	font-family: 'Roboto-Thin' !important;
+}
