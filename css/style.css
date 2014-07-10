@@ -67,9 +67,9 @@ body{
 .side-item paper-ripple{
 	position: absolute;
 	height: 50px;
-	width: 100%;
-	left: 0px;
-	top: 0px;	
+	width: calc(100% + 10px);
+	left: -10px;
+	top: -10px;	
 }
 .side-item a{
 	width: calc(100% - 10px);
