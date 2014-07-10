@@ -60,3 +60,24 @@ $("#detect").click(function(){
 		close_side();
 	}	
 });
+
+var editor = CodeMirror(document.getElementById("code"),{
+    lineNumbers: true,
+    mode: "swift",
+    theme: "pastel-on-dark",
+    lineWrapping: false, 
+    indentUnit: 4, 
+    indentWithTabs: true
+});
+var txtFile = new XMLHttpRequest();
+txtFile.open("GET", "lib/intro.swift", true);
+txtFile.onreadystatechange = function()
+{
+	if (txtFile.readyState === 4) {  // document is ready to parse.
+		if (txtFile.status === 200) {  // file is found
+			var allText = txtFile.responseText; 
+			editor.setValue(allText);
+		}
+	}
+}
+txtFile.send(null);
