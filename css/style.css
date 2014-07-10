@@ -40,10 +40,12 @@ body{
 }
 #side{
 	background-color: white;
-	height: 100%;
+	height: calc(100% - 53px);
 	width: 30%;
 	z-index: 90;
 	position: absolute;
+	bottom: 0;
+	overflow-y: scroll;
 }
 
 #detect{
