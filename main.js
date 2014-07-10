@@ -54,3 +54,9 @@ $("#detect").click(function(){
   		close_side();
   	}	
 });
+$("#detect").click(function(){
+	if($("#side").hasClass("hide")){
+		side_open = false;
+		close_side();
+	}	
+});
