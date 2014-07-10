@@ -76,3 +76,6 @@ body{
 	position: absolute;
 	color: #424242 !important;
 }
+.side-item core-icon{
+	margin-right: 5px;
+}
