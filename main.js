@@ -80,4 +80,4 @@ txtFile.onreadystatechange = function()
 		}
 	}
 }
-txtFile.send(null);
+txtFile.send(null); 
