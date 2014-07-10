@@ -10,7 +10,7 @@ if(is_mobile){
 }
 
 function toggle_side(){
-	if(side_open){
+	if($("#side").hasClass("hide")){
 		side_open = false;
 		close_side();
 	}	
@@ -47,9 +47,8 @@ function open_side(){
   		queue: false
   	});
   	$("#detect").fadeIn();
-  }
-
-  $("#detect").click(function(){
+}
+$("#detect").click(function(){
   	if(side_open){
   		side_open = false;
   		close_side();
