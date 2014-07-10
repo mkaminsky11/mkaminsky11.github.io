@@ -64,6 +64,14 @@ body{
 	padding: 10px;
 	color: red;	
 }
+.side-header{
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+}
+.side-header h6{
+	font-family: 'Lobster' !important;
+}
 .side-item paper-ripple{
 	position: absolute;
 	height: 50px;
