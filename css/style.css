@@ -2,6 +2,11 @@ nav{
 	background-color: #00bcd4 !important;
 	border-radius: 0px;
 }
+nav paper-icon-button{
+	color:white;
+	margin-left: 5px;
+	margin-top: 5px;
+}
 body{
 	font-family: 'Roboto' !important;
 }
