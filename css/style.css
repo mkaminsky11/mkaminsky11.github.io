@@ -16,6 +16,7 @@ body{
 	position: absolute;
 	padding: 20px;
 	padding-top: 54px;
+	overflow: scroll;
 }
 
 .header{
