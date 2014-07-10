@@ -38,3 +38,19 @@ body{
 	text-align: left;
 	font-family: 'Roboto-Thin' !important;
 }
+#side{
+	background-color: white;
+	height: 100%;
+	width: 30%;
+	z-index: 90;
+	position: absolute;
+}
+
+#detect{
+	height: 100%;
+	width: 100%;
+	z-index: 88;
+	position: absolute;
+	background-color: black;
+	opacity: 0.4;
+}
