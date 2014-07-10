@@ -1,6 +1,14 @@
 nav{
-	background-color: #00bcd4;
+	background-color: #00bcd4 !important;
+	border-radius: 0px;
 }
 body{
 	font-family: 'Roboto' !important;
+}
+#content{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	padding: 20px;
+	padding-top: 54px;
 }
