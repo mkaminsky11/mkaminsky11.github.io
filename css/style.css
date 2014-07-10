@@ -104,3 +104,6 @@ body{
 #google_div:hover{
     color:#c0392b;
 }
+.col-sm-3{
+	text-align: center;
+}
