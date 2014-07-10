@@ -80,29 +80,29 @@ body{
 	margin-right: 10px;
 }
 .contact_i{
-    font-size:50px;
+	font-size:50px;
 }
 
 #email_div{
-    color:#2c3e50;    
+	color:#2c3e50;    
 }
 #github_div{
-    color:#3498db;
+	color:#3498db;
 }
 #github_div:hover{
-    color:#2980b9;
+	color:#2980b9;
 }
 #dribbble_div{
-    color:#9b59b6;
+	color:#3f51b5;
 }
 #dribbble_div:hover{
-    color:#8e44ad;
+ 	color:#8e44ad;
 }
 #google_div{
-    color:#e74c3c;
+	color:#e74c3c;
 }
 #google_div:hover{
-    color:#c0392b;
+	color:#c0392b;
 }
 .col-sm-3{
 	text-align: center !important;
