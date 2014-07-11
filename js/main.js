@@ -7,6 +7,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 if(is_mobile){
   $("#side").css("width","80%");
+  $("#d").remove();
 }
 
 function toggle_side(){
