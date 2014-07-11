@@ -1,6 +1,7 @@
 nav{
 	background-color: #00bcd4 !important;
 	border-radius: 0px;
+	z-index: 90;
 }
 nav paper-icon-button{
 	color:white;
@@ -41,9 +42,9 @@ body{
 }
 #side{
 	background-color: white;
-	height: calc(100% - 53px);
+	height: 100%;
 	width: 30%;
-	z-index: 90;
+	z-index: 100;
 	position: absolute;
 	bottom: 0;
 	overflow-y: scroll;
@@ -53,7 +54,7 @@ body{
 #detect{
 	height: 100%;
 	width: 100%;
-	z-index: 88;
+	z-index: 99;
 	position: absolute;
 	background-color: black;
 	opacity: 0.4;
