@@ -1,7 +1,7 @@
-nav{
+nav, #nav{
 	background-color: #00bcd4 !important;
 	border-radius: 0px;
-	z-index: 90;
+	z-index: 90 !important;
 }
 nav paper-icon-button{
 	color:white;
