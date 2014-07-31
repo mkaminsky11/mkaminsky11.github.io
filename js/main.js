@@ -7,7 +7,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 if(is_mobile){
   $("#side").css("width","80%");
-  $("#d").remove();
+  $(".goto").remove();
 }
 
 function toggle_side(){
@@ -82,3 +82,10 @@ txtFile.onreadystatechange = function()
 	}
 }
 txtFile.send(null); 
+
+
+function goto(elem){
+   $('#content').animate({
+        scrollTop: $(elem).offset().top
+    }, 500);
+}
