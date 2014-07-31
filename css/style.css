@@ -124,3 +124,10 @@ body{
 	margin-top: 10px;
 }
 
+.white-a{
+	font-size: 24px;
+	color: white;
+}
+.white-a:hover{
+	color: white;
+}
