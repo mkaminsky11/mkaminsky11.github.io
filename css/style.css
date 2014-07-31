@@ -125,9 +125,9 @@ body{
 }
 
 .white-a{
-	font-size: 24px;
-	color: white;
+	font-size: 24px !important;
+	color: white !important;
 }
 .white-a:hover{
-	color: white;
+	color: white !important;
 }
