@@ -86,6 +86,6 @@ txtFile.send(null);
 
 function goto(elem){
    $('#content').animate({
-        scrollTop: $(elem).offset().top
+        scrollTop: $(elem).offset().top + 200
     }, 500);
 }
