@@ -145,5 +145,5 @@ body{
 }
 
 .name>a:hover{
-	color: white;
+	color: white !important;
 }
