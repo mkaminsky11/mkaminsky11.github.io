@@ -131,3 +131,12 @@ body{
 .white-a:hover{
 	color: white !important;
 }
+
+
+.name{
+	position: absolute;
+	left: 46px;
+	top: 40px;
+	color: white;
+}
+}
