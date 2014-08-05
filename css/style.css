@@ -140,7 +140,10 @@ body{
 	color: white;
 }
 
-.name:hover{
+.name>a{
 	color: white;
 }
+
+.name>a:hover{
+	color: white;
 }
