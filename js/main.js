@@ -89,3 +89,39 @@ function goto(elem){
         scrollTop: $(elem).offset().top + 200
     }, 500);
 }
+
+$("#content").scroll(function(){
+	var top = $("#content").scrollTop();
+	if(top >= 80){
+		//name hidden	
+		$(".lang-goto").animate({
+		   marginTop: "-40px"
+		},{
+		  duration: 500,
+		  queue: false
+		});
+		
+		$(".name").animate({
+		   top: "0px"
+		},{
+		  duration: 500,
+		  queue: false
+		});
+	}
+	else{
+		//name visible
+		$(".lang-goto").animate({
+		   marginTop: "0px"
+		},{
+		  duration: 500,
+		  queue: false
+		});
+		
+		$(".name").animate({
+		   top: "40px"
+		},{
+		  duration: 500,
+		  queue: false
+		});
+	}
+});
