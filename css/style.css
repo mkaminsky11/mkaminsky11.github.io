@@ -134,9 +134,13 @@ body{
 
 
 .name{
-	position: absolute;
+	position: absolute !important;
 	left: 46px;
 	top: 40px;
+	color: white;
+}
+
+.name:hover{
 	color: white;
 }
 }
