@@ -1,5 +1,5 @@
 nav, #nav{
-	background-color: #00bcd4 !important;
+	background-color: #f36c60 !important;
 	border-radius: 0px;
 	z-index: 90 !important;
 }
@@ -36,7 +36,7 @@ body{
 	color: #37474f;	
 }
 .header-left{
-	color:#00acc1;
+	color:#992F26;
 	text-align: left;
 	font-family: 'Roboto-Thin' !important;
 }
