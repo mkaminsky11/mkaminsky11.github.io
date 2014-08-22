@@ -147,3 +147,7 @@ body{
 .name>a:hover{
 	color: white !important;
 }
+
+.navbar-nav > li > a {
+	font-weight: 400;
+}
