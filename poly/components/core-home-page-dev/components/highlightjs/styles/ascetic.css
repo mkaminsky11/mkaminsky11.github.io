@@ -1,0 +1,60 @@
+/*
+ * @license
+ * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ */
+
+﻿/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: white; color: black;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-filter .hljs-argument,
+.hljs-addition,
+.hljs-change,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.nginx .hljs-built_in,
+.tex .hljs-formula {
+  color: #888;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.hljs-shebang,
+.hljs-doctype,
+.hljs-pi,
+.hljs-javadoc,
+.hljs-deletion,
+.apache .hljs-sqbracket {
+  color: #CCC;
+}
+
+.hljs-keyword,
+.hljs-tag .hljs-title,
+.ini .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.http .hljs-title,
+.nginx .hljs-title,
+.css .hljs-tag,
+.hljs-winutils,
+.hljs-flow,
+.apache .hljs-tag,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}

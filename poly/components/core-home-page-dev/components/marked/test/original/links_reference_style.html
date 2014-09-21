@@ -1,0 +1,61 @@
+<!--
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<p>Foo <a href="/url/" title="Title">bar</a>.</p>
+
+<p>Foo <a href="/url/" title="Title">bar</a>.</p>
+
+<p>Foo <a href="/url/" title="Title">bar</a>.</p>
+
+<p>With <a href="/url/">embedded [brackets]</a>.</p>
+
+<p>Indented <a href="/url">once</a>.</p>
+
+<p>Indented <a href="/url">twice</a>.</p>
+
+<p>Indented <a href="/url">thrice</a>.</p>
+
+<p>Indented [four][] times.</p>
+
+<pre><code>[four]: /url
+</code></pre>
+
+<hr />
+
+<p><a href="foo">this</a> should work</p>
+
+<p>So should <a href="foo">this</a>.</p>
+
+<p>And <a href="foo">this</a>.</p>
+
+<p>And <a href="foo">this</a>.</p>
+
+<p>And <a href="foo">this</a>.</p>
+
+<p>But not [that] [].</p>
+
+<p>Nor [that][].</p>
+
+<p>Nor [that].</p>
+
+<p>[Something in brackets like <a href="foo">this</a> should work]</p>
+
+<p>[Same with <a href="foo">this</a>.]</p>
+
+<p>In this case, <a href="/somethingelse/">this</a> points to something else.</p>
+
+<p>Backslashing should suppress [this] and [this].</p>
+
+<hr />
+
+<p>Here's one where the <a href="/url/">link
+breaks</a> across lines.</p>
+
+<p>Here's another where the <a href="/url/">link 
+breaks</a> across lines, but with a line-ending space.</p>
