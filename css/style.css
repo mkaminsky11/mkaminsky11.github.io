@@ -1,29 +1,11 @@
 .main-header{
-	position: absolute;
-	width: calc(100% + 0px);
-	padding: 60px 20px;
-	margin: 0px !important;
-	left: 0;
-	margin-top: -10px;
-	background-image: url('https://codeyourcloud.com/images/patterns/3.jpg');
-	color: #eee !important;
-	background-size: cover;
-	background-attachment: fixed;
-	top: 35px;
+	color: #C0392B !important;
 }
 .main-footer{
-	background-image: url('https://codeyourcloud.com/images/patterns/3.jpg');
-	color: #eee !important;
-	background-size: cover;
-	background-attachment: fixed;
-	margin-left: -23px;
-	margin-right: -36px;
-	padding-top:30px;
-	padding-bottom: 30px;
-	width: calc(100%)
+
 }
 .main-spacer{
-	margin-top: 180px;
+
 }
 .main-bottom{
 
@@ -151,7 +133,7 @@ body{
 }
 
 #email_div{
-	color:#bdc3c7;    
+	color:#C0392B;    
 }
 #github_div{
 	color:#3498db;
