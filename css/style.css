@@ -6,6 +6,8 @@
 	left: 0;
 	margin-top: -10px;
 	background-image: url('https://codeyourcloud.com/images/patterns/3.jpg');
+	color: #eee;
+	background-size: cover;
 }
 
 .main-header h2{
