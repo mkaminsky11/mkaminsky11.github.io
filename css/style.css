@@ -1,3 +1,18 @@
+.main-header{
+	position: absolute;
+	width: calc(100% - 40px);
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin: 0 !important;
+}
+
+.main-spacer{
+	margin-top: 100px;
+}
+
+
 @-moz-document url-prefix() {
     nav, #nav{
 			height: 50px
