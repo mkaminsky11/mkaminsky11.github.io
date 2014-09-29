@@ -18,12 +18,11 @@
 	padding: 60px 20px;
 	margin: 0px !important;
 	left: 0;
-	margin-top: -10px;
 	background-image: url('https://codeyourcloud.com/images/patterns/3.jpg');
 	color: #eee !important;
 	background-size: cover;
 	background-attachment: fixed;
-	top: 35px;
+	bottom: 0px;
 }
 
 .main-spacer{
