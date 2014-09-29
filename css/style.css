@@ -50,10 +50,10 @@ nav paper-icon-button{
 body{
 	font-family: 'Roboto' !important;
 }
-#content{
+.part{
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	padding: 20px;
 	padding-top: 54px;
 	overflow: scroll;
