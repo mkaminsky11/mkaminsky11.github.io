@@ -1,4 +1,6 @@
 .main-header{
+	position: absolute;
+	width: calc(100% + 0px);
 	padding: 60px 20px;
 	margin: 0px !important;
 	left: 0;
@@ -7,29 +9,21 @@
 	color: #eee !important;
 	background-size: cover;
 	background-attachment: fixed;
-	margin-left: -23px;
-	margin-right: -36px;
+	top: 35px;
 }
-
 .main-footer{
-	position: absolute;
-	width: calc(100% + 0px);
-	padding: 60px 20px;
-	margin: 0px !important;
-	left: 0;
 	background-image: url('https://codeyourcloud.com/images/patterns/3.jpg');
 	color: #eee !important;
 	background-size: cover;
 	background-attachment: fixed;
-	bottom: 0px;
+	margin-left: -23px;
+	margin-right: -36px;
 }
-
 .main-spacer{
-
-}
-
-.main-bottom{
 	margin-top: 180px;
+}
+.main-bottom{
+
 }
 
 
