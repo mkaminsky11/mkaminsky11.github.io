@@ -44,9 +44,9 @@ body{
 }
 
 .header{
-	color:#607d8b;
+	color:#e84e40;
 	text-align: center;
-	font-family: 'Roboto-Thin' !important;
+	font-family: 'Roboto-Medium' !important;
 }
 .desc{
 	text-align: center;
@@ -59,7 +59,7 @@ body{
 	color: #37474f;	
 }
 .header-left{
-	color:#992F26;
+	color:#607d8b;
 	text-align: left;
 	font-family: 'Roboto-Thin' !important;
 }
