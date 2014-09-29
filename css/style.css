@@ -1,7 +1,30 @@
+@-moz-document url-prefix() {
+    nav, #nav{
+			height: 50px
+		}
+		.navbar-nav:not(.navbar-right){
+			width: calc(100% - 67px) !important;
+		}
+		.navbar-nav:not(.navbar-right) paper-icon-button{
+			padding-left: 0;
+			margin-left: -10px;
+			margin-top:-45px;
+			overflow: hidden !important;
+		}
+		.navbar-nav:not(.navbar-right) paper-icon-button #content{
+			overflow: hidden !important;
+		}
+}
 nav, #nav{
 	background-color: #f36c60 !important;
 	border-radius: 0px;
 	z-index: 90 !important;
+}
+.navbar-right{
+	width: 67px !important;
+}
+.navbar-nav:not(.navbar-right){
+	width: auto;
 }
 nav paper-icon-button{
 	color:white;
