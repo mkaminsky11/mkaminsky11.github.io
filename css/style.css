@@ -4,6 +4,11 @@
 	padding: 40px 20px;
 	margin: 0px !important;
 	left: 0;
+	background-image: url('https://codeyourcloud.com/images/patterns/3.jpg');
+}
+
+.main-header h6{
+	color: white;
 }
 
 .main-spacer{
