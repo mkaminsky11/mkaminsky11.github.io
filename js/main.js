@@ -85,7 +85,7 @@ txtFile.send(null);
 
 
 function goto(elem){
-   $(elem).velocity("scroll", { container: $("#content") });
+   $(elem).velocity("scroll", { container: $("body") });
 }
 
 $("#content").scroll(function(){
