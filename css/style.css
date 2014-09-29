@@ -62,7 +62,7 @@ body{
 .header{
 	color:#e84e40;
 	text-align: center;
-	font-family: 'Roboto-Medium' !important;
+	font-family: 'Roboto-Medium';
 }
 .desc{
 	text-align: center;
