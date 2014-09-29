@@ -11,6 +11,25 @@
 	font-weight: 400;
 }
 
+
+@font-face{
+	font-family: 'Docker1';
+	src: url('Docker1.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face{
+	font-family: 'Docker2';
+	src: url('Docker2.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face{
+	font-family: 'Docker3';
+	src: url('Docker3.ttf') format('truetype');
+	font-weight: 400;
+}
+
 @font-face{
 	font-family: 'Anders';
 	src: url('Anders.woff') format('woff'), url('Anders.ttf') format('truetype');
