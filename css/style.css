@@ -1,5 +1,5 @@
 .main-header{
-	color: #C0392B !important;
+	color: black !important;
 	font-family: 'Docker3' !important;
 }
 .main-footer{
@@ -32,7 +32,7 @@
 		}
 }
 nav, #nav{
-	background-color: #f36c60 !important;
+	background-color: #E2B80E !important;
 	border-radius: 0px;
 	z-index: 90 !important;
 	position: fixed;
@@ -67,7 +67,7 @@ body{
 }
 .desc{
 	text-align: center;
-	font-family: 'Roboto-Light' !important;
+	font-family: 'Roboto-Light';
 	color: #37474f;
 }
 .desc-left{
@@ -190,4 +190,9 @@ body{
 
 .navbar-nav > li > a {
 	font-weight: 400;
+}
+
+#part-1{
+	font-family: 'Roboto';
+	background-color: #F1C40F;
 }
