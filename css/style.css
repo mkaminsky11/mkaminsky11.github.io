@@ -1,18 +1,94 @@
-.main-header{
-	color: black !important;
-	font-family: 'Docker3' !important;
-}
-.main-footer{
-
-}
-.main-spacer{
-
-}
-.main-bottom{
-
+#intro{
+  position: absolute;
+  right: 0;
+  top: 60px;
+  height: calc(100% - 100px); 
 }
 
+#part-0 h2{
+  font-size: 80px;
+  text-align: left; 
+  color: #34495E !important;
+	 font-family: 'Docker2' !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
 
+#part-0 h3{
+  font-size: 50px;
+  text-align: left;
+  color: #34495E !important;
+  font-family: 'Docker1' !important;
+  margin-top: 47px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
+
+#part-0{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #F1C40F;
+}
+
+#part-1{
+  background-color: #F7F5F5; 
+}
+
+#part-1 h6{
+  	text-align: left;
+  font-family: 'Roboto-Light';
+  color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 29px;
+}
+
+.real-link{
+  text-decoration: underline;
+  font-family: 'Roboto';
+}
+
+#part-2 h5,#part-2 h6,#part-2 .progress{
+  margin-left: 20px;
+  margin-right: 20px; 
+}
+
+#part-2 h5{
+  	color:#607d8b;
+  	text-align: left;
+	 font-family: 'Roboto' !important;
+}
+
+
+#part-2 h6{
+  	text-align: left;
+	 font-family: 'Roboto-Light' !important;
+  color: #37474f;	
+}
+
+#part-3{
+  background-color: #ECF0F1;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#part-3 h6{
+  	text-align: left;
+	 font-family: 'Roboto' !important;
+  color: #34495E;	 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#part-5{
+  background-color: #F1C40F;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
 @-moz-document url-prefix() {
     nav, #nav{
@@ -32,7 +108,7 @@
 		}
 }
 nav, #nav{
-	background-color: #E2B80E !important;
+	background-color: #EABE0C !important;
 	border-radius: 0px;
 	z-index: 90 !important;
 	position: fixed;
@@ -135,22 +211,22 @@ body{
 }
 
 #email_div{
-	color:#C0392B;    
+	color:#ECF0F1;    
 }
 #github_div{
-	color:#3498db;
+	color:#ECF0F1;
 }
 #github_div:hover{
 	color:#2980b9;
 }
 #dribbble_div{
-	color:#3f51b5;
+	color:#ECF0F1;
 }
 #dribbble_div:hover{
  	color:#8e44ad;
 }
 #google_div{
-	color:#e74c3c;
+	color:#ECF0F1;
 }
 #google_div:hover{
 	color:#c0392b;
@@ -190,9 +266,4 @@ body{
 
 .navbar-nav > li > a {
 	font-weight: 400;
-}
-
-#part-1{
-	font-family: 'Roboto';
-	background-color: #F1C40F;
 }
