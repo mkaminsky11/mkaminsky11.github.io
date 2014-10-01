@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Change this to the correct selector.
-  $('#fixed-header').midnight();
+  //$('#fixed-header').midnight();
 });
 
 $(".main-header").fitText();
