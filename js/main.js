@@ -1,3 +1,8 @@
+$(document).ready(function(){
+  // Change this to the correct selector.
+  $('#fixed-header').midnight();
+});
+
 $(".main-header").fitText();
 
 var side_open = false;
