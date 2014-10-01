@@ -6,7 +6,7 @@
 }
 
 #part-0 h2{
-  font-size: 80px;
+  /*font-size: 80px;*/
   text-align: left; 
   color: #34495E !important;
 	 font-family: 'Docker2' !important;
@@ -16,7 +16,7 @@
 }
 
 #part-0 h3{
-  font-size: 50px;
+  /*font-size: 50px;*/
   text-align: left;
   color: #34495E !important;
   font-family: 'Docker1' !important;

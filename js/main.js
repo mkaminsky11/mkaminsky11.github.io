@@ -1,3 +1,5 @@
+$(".main-header").fitText();
+
 var side_open = false;
 var is_mobile = false;
 
