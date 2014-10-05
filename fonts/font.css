@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/devicons/1.4.0/css/devicons.min.css');
+
 /*Hipstelvetica_Bold*/
 @font-face{
 	font-family: 'Odin-Bold';
@@ -70,8 +72,6 @@
 	src: url('more/Tesla.ttf') format('truetype');
 	font-weight: 400;
 }
-
-@import url('https://cdn.jsdelivr.net/devicons/1.4.0/css/devicons.min.css');
 
 @font-face{
 	font-family: 'Devicons';
