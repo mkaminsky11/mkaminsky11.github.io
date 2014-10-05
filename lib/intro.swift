@@ -1,19 +1,98 @@
+//
+//  DetailViewController.swift
+//  SimpleContact
+//
+//  Created by Michael Kaminsky on 9/11/14.
+//  Copyright (c) 2014 Michael Kaminsky. All rights reserved.
+//
+
 import UIKit
 
-class RootViewController: UIViewController {
+class DetailViewController: UIViewController {
+
+    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var nav: UINavigationItem!
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var edit_button: UIBarButtonItem!
+    
+    
+    
+    var isEditing = false;
+    var index = 0;
+    
+    
+    @IBAction func trigger(sender: AnyObject) {
+        if(self.isEditing == false){
+            //turn to true
+            
+            self.isEditing = true;
+            println("start");
+            
+            nameInput.borderStyle = UITextBorderStyle.RoundedRect;
+            nameInput.enabled = true;
+        }
+        else{
+            //turn to false
+            
+            self.isEditing = false;
+            println("stop");
+            
+            nameInput.borderStyle = UITextBorderStyle.None;
+            nameInput.enabled = false;
+            
+            self.updateData();
+            
+        }
+    }
+    var detailItem: AnyObject? {
+        didSet {
+            // Update the view.
+            self.configureView()
+        }
+    }
+    
+    var birth: AnyObject? {
+        didSet {
+            self.configureView();
+        }
+    }
+    
+
+    func configureView() {
+        // Update the user interface for the detail item.
+        if let detail: AnyObject = self.detailItem {
+            if let name_input = self.nameInput {
+                
+                nav.title = detail.description;
+                
+                nameInput.borderStyle = UITextBorderStyle.None;
+                nameInput.enabled = false;
+                name_input.text = detail.description
+                
+                
+                
+            }
+        }
+    }
+    
+    func updateData(){
+        var newName = nameInput.text + "_index_" + String(index);
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("newName", object: newName); //send it
+    }
 
     override func viewDidLoad() {
-        var button: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        button.frame = CGRectMake(10, 10, 300, 60)
-        button.setTitle("Show", forState: UIControlState.Normal)
-        button.addTarget(self, action: "showButtonTouchUpInside", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(button)
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.configureView()
     }
 
-    func showButtonTouchUpInside() {
-        JLToast.makeText("Basic JLToast").show()
-        JLToast.makeText("You can set duration. `JLToastDelay.ShortDelay` means 2 seconds." +
-                         "`JLToastDelay.LongDelay` means 3.5 seconds.", duration: JLToastDelay.LongDelay).show()
-        JLToast.makeText("With delay, JLToast will be shown after delay.", delay: 1, duration: 5)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+
+
 }
+
+
