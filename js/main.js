@@ -95,7 +95,7 @@ function goto(elem){
    $(elem).velocity("scroll", { container: $("body") });
 }
 
-$("#content").scroll(function(){
+$("body").scroll(function(){
 	var top = $("#content").scrollTop();
 	if(top >= 80){
 		//name hidden	
