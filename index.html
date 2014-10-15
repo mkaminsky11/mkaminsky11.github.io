@@ -60,70 +60,10 @@
 	
 </head>
 <body>
-	<nav style="overflow:hidden" id="nav" class="navbar navbar-inverse nav-1 navbar-fixed-top" role="navigation">
-  		<div class="navbar-header">
-		</div>
-    	<div class="" id="navbar-collapse-01" style="width: 99%;">
-    	  <ul class="nav navbar-nav" style="display:flex;float:left">  
-		<paper-icon-button icon="menu" onclick="toggle_side()" style="color:black"></paper-icon-button>
-		
-		<li class="lang-goto" onclick="goto('#goto-javascript')"><a class="devicons devicons-javascript white-a goto"></a></li>
-		<li class="lang-goto" onclick="goto('#goto-swift')" ><a class="devicons devicons-swift white-a goto"></a></li>
-		<li class="lang-goto" onclick="goto('#goto-html')"><a class="devicons devicons-html5 white-a goto"></a></li>
-		<li class="lang-goto" onclick="goto('#goto-css')"><a class="devicons devicons-css3 white-a goto"></a></li>
-    	  	
-    	 
-    	 	<li class="name"><a class="Roboto-Thin">Michael Kaminsky</a></li>
-    	  </ul>
-    	  <ul class="nav navbar-nav navbar-right" style="float:right">
-    	  	<li><a href="https://github.com/mkaminsky11" class="devicons devicons-github_badge white-a"></a></li>
-    	  
-    	  </ul>
-    	</div>
-  	</nav>
-  	
-  	<div id="side" class="hide">
-  		<div class="side-header">
-  			<h6>Michael Kaminsky</h6>
-  		</div>
-  		<hr/>
-  		<div class="side-item">
-  			<a href="#about">
-  				<paper-ripple></paper-ripple>
-  				<core-icon icon="account-circle"></core-icon>About Me
-  			</a>
-  		</div>
-  		<div class="side-item">
-  			<a href="#design">
-  				<paper-ripple></paper-ripple>
-  				<core-icon icon="create"></core-icon>Design
-  			</a>
-  		</div>
-  		<div class="side-item">
-  			<a href="#skills">
-  				<paper-ripple></paper-ripple>
-  				<core-icon icon="thumb-up"></core-icon>Skills
-  			</a>
-  		</div>
-  		<div class="side-item">
-  			<a href="#projects">
-  				<paper-ripple></paper-ripple>
-  				<core-icon icon="view-quilt"></core-icon>Projects
-  			</a>
-  		</div>
-  		<div class="side-item">
-  			<a href="#contact">
-  				<paper-ripple></paper-ripple>
-  				<core-icon icon="send"></core-icon>Contact
-  			</a>
-  		</div>
-  	</div>
-  	<div id="detect" style="display:none">
-  		
-  	</div>
+    <!--a id="more"><core-icon icon="more-vert"></core-icon></a-->
   
-  <!--h2 id="fixed-header">MICHAEL KAMINSKY</h2-->
-  	
+    <a id="github" href="https://github.com/mkaminsky11"><i class="devicons devicons-github_badge"></i>Github</a>	
+  
   	<div class="part" id="part-0" data-midnight="clear">
 		    <h2 class="header main-header" id="about">MICHAEL</h2>
       <h2 class="header main-header">KAMINSKY</h2>
@@ -143,11 +83,6 @@
     </h6> 
   
     <br/>
-
-    <!--blockquote class="quote">
-Personally I think this is amazing, and then some. You have the most promising code editor available now, and...this is already the most robust editor
-    </blockquote-->
-    
 	</div>
   
 	<div class="part" id="part-2" data-midnight="yellow">
@@ -208,10 +143,7 @@ Personally I think this is amazing, and then some. You have the most promising c
 		<div class="progress"><div class="progress-bar progress-bar-success" style="width: 20%;"></div></div>
 		
 		<br/>
-		<!--blockquote>
-			<p>Code Your Cloud is a great app...</p>
-		</blockquote-->
-   
+
    
 	</div>
   
@@ -220,7 +152,7 @@ Personally I think this is amazing, and then some. You have the most promising c
 		<h6>This is the project on which most of my time is spent. It is a code editor for Google Drive, available at <a class="real-link" href="https://codeyourcloud.com">codeyourcloud.com</a>. It allows for collaborative editing, and incorporates almost all of the skills I have learned, including mySQL and Node.js. With about 2,000 users on the Chrome Web Store, many people find it to be very useful, and I have used it as a testing ground, experimenting with Polymer and AngularJS, among others.</h6>
 		<a href="https://github.com/mkaminsky11/codeyourcloud" class="btn btn-inverse"><i class="fa fa-github"></i> GitHub Page</a>
 		<br/><br/>
-		<img src="images/web.png" width="100%">
+		<img src="images/web_2.png" width="100%">
   
   <h6>I am getting ready to publish a mobile version of Code Your Cloud onto the Apple App Store. It is built using Apache Cordova, and should be launched in the next couple of months.</h6>
 		<br/>
@@ -240,16 +172,16 @@ Personally I think this is amazing, and then some. You have the most promising c
    
 		<h5 class="header-left">SnipSafe</h5>
 		<h6 class="desc-left">This is the final project I created for my Dynamic Web Applications class at Harvard University. It is a site for storing and editing code snippets. SnipSafe was created with Laravel, and was my one of my first experiences with PHP</h6>
-		<br/>
+
 		<a href="https://github.com/mkaminsky11/harvard-p4" class="btn btn-inverse"><i class="fa fa-github"></i> GitHub Page</a>
-   <br/><br/>
+   <br/>
+   <!--br/>
    <img src="images/snip.png" width="100%">
 		
-		<br/>
+		<br/-->
    
 		<h5 class="header-left">ComicJS</h5>
 		<h6 class="desc-left">I'm a fan of tech-themed comics, especially Dilbert. So, on a whim, I created a javascript library that parses several sites (Dilbert, XKCD, etc.) to get the image urls.</h6>
-		<br/>
 		<a href="https://github.com/mkaminsky11/comicjs" class="btn btn-inverse"><i class="fa fa-github"></i> GitHub Page</a>
 
 		<br/>
@@ -264,6 +196,17 @@ Personally I think this is amazing, and then some. You have the most promising c
    <img src="images/cpp.png" width="100px" style="margin-right:10px">
    <img src="images/git_folder.png" width="100px" style="margin-right:10px">
    <img src="images/java.png" width="100px">
+   
+   
+   
+   <br/>
+
+		<h5 class="header-left">GoogleJS</h5>
+		<h6 class="desc-left">I was annoyed at the complexity of Google's javascript APIs, which took me a long time to learn, particularly the Google Drive API. So, I created an easy-to-use wrapper to help others avoid similar trouble.</h6>
+   
+   	<a href="https://github.com/mkaminsky11/googlejs" class="btn btn-inverse"><i class="fa fa-github"></i> Github Page</a>
+   
+   
 	</div>
   
 	<div class="part" id="part-5">
