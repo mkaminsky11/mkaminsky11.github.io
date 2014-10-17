@@ -148,7 +148,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 #part-5{
-  background-color: #34495E;
+  background-color: #E74C3C;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -361,4 +361,24 @@ body{
   padding-right: 3px;
   padding-left: 7px;
   border-radius: 50%;
+}
+
+.light img{
+  width: 100%;
+  border: solid thick #eee; 
+  transition: border 0.5s ease;
+  border-radius: 5px;
+}
+.light img:hover{
+  border: solid thick #3498DB;
+}
+
+.no-light img{
+  width: 100%;
+  border: solid thick #eee; 
+  transition: border 0.5s ease;
+  border-radius: 50%;
+}
+.no-light img:hover{
+  border: solid thick #3498DB;
 }
