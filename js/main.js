@@ -37,3 +37,43 @@ txtFile.onreadystatechange = function()
 	}
 }
 txtFile.send(null); 
+
+function skill(){
+  $('#part-2').slideToggle();
+  if($("#skill").attr("shape") === "cancel"){
+    $("#skill").attr("shape","plus");
+  }
+  else{
+    $("#skill").attr("shape","cancel"); 
+  }
+}
+
+function cyc(){
+  $('#part-3').slideToggle();
+  if($("#cyc").attr("shape") === "cancel"){
+    $("#cyc").attr("shape","plus");
+  }
+  else{
+    $("#cyc").attr("shape","cancel"); 
+  }
+}
+
+function proj(){
+  $('#part-4').slideToggle();
+  if($("#proj").attr("shape") === "cancel"){
+    $("#proj").attr("shape","plus");
+  }
+  else{
+    $("#proj").attr("shape","cancel"); 
+  }
+}
+
+function xp(){
+  $('#part-6').slideToggle();
+  if($("#xp").attr("shape") === "cancel"){
+    $("#xp").attr("shape","plus");
+  }
+  else{
+    $("#xp").attr("shape","cancel"); 
+  }
+}
