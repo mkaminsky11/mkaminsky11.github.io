@@ -59,7 +59,12 @@ function cyc(){
 }
 
 function proj(){
-  $('#part-4').slideToggle();
+  $('#part-4').slideToggle({
+    complete: function(){
+      editor.refresh(); 
+    }
+  });
+  
   if($("#proj").attr("shape") === "cancel"){
     $("#proj").attr("shape","plus");
   }
