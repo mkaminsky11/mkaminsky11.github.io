@@ -3,7 +3,7 @@ $(document).ready(function(){
   //$('#fixed-header').midnight();
 });
 
-$(".main-header").fitText();
+jQuery(".main-header").fitText(1.8);
 
 var side_open = false;
 var is_mobile = false;

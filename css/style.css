@@ -110,11 +110,6 @@ body{
 	overflow: hidden;
 }
 
-.header{
-	color:#e84e40;
-	text-align: center;
-	font-family: 'Roboto-Medium';
-}
 .desc{
 	text-align: left;
 	font-family: 'Roboto-Light';
