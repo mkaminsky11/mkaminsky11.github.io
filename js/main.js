@@ -1,9 +1,10 @@
 $(document).ready(function(){
   // Change this to the correct selector.
   //$('#fixed-header').midnight();
+  $("#part-0").height($(window).height() - 60);
 });
 
-jQuery(".main-header").fitText(1.8);
+//jQuery(".main-header").fitText(1.8);
 
 var side_open = false;
 var is_mobile = false;

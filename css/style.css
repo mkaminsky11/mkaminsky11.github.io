@@ -3,37 +3,55 @@
   right: 0;
   top: 60px;
   height: calc(100% - 100px); 
+  
+  
 }
 
 #part-0 h2{
   /*font-size: 80px;*/
-  text-align: left; 
+  text-align: center; 
   color: #eee !important;
-	 font-family: 'Docker2' !important;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 40px;
+	 font-family: 'Polya' !important;
+  margin: 0;
+  font-size: 100px;
+  font-weight: 300;
 }
 
 #part-0 h3{
   /*font-size: 50px;*/
-  text-align: left;
+  text-align: center;
   color: #eee !important;
-  font-family: 'Docker1' !important;
-  margin-top: 47px;
-  margin-bottom: 10px;
-  margin-left: 60px;
+  font-family: 'Roboto-Thin' !important;
+  margin: 0;
+  margin-top: 20px;
+  
+  font-size: 30px;
 }
 
 #part-0{
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #F1C40F;
-  background-image: url('../images/water.jpeg');
+  background-image: url('../img/sky.jpg');
   background-size: cover;
   background-position: fixed;
   background-attachment: fixed;
   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.down{
+  position: absolute;
+  bottom: 20px;
+  font-size: 30px !important;
+  color: gray;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  text-align: center;
 }
 
 #part-1{

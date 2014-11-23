@@ -151,6 +151,11 @@
 	font-weight: 400;
 }
 
+@font-face{
+  font-family: 'Polya';
+  src: url('polya.otf') format('opentype');
+}
+
 .Lobster{
 	font-family: 'Lobster';
 }
