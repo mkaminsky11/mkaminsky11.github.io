@@ -4,7 +4,7 @@ $(document).ready(function(){
   $("#part-0").height($(window).height() - 60);
 });
 
-//jQuery(".main-header").fitText(1.8);
+jQuery(".main-header-1").fitText();
 
 var side_open = false;
 var is_mobile = false;
