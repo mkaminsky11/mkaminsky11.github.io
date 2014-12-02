@@ -1,6 +1,8 @@
 $(document).ready(function(){
   // Change this to the correct selector.
   //$('#fixed-header').midnight();
+  $("#part-0").height($(window).height() - 60);
+  
   $( window ).resize(function() {
   	$("#part-0").height($(window).height() - 60);
   });
