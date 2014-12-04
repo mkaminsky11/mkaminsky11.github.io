@@ -166,7 +166,6 @@ body{
   padding: 20px;
   width: calc(100% - 40px);
   background-color: #3498DB;
-  box-shadow: 5px 5px 5px #C8C8DA;
 }
 .control h6{
   font-family: 'Roboto';
@@ -203,6 +202,11 @@ body{
   width: calc(100%- 40px);
   background-color: #2980B9;
 }
+
+.control, .control-alt{
+	box-shadow: 5px 5px 5px #C8C8DA;
+}
+
 .control-alt h6{
   font-family: 'Roboto';
   color: #eee;
