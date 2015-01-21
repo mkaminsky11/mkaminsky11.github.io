@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/mkaminsky11
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mkaminsky11.github.io
+  * I am mkaminsky11 (https://keybase.io/mkaminsky11) on keybase.
+  * I have a public key with fingerprint 20A2 301D FA26 B5B7 AE4D  A988 40C9 5C6A BCA8 4724
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "20a2301dfa26b5b7ae4da98840c95c6abca84724",
+            "host": "keybase.io",
+            "key_id": "40c95c6abca84724",
+            "kid": "010132e0cb2479fd03d5315de1084835ef1213691a56eb1b53a08ed0ead309052c010a",
+            "uid": "1b6110bfadf7996518fcd47bffd86300",
+            "username": "mkaminsky11"
+        },
+        "service": {
+            "hostname": "mkaminsky11.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1421802823,
+    "expire_in": 157680000,
+    "prev": "ea1fd42dc3607c0ff9daa5c85735626dff24e84ad199fa9aac2af07de0b7d5be",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.1
+Comment: https://keybase.io/crypto
+
+yMIfAnicbZJbSBVBGIDP0coyuyCeEgqtDcpIbWbveyx8CD2RRFftRTrM7Mx4lpO7
+57JaamKRaD1VIJLdsKCMoKIs6Z5mPZRB2T2lB4V6ER/CLiaZ7Vo91bwM8//f//38
+P/NgVqIn2VsXOPMqfc/qmd6ervUVnq13xwM1HLZIFeev4cJ08mKGWUZjkZhh2pyf
+4wHiBQAJQ7yMJawgKhKkqaoIdE3SZYR1pIoKL3LZXMiKuxWOBqM4zTUsJ+Y8ggZx
+ov/hw5MJAAEUeAp0zIuKxggQiCRAiVAIVFEVJMogDwVZg0iSKYZYEhBQKQEUEQFo
+QOJ1x4AcXcWkDmIZQoAZIkzRNFmCKtOJqGDGiCoLALhgnMZMVE4dujyMyg0zHq6C
+kKvN5pxEpaFTdwvuMP9CuWWGHarAv2eLxCzb0q0dDhKy7Ujc7yrsqohbs5Pi4B9b
+EBsmcXbqVFTSWNywTM4PHVK3DVcPRR6qgFd5IZujuyJGjAYNl5AUWQXOcfvQSkdJ
+EWRE5IkuyEDRAWMaQUjSVUkRJJmXCWO8SFUREahpDGkI6TxiQCEUYIVImHLufFHT
+4vxOJxuVOcq4UWYiuyJGudr7naVTPN5kz7SpCe6v8CTPmPv3r1SvTRpP/ZH4buTi
+tvTZbccuLD5143l9RvrR0f7igmjTvE4hsCXQl5DUP/jkUvOspE2l6/K84fycxd2n
+hj+XJIZato8llsw5F8570abW+Vo5/ufxYu/gvt7M2qK0y8FLrDd6Zc3SkvyUx0dG
+Pj5c/7TXfjhUUL/owe7Z13FhdLxj/+jAtbz5b1OGV5zo7F4+cjZnIDSY2pZco/ta
+Dmc9S9s4OvFlYOGq48uqs7oKD32aXvfm5A9hBLU2NW7wiSVf91qtHdEtH8Y2pz6C
+Pm+g/Xzf1Yy8lFu7xZ73fdGJ+bfHXrb+zJxTfNO+Rw4WNSZs/NagnT6wzhMZWvD6
+uyk2WHeWkJVF/uZ23y+TtCts
+=1/D+
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mkaminsky11
+
+==================================================================
