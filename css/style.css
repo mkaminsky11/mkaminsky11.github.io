@@ -40,6 +40,7 @@
 #part-0 > div > div > h3{
   font-family: "Baron";
   text-transform: lowercase;
+  margin-top: 75px;
 }
 
 .Grid {
