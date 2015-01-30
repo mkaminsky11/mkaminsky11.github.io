@@ -12,6 +12,7 @@ $(".main-header-1").fitText();
 $("#part-0 > div > div > h3").fitText(0.8);
 $("#part-0 > div > div > h4").fitText(0.6);
 $("#part-0 > div > div > h5").fitText(1.5);
+$("#name").fitText();
 
 var side_open = false;
 var is_mobile = false;
