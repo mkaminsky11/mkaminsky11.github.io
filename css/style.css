@@ -2,43 +2,62 @@
   position: absolute;
   right: 0;
   top: 60px;
-  height: calc(100% - 100px); 
-  
-  
-}
+  height: calc(100% - 100px);
 
-#part-0 h2{
-  	font-size: 80px;
-	text-align: center;
-	color: #C3C3C3 !important;
-	font-family: 'Roboto-Black' !important;
-	margin: 0;
-	font-size: 100px;
-	font-weight: 300;
-}
 
-#part-0 h3{
-  /*font-size: 50px;*/
-  text-align: center;
-  color: #eee !important;
-  font-family: 'Roboto-Thin' !important;
-  margin: 0;
-  margin-top: 20px;
-  
-  font-size: 30px;
-  
-  position: absolute;
-	width: 100%;
 }
 
 #part-0{
-  padding-top: 30px;
-  padding-bottom: 30px;
-  
+  padding: 0px;
+  width: 100% !important;
+  box-shadow: 5px 5px 5px #C8C8DA;
+  margin-bottom: 10px;
+}
+
+#part-0 > div{
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
+  box-shadow: none;
+  z-index: 0;
+  transition: box-shadow 0.5s ease;
+}
+
+#part-0 > div:hover{
+  z-index: 99;
+  box-shadow: 4px 0px 7px #71717C;
+}
+
+#part-0 > div > div{
+  min-width: 70%;
+  max-width: 90%;
+  text-align: center;
+  color: white;
+}
+
+#part-0 > div > div > h3{
+  font-family: "Baron";
+  text-transform: lowercase;
+}
+
+.Grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Grid-cell {
+  flex: 0 0 33.3333%;
+  display: block;
+  position: relative;
+}
+
+@media screen and (max-width: 750px) {
+  .Grid-cell {
+    flex: 0 0 100%;
+  }
 }
 
 .down{
@@ -80,7 +99,7 @@
 
 #part-2 h5,#part-2 h6,#part-2 .progress{
   margin-left: 20px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 #part-2 h5{
@@ -93,7 +112,7 @@
 #part-2 h6{
   	text-align: left;
 	 font-family: 'Roboto-Light' !important;
-  color: #37474f;	
+  color: #37474f;
 }
 
 #part-3,  #part-6{
@@ -103,7 +122,7 @@
 #part-3 h6, #part-6 h6{
   	text-align: left;
 	 font-family: 'Roboto-Thin' !important;
-  color: #34495E;	 
+  color: #34495E;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 20px;
@@ -114,6 +133,7 @@
   background-color: #ECF0F1;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-top: -10px;
 }
 
 body{
@@ -136,7 +156,7 @@ body{
 .desc-left{
 	text-align: left;
 	font-family: 'Roboto-Light' !important;
-	color: #37474f;	
+	color: #37474f;
 }
 .header-left{
 	color:#607d8b;
@@ -147,32 +167,32 @@ body{
 
 .light img{
   width: 100%;
-  border: solid thick #eee; 
+  border: solid thick #eee;
   transition: border 0.5s ease;
   border-radius: 5px;
 }
 .light img:hover{
-  border: solid thick #3498DB;
+  border: solid thick #E74C3C;
 }
 
 .no-light img{
   width: 100%;
-  border: solid thick #eee; 
+  border: solid thick #eee;
   transition: border 0.5s ease;
   border-radius: 50%;
 }
 .no-light img:hover{
-  border: solid thick #3498DB;
+  border: solid thick #E74C3C;
 }
 
 .control{
   padding: 20px;
   width: calc(100% - 40px);
-  background-color: #3498DB;
+  background-color: white;
 }
 .control h6{
   font-family: 'Roboto';
-  color: #eee;
+  color: #34495E;
   text-transform: uppercase;
   font-size: 30px;
   position: relative;
@@ -181,7 +201,7 @@ body{
 }
 .control icon-transition{
   font-family: 'Roboto';
-  color: #eee;
+  color: #7F8C8D;
   text-transform: uppercase;
   font-size: 30px;
   position: absolute;
@@ -192,27 +212,30 @@ body{
   text-align: center;
   border-radius: 50%;
   background-color: transparent;
-  border: solid 2px #eee;
+  border: solid 2px #7F8C8D;
   transition: background-color 0.5s ease;
 }
 
 .control icon-transition:hover{
-  background-color: rgba(255,255,255,0.5); 
+  background-color: rgba(255,255,255,0.5);
 }
 
 .control-alt{
   padding: 20px;
   width: calc(100%- 40px);
-  background-color: #2980B9;
+  background-color: white;
 }
 
 .control, .control-alt{
 	box-shadow: 5px 5px 5px #C8C8DA;
+  border-bottom: solid 1px #34495E;
+  margin-bottom: 10px;
 }
+
 
 .control-alt h6{
   font-family: 'Roboto';
-  color: #eee;
+  color: #34495E;
   text-transform: uppercase;
   font-size: 30px;
   position: relative;
@@ -221,7 +244,7 @@ body{
 }
 .control-alt icon-transition{
   font-family: 'Roboto';
-  color: #eee;
+  color: #7F8C8D;
   text-transform: uppercase;
   font-size: 30px;
   position: absolute;
@@ -232,12 +255,16 @@ body{
   text-align: center;
   border-radius: 50%;
   background-color: transparent;
-  border: solid 2px #eee;
+  border: solid 2px #7F8C8D;
   transition: background-color 0.5s ease;
 }
 
 .control-alt icon-transition:hover{
-  background-color: rgba(255,255,255,0.5); 
+  background-color: rgba(255,255,255,0.5);
+}
+
+.control-alt:first-child, .control:first-child{
+  border-top: solid 1px #34495E;
 }
 
 #part-5 img{
@@ -248,7 +275,7 @@ body{
   transition: border 0.5s ease;
 }
 #part-5 img:hover{
-  border: solid thick #3498DB;
+  border: solid thick #E74C3C;
 }
 
 .cbp_tmlabel a{
@@ -258,11 +285,11 @@ body{
 
 .part h6{
   margin: 5px;
-  font-size: 18px;
+  font-size: 20px;
 }
 .part h5{
   margin: 5px;
-  font-size: 21px;
+  font-size: 25px;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -376,27 +403,29 @@ body{
 }
 
 .time-label{
-  text-align: left !important; 
+  text-align: left !important;
   width: calc(100% - 100px);
   font-size: 40px !important;
 }
 
 .btn-inverse{
   padding: 10px;
-  background-color: #34495E;
+  background-color: #transparent;
   border-radius: 5px;
-  color: white;
+  color: #34495E;
   text-decoration: none;
-  border: solid thick #34495E;
+  border: solid 2px #eee;
   margin-top: 5px;
   margin-bottom: 5px;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
+  transition: border-color 0.5s ease;
   position: relative;
 }
 .btn-inverse:hover{
   background-color: rgba(255,255,255,0.5);
   color: #34495E;
+  border-color: #E74C3C;
 }
 
 #sep{
@@ -427,7 +456,7 @@ body{
 	background-attachment: fixed;
 }
 #part-0 h2, #part-0 h3{
-  z-index: 2; 
+  z-index: 2;
   position: relative;
 }
 

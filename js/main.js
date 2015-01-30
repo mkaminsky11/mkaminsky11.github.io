@@ -1,14 +1,17 @@
 $(document).ready(function(){
   // Change this to the correct selector.
   //$('#fixed-header').midnight();
-  $("#part-0").height($(window).height() - 60);
-  
+  $("#part-0").css("min-height",$(window).height() - 0);
+
   $( window ).resize(function() {
-  	$("#part-0").height($(window).height() - 60);
+    $("#part-0").css("min-height",$(window).height() - 0);
   });
 });
 
-jQuery(".main-header-1").fitText();
+$(".main-header-1").fitText();
+$("#part-0 > div > div > h3").fitText(0.8);
+$("#part-0 > div > div > h4").fitText(0.6);
+$("#part-0 > div > div > h5").fitText(1.5);
 
 var side_open = false;
 var is_mobile = false;
@@ -26,8 +29,8 @@ var editor = CodeMirror(document.getElementById("code"),{
     lineNumbers: true,
     mode: "swift",
     theme: "pastel-on-dark",
-    lineWrapping: false, 
-    indentUnit: 4, 
+    lineWrapping: false,
+    indentUnit: 4,
     indentWithTabs: true
 });
 var txtFile = new XMLHttpRequest();
@@ -36,12 +39,12 @@ txtFile.onreadystatechange = function()
 {
 	if (txtFile.readyState === 4) {  // document is ready to parse.
 		if (txtFile.status === 200) {  // file is found
-			var allText = txtFile.responseText; 
+			var allText = txtFile.responseText;
 			editor.setValue(allText);
 		}
 	}
 }
-txtFile.send(null); 
+txtFile.send(null);
 
 function skill(){
   $('#part-2').slideToggle();
@@ -49,7 +52,7 @@ function skill(){
     $("#skill").attr("shape","plus");
   }
   else{
-    $("#skill").attr("shape","cancel"); 
+    $("#skill").attr("shape","cancel");
   }
 }
 
@@ -59,22 +62,22 @@ function cyc(){
     $("#cyc").attr("shape","plus");
   }
   else{
-    $("#cyc").attr("shape","cancel"); 
+    $("#cyc").attr("shape","cancel");
   }
 }
 
 function proj(){
   $('#part-4').slideToggle({
     complete: function(){
-      editor.refresh(); 
+      editor.refresh();
     }
   });
-  
+
   if($("#proj").attr("shape") === "cancel"){
     $("#proj").attr("shape","plus");
   }
   else{
-    $("#proj").attr("shape","cancel"); 
+    $("#proj").attr("shape","cancel");
   }
 }
 
@@ -84,6 +87,6 @@ function xp(){
     $("#xp").attr("shape","plus");
   }
   else{
-    $("#xp").attr("shape","cancel"); 
+    $("#xp").attr("shape","cancel");
   }
 }

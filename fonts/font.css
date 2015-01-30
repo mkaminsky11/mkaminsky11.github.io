@@ -1,53 +1,4 @@
-@import url('https://cdn.jsdelivr.net/devicons/1.4.0/css/devicons.min.css');
 
-/*Hipstelvetica_Bold*/
-@font-face{
-	font-family: 'Odin-Bold';
-	src: url('more/Odin-Bold.otf') format('opentype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Odin-Light';
-	src: url('more/Odin-Light.otf') format('opentype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Odin';
-	src: url('more/Odin.otf') format('opentype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Langdon';
-	src: url('more/Langdon.otf') format('opentype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Gent';
-	src: url('more/Gent.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Hip-Bold';
-	src: url('more/Hipstelvetica_Bold.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Hip-Light';
-	src: url('more/Hipstelvetica_Light.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Hip-Lighter';
-	src: url('more/Hipstelvetica_UltraLight.ttf') format('truetype');
-	font-weight: 400;
-}
 
 @font-face{
 	font-family: 'Baron-Black';
@@ -67,47 +18,6 @@
 	font-weight: 400;
 }
 
-@font-face{
-	font-family: 'Tesla';
-	src: url('more/Tesla.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Devicons';
-	src: url('../lib/devicons/devicons.woff') format('woff'), url('../lib/devicons/devicons.ttf') format('truetype');
-}
-
-@font-face{
-	font-family: 'Lobster';
-	src: url('Lobster.woff') format('woff'), url('Lobster.ttf') format('truetype');
-	font-weight: 400;
-}
-
-
-@font-face{
-	font-family: 'Docker1';
-	src: url('Docker1.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Docker2';
-	src: url('Docker2.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Docker3';
-	src: url('Docker3.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face{
-	font-family: 'Anders';
-	src: url('Anders.woff') format('woff'), url('Anders.ttf') format('truetype');
-	font-weight: 400;
-}
 
 @font-face{
 	font-family: 'Roboto';
@@ -151,18 +61,6 @@
 	font-weight: 400;
 }
 
-@font-face{
-  font-family: 'Polya';
-  src: url('polya.otf') format('opentype');
-}
-
-.Lobster{
-	font-family: 'Lobster';
-}
-
-.Anders{
-	font-family: 'Anders';
-}
 
 .Roboto{
 	font-family: 'Roboto';
