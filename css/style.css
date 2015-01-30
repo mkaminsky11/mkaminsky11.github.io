@@ -7,26 +7,70 @@
 
 }
 
+#part-name{
+  background-color: white;
+  padding: 20px;
+
+  -moz-box-shadow: 0 0 9px #4A4A4A;
+  -webkit-box-shadow: 0 0 9px #4A4A4A;
+  box-shadow: 0 0 9px #4A4A4A;
+
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+#part-name h1{
+  font-family: 'Lobster';
+  margin: 0;
+  color: #2C3E50;
+  font-size: 30px;
+}
+
+#part-name h2{
+  margin: 0;
+  font-size: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #transparent;
+  border-radius: 5px;
+  color: #34495E !important;
+  text-decoration: none;
+  border: solid 2px #eee;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
+  transition: border-color 0.5s ease;
+  position: relative;
+  font-family: 'Roboto-Thin';
+}
+#part-name h2:hover{
+  background-color: rgba(255,255,255,0.5);
+  color: #34495E;
+  border-color: #E74C3C;
+}
+#part-name h2>a{
+  text-decoration: none;
+  color: #34495E !important;
+}
+
 #part-0{
   padding: 0px;
   width: 100% !important;
-  box-shadow: 5px 5px 5px #C8C8DA;
+
+  -moz-box-shadow: 0 0 9px #4A4A4A;
+  -webkit-box-shadow: 0 0 9px #4A4A4A;
+  box-shadow: 0 0 9px #4A4A4A;
+
   margin-bottom: 10px;
+
+  margin-top: -10px;
 }
 
 #part-0 > div{
   display: flex;
   align-items: center;
   justify-content: center;
-
-  box-shadow: none;
   z-index: 0;
-  transition: box-shadow 0.5s ease;
-}
-
-#part-0 > div:hover{
-  z-index: 90;
-  box-shadow: 4px 0px 7px #71717C;
 }
 
 #part-0 > div > div{
@@ -40,7 +84,6 @@
 #part-0 > div > div > h3{
   font-family: "Baron";
   text-transform: lowercase;
-  margin-top: 75px;
 }
 
 .Grid {

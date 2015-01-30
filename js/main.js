@@ -1,10 +1,10 @@
 $(document).ready(function(){
   // Change this to the correct selector.
   //$('#fixed-header').midnight();
-  $("#part-0").css("min-height",$(window).height() - 0);
+  $("#part-0").css("min-height",$(window).height() - 79);
 
   $( window ).resize(function() {
-    $("#part-0").css("min-height",$(window).height() - 0);
+    $("#part-0").css("min-height",$(window).height() - 79);
   });
 });
 
@@ -12,7 +12,6 @@ $(".main-header-1").fitText();
 $("#part-0 > div > div > h3").fitText(0.8);
 $("#part-0 > div > div > h4").fitText(0.6);
 $("#part-0 > div > div > h5").fitText(1.5);
-$("#name").fitText();
 
 var side_open = false;
 var is_mobile = false;
