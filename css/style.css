@@ -25,7 +25,7 @@
 }
 
 #part-0 > div:hover{
-  z-index: 99;
+  z-index: 90;
   box-shadow: 4px 0px 7px #71717C;
 }
 
