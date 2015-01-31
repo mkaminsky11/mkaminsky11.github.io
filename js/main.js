@@ -9,12 +9,10 @@ $(document).ready(function(){
 });
 
 $(".main-header-1").fitText();
-$("#part-0 > div > div > h3").fitText(1);
-$("#part-0 > div > div > h4").fitText(0.8);
-$("#part-0 > div > div > h5").fitText(1.9);
+fit_all();
 
 var clip_index = 0; //up to 2;
-var clips = ["#cell-site","#cell-ware","#cell-srv"]
+var clips = ["#cell-site","#cell-ware","#cell-srv","#cell-img"]
 
 
 function clip(elem){
@@ -40,9 +38,7 @@ function clip(elem){
   $(elem).css("z-index","2");
   $(elem).css("display","flex");
 
-  $("#part-0 > div > div > h3").fitText(1);
-  $("#part-0 > div > div > h4").fitText(0.8);
-  $("#part-0 > div > div > h5").fitText(1.9);
+  fit_all();
 
   var slope = 0.5;
 
@@ -140,7 +136,7 @@ function clip(elem){
         $(".will-remove").removeClass("will-remove");
       }
     }
-  }, 15);
+  }, 10);
 
   /*
   clipTop
@@ -232,4 +228,10 @@ function xp(){
 
 function generate(x1, y1, x2, y2, x3, y3, x4, y4){
   return "polygon(" + x1 + "px " + y1 + "px," + x2 + "px " + y2 + "px," + x4 + "px " + y4 + "px," + x3 + "px " + y3 + "px)";
+}
+
+function fit_all(){
+  $("#part-0 > div > div > h3").fitText(1.2);
+  $("#part-0 > div > div > h4").fitText(1);
+  $("#part-0 > div > div > h5").fitText(2.1);
 }

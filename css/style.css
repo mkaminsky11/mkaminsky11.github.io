@@ -87,6 +87,7 @@
 
   transition: padding-left 0.5s ease;
   z-index: 3;
+  box-shadow: 0 0 9px #4A4A4A;
 }
 
 #part-0 > span:hover{
