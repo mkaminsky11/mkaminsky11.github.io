@@ -9,9 +9,45 @@ $(document).ready(function(){
 });
 
 $(".main-header-1").fitText();
-$("#part-0 > div > div > h3").fitText(0.8);
-$("#part-0 > div > div > h4").fitText(0.6);
-$("#part-0 > div > div > h5").fitText(1.5);
+$("#part-0 > div > div > h3").fitText(1);
+$("#part-0 > div > div > h4").fitText(0.8);
+$("#part-0 > div > div > h5").fitText(1.9);
+
+function clip(elem){
+  var left = Math.floor($(elem).width() /2) + "px";
+  var right = ($(elem).width() - left) + "px";
+  var height = $(elem).height() + "px";
+  var width = $(elem).width() + "px";
+
+  /*
+  y1, x2, y2, x1
+  */
+
+  var def = "rect(0px," + left + "," + height + "," + left + ")";
+
+  $("#part-0 div").css("z-index","1");
+  $(elem).css("clip", def)
+  $(elem).css("z-index","2");
+  $(elem).css("display","flex");
+
+  $("#part-0 > div > div > h3").fitText(1);
+  $("#part-0 > div > div > h4").fitText(0.8);
+  $("#part-0 > div > div > h5").fitText(1.9);
+
+  $(elem).velocity({
+    clipTop: "0px",
+    clipLeft: "0px",
+    clipBottom: height,
+    clipRight: width
+  }, 1500);
+
+  /*
+  clipTop
+  clipBottom
+  clipRight
+  clipLeft
+  */
+}
 
 var side_open = false;
 var is_mobile = false;

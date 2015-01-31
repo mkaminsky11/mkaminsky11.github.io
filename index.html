@@ -75,9 +75,10 @@
     <h2 style="float:right"><a href="https://github.com/mkaminsky11"><i class="fa fa-github"></i></a></h2>
   </div>
 
-  <div class="part Grid" id="part-0">
+  <div class="part" id="part-0">
 
-    <div class="Grid-cell" style="background-color:#F1C40F">
+    <div style="background-color:#F1C40F" id="cell-site">
+
       <div>
         <h3>SITES</h3>
         <h4><i class="devicons devicons-responsive"></i></h4>
@@ -85,7 +86,7 @@
       </div>
     </div>
 
-    <div class="Grid-cell" style="background-color:#E74C3C">
+    <div style="background-color:#E74C3C;display:none" id="cell-ware">
       <div>
         <h3>SOFTWARE</h3>
         <h4><i class="devicons devicons-terminal"></i></h4>
@@ -93,13 +94,17 @@
       </div>
     </div>
 
-    <div class="Grid-cell" style="background-color:#2ECC71">
+    <div style="background-color:#2ECC71;display:none" id="cell-srv">
       <div>
         <h3>SERVERS</h3>
         <h4><i class="devicons devicons-database"></i></h4>
         <h5>Everything from administration to security</h5>
       </div>
     </div>
+
+    <span onclick="clip('#cell-site')" style="background-color:#1ABC9C;top:0px;"><i class="devicons devicons-responsive"></i></span>
+    <span onclick="clip('#cell-ware')" style="background-color:#E67E22;top:75px;"><i class="devicons devicons-terminal"></i></span>
+    <span onclick="clip('#cell-srv')" style="background-color:#9B59B6;top:150px;"><i class="devicons devicons-database"></i></span>
 
   </div>
 
@@ -136,11 +141,19 @@
 
   <br/>
 
+  <h5>Python  | <span class="devicons devicons-python"></span></h5>
+  <h6>
+    Recently, I have been using Python instead of bash to run commands, including several scripts designed to harden the security of an Ubuntu server.
+  </h6>
+  <div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 35%;"></div></div>
+
+  <br/>
+
 		<h5 id="goto-swift">Swift  | <span class="devicons devicons-swift"></span></h5>
 		<h6>
 			Swift is an expressive language used to create iOS and OSX apps, which works with Objective-C. I use Swift to create mobile apps.
 		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-info" style="width: 50%;"></div></div>
+		<div class="progress"><div class="progress-bar progress-bar-info" style="width: 25%;"></div></div>
 
    <br/>
 
@@ -148,7 +161,7 @@
 		<h6>
 			Javascript is my greatest strength, and I use it extensively for client-side, server-side, and mobile applications. I run Node.js on my server, and use communicate with client-side code using WebSockets. Recently, I have also begun to switch from CSS animations to Javascript animations using libraries such as Velocity.js.
 		</h6>
-		<div class="progress"><div class="progress-bar" style="width: 80%;"></div></div>
+		<div class="progress"><div class="progress-bar" style="width: 70%;"></div></div>
 
    <br/>
 
@@ -156,7 +169,7 @@
 		<h6>
 			As the backbone of websites, I use HTML as often as I do Javascript. I am also experimenting with Polymer, which allows me to create custom elements, freeing my applications from some of the restrictions imposed by HTML's "default" elements.
 		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 75%;"></div></div>
+		<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 60%;"></div></div>
 
 		<br/>
 
@@ -164,7 +177,7 @@
 		<h6>
 			I'm also learning Go, a scalable back-end langauge used by Google, Dropbox, and Soundcloud, among others.
 		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-info" style="width: 30%;"></div></div>
+		<div class="progress"><div class="progress-bar progress-bar-info" style="width: 25%;"></div></div>
 
    <br/>
 
@@ -172,7 +185,7 @@
 		<h6>
 			As I do a lot of web design, I use CSS very often.
 		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 65%;"></div></div>
+		<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 50%;"></div></div>
 
    <br/>
 
@@ -181,7 +194,7 @@
 		<h6>
 			I have taken many courses in Java, including AP Computer Science during the 2013-2014 school year, but do not use it regularly for servers or applications.
 		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 40%;"></div></div>
+		<div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 35%;"></div></div>
 
    <br/>
 
@@ -189,7 +202,7 @@
 		<h6>
 			I use mySQL to store user preferences in a database, which are then loaded. I connect mySQL to my Node.js server using a module.
 		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-success" style="width: 20%;"></div></div>
+		<div class="progress"><div class="progress-bar progress-bar-success" style="width: 15%;"></div></div>
 
 
 	</div>
@@ -258,11 +271,16 @@
 
 	<div class="part" id="part-4" style="display:none">
 
+    <h5 class="header-left">scripts</h5>
+    <h6 class="desc-left">To help with the Cyberpatriot competitions, I made some Python scripts to automatically check for and fix vulnerabilities in Ubuntu servers. These tasks include checking for unecessary packages, configuring OpenSSH, and checking crontab.</h6>
+    <br/>
+    <a href="https://github.com/mkaminsky11/scripts" class="btn btn-inverse"><i class="fa fa-github"></i> Github Page</a>
+    <br/><br/>
 
 		<h5 class="header-left">nodebot</h5>
 		<h6 class="desc-left">I regularly use <a href="https://github.com/shazow/ssh-chat" class="real-link">ssh-chat</a>, and made an ssh bot for it. nodebot is capable of fetching news, doing calculations, and providing information about movies. It is named <i>nodebot</i> because it I built it using node.js, and I often use the username <i>node</i>.</h6>
 		<br/>
-		<a href="https://github.com/mkaminsky11/nodebot" class="btn btn-inverse"><i class="fa fa-link"></i> nodebot</a>
+		<a href="https://github.com/mkaminsky11/nodebot" class="btn btn-inverse"><i class="fa fa-github"></i> Github Page</a>
 		<br/><br/>
 
 		<h5 class="header-left">~mkaminsky</h5>
@@ -470,7 +488,7 @@
 						<div class="cbp_tmicon"><i class="fa fa-user"></i></div>
 						<div class="cbp_tmlabel">
 							<h2>CyberPatriot Competition</h2>
-        <p>I started participation in the <a href="http://www.uscyberpatriot.org/" class="real-link">CyberPatriot</a> competition with MIT's Lincoln Labs. The goal of the competition is to fix security flaws in 3 virual machine images: 1 Linux and 2 Windows. My team placed 3rd in the State, advancing to the Regional Level.</p>
+        <p>I started participation in the <a href="http://www.uscyberpatriot.org/" class="real-link">CyberPatriot</a> competition with MIT's Lincoln Labs. The goal of the competition is to fix security flaws in 3 virual machine images: Ubuntu, Windows 7, and Windows Vista. My team placed 3rd in the State, advancing to the Regional Level.</p>
 						</div>
 					</li>
 
