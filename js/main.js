@@ -13,20 +13,30 @@ $("#part-0 > div > div > h3").fitText(1);
 $("#part-0 > div > div > h4").fitText(0.8);
 $("#part-0 > div > div > h5").fitText(1.9);
 
+var clip_index = 0; //up to 2;
+var clips = ["#cell-site","#cell-ware","#cell-srv"]
+
+
 function clip(elem){
-  var left = Math.floor($(elem).width() /2) + "px";
-  var right = ($(elem).width() - left) + "px";
-  var height = $(elem).height() + "px";
-  var width = $(elem).width() + "px";
+  clip_index = clips.indexOf(elem);
+
+  var left = Math.floor($(elem).width() /2);
+  var right = ($(elem).width() - left);
+  var height = $(elem).height();
+  var width = $(elem).width();
 
   /*
   y1, x2, y2, x1
   */
 
-  var def = "rect(0px," + left + "," + height + "," + left + ")";
 
-  $("#part-0 div").css("z-index","1");
-  $(elem).css("clip", def)
+  $("#part-0 > div").each(function(index){
+    if($(this).css("display") !== "none"){
+      $(this).css("z-index","1");
+      $(this).addClass("will-remove");
+    }
+  });
+
   $(elem).css("z-index","2");
   $(elem).css("display","flex");
 
@@ -34,12 +44,103 @@ function clip(elem){
   $("#part-0 > div > div > h4").fitText(0.8);
   $("#part-0 > div > div > h5").fitText(1.9);
 
-  $(elem).velocity({
-    clipTop: "0px",
-    clipLeft: "0px",
-    clipBottom: height,
-    clipRight: width
-  }, 1500);
+  var slope = 0.5;
+
+  /*
+  start:
+          13---24
+
+      1 = (left-100,0)
+      2 = (left+100,0)
+      3 = (left-100,0)
+      4 = (left+100,0)
+
+  down:
+         1___2
+        /   /
+      /   /
+   3/___/4
+
+
+    1 = (left - 100, 0)
+    2 = (left + 100, 0)
+    3 = ((left-100) - height/2,height) *change
+    4 = ((left+100) - height/2,height) *change
+
+
+    out
+
+              1________________2
+            /                 /
+          /                 /
+        /                 /
+      /3________________/4
+
+      1 = (0,0)
+      2 = (width + height/2 ,0)
+      3 = (0 - height/2,height)
+      4 = (width, height)
+
+  */
+
+  $(elem).css("-webkit-clip-path",generate(left-100,0,left+100,0,left-100,0,left+100,0));
+  $(elem).css("-moz-clip-path",generate(left-100,0,left+100,0,left-100,0,left+100,0));
+  $(elem).css("clip-path",generate(left-100,0,left+100,0,left-100,0,left+100,0));
+
+  var x1 = left-100;
+  var y1 = 0;
+  var x2 = left+100;
+  var y2 = 0;
+  var x3 = left-100;
+  var y3 = 0;
+  var x4 = left+100;
+  var y4 = 0;
+
+  var out = height*slope;
+
+
+  var per = 0;
+  var interval = window.setInterval(function(){
+    per++;
+
+    if(per <= 50){
+      var percent = (per * 2) / 100;
+
+      y3 = percent*height;
+      y4 = percent*height;
+
+      x3 = (left-100) - percent*out;
+      x4 = (left+100) - percent*out;
+
+      $(elem).css("clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
+      $(elem).css("-webkit-clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
+      $(elem).css("-moz-clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
+    }
+    else{
+      var percent = ((per - 50) * 2 ) / 100;
+
+      //  init  final init
+      x1 = (left-100) + ((0) - (left-100))*percent;
+      x2 = (left+100) + ((width + out) - (left+100))*percent;
+      x3 = ((left-100) - out) + ((0 - out) - ((left-100) - out))*percent;
+      x4 = ((left+100) - out) + ((width) - ((left+100) - out))*percent;
+
+      $(elem).css("clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
+      $(elem).css("-webkit-clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
+      $(elem).css("-moz-clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
+
+      if(per === 100){
+        clearInterval(interval);
+
+        $(elem).css("clip-path", "none");
+        $(elem).css("-webkit-clip-path", "none");
+        $(elem).css("-moz-clip-path", "none");
+
+        $(".will-remove").css("display","none");
+        $(".will-remove").removeClass("will-remove");
+      }
+    }
+  }, 15);
 
   /*
   clipTop
@@ -47,6 +148,8 @@ function clip(elem){
   clipRight
   clipLeft
   */
+
+  //once done, clip-path = none
 }
 
 var side_open = false;
@@ -125,4 +228,8 @@ function xp(){
   else{
     $("#xp").attr("shape","cancel");
   }
+}
+
+function generate(x1, y1, x2, y2, x3, y3, x4, y4){
+  return "polygon(" + x1 + "px " + y1 + "px," + x2 + "px " + y2 + "px," + x4 + "px " + y4 + "px," + x3 + "px " + y3 + "px)";
 }
