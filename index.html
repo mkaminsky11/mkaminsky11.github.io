@@ -8,21 +8,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-	   <script src="flat/js/jquery-1.8.3.min.js"></script>
+	 <script src="js/jquery-1.8.3.min.js"></script>
    <script src="js/light.js"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/velocity.ui.min.js"></script>
 
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
-    	<!--[if lt IE 9]>
-	<script src="flat/js/html5shiv.js"></script>
-	<script src="flat/js/respond.min.js"></script>
-	<![endif]-->
-
-  <link rel="stylesheet" href="fa/fa.css">
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="fa/css/font-awesome.css">
 
 	<script src="codemirror/lib/codemirror.js"></script>
 	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
@@ -32,31 +26,15 @@
 
 	<link rel='stylesheet' type='text/css' href="codemirror/theme/theme.css">
 	<link rel='stylesheet' href="fonts/font.css">
-	<script src="codemirror/lib/codemirror.js"></script>
-	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
-
-	<script src = "codemirror/mode/css/css.js"></script>
-	<script src = "codemirror/mode/swift.js"></script>
-
-	<link rel='stylesheet' type='text/css' href="codemirror/theme/theme.css">
 
 
    <link rel="import" href="poly/components/core-style/core-style.html">
-   <link rel="import" href="poly/components/paper-checkbox/paper-checkbox.html">
-   <link rel="import" href="poly/components/core-header-panel/core-header-panel.html">
    <link rel="import" href="poly/components/paper-icon-button/paper-icon-button.html">
-   <link rel="import" href="poly/components/paper-input/paper-input.html">
-   <link rel="import" href="poly/components/paper-slider/paper-slider.html">
-   <link rel="import" href="poly/components/core-toolbar/core-toolbar.html">
-   <link rel="import" href="poly/components/core-menu/core-menu.html">
    <link rel="import" href="poly/components/core-icons/core-icons.html">
    <link rel="import" href="poly/components/paper-button/paper-button.html">
-   <link rel="import" href="poly/components/paper-fab/paper-fab.html">
    <link rel="import" href="poly/components/paper-ripple/paper-ripple.html">
    <link rel="import" href="poly/components/paper-item/paper-item.html">
    <link rel="import" href="poly/components/paper-shadow/paper-shadow.html">
-   <link rel="import" href="poly/components/paper-toast/paper-toast.html">
-   <link rel="import" href="poly/components/core-tooltip/core-tooltip.html">
    <link rel="import" href="poly/components/icon-transition/icon-transition.html">
 
    <link rel="stylesheet" type="text/css" href="lib/timeline/css/component.css" />
@@ -69,6 +47,8 @@
    <!--script src="js/scroll.js"></script-->
 
    <link href='devicons/css/devicons.css' rel='stylesheet'>
+
+   <link href="media-queries.css" rel="stylesheet">
 
 </head>
 <body>
@@ -87,7 +67,7 @@
 
       <div>
         <h3>SITES</h3>
-        <h4><i class="devicons devicons-responsive"></i></h4>
+        <h4><i class="fa fa-desktop"></i></h4>
         <h5>Websites that emphasize usability, and present content clearly. Plus, they look nice.</h5>
       </div>
     </div>
@@ -95,7 +75,7 @@
     <div style="background-color:#E74C3C;display:none" id="cell-ware">
       <div>
         <h3>SOFTWARE</h3>
-        <h4><i class="devicons devicons-terminal"></i></h4>
+        <h4><i class="fa fa-terminal"></i></h4>
         <h5>I make software for a variety of different devices, including mobile.</h5>
       </div>
     </div>
@@ -103,7 +83,7 @@
     <div style="background-color:#2ECC71;display:none" id="cell-srv">
       <div>
         <h3>SERVERS</h3>
-        <h4><i class="devicons devicons-database"></i></h4>
+        <h4><i class="fa fa-server"></i></h4>
         <h5>Everything from administration to security</h5>
       </div>
     </div>
@@ -111,16 +91,18 @@
     <div style="background-color:#3498DB;display:none" id="cell-img">
       <div>
         <h3>GRAPHICS</h3>
-        <h4><i class="fa fa-image"></i></h4>
+        <h4><i class="fa fa-paint-brush"></i></h4>
         <h5>Graphical design, mockups, and image manipulation</h5>
       </div>
     </div>
 
-    <span onclick="clip('#cell-site')" style="background-color:#1ABC9C;top:0px;"><i class="devicons devicons-responsive"></i></span>
-    <span onclick="clip('#cell-ware')" style="background-color:#E67E22;top:75px;"><i class="devicons devicons-terminal"></i></span>
-    <span onclick="clip('#cell-srv')" style="background-color:#9B59B6;top:150px;"><i class="devicons devicons-database"></i></span>
-    <span onclick="clip('#cell-img')" style="background-color:#34495E;top:225px;font-size:37px;"><i class="fa fa-image"></i></span>
+    <span onclick="clip('#cell-site')" style="background-color:#F1C40F;top:0px;"><i class="fa fa-desktop"></i></span>
+    <span onclick="clip('#cell-ware')" style="background-color:#E74C3C;top:65px;"><i class="fa fa-terminal"></i></span>
+    <span onclick="clip('#cell-srv')" style="background-color:#2ECC71;top:130px;"><i class="fa fa-server"></i></span>
+    <span onclick="clip('#cell-img')" style="background-color:#3498DB;top:195px;"><i class="fa fa-paint-brush"></i></span>
 
+
+    <i class="fa fa-chevron-down" style="position: absolute;z-index: 3;font-size: 54px;bottom: 5px;left: calc(50% - 27px);color: #eee;"></i>
   </div>
 
   <div class="part" id="part-1">

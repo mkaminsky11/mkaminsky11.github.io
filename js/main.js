@@ -231,7 +231,7 @@ function generate(x1, y1, x2, y2, x3, y3, x4, y4){
 }
 
 function fit_all(){
-  $("#part-0 > div > div > h3").fitText(1.2);
-  $("#part-0 > div > div > h4").fitText(1);
-  $("#part-0 > div > div > h5").fitText(2.1);
+  //$("#part-0 > div > div > h3").fitText(1.2);
+  //$("#part-0 > div > div > h4").fitText(1);
+  //$("#part-0 > div > div > h5").fitText(2.1);
 }
