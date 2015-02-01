@@ -194,6 +194,12 @@
   background-color: white;
 }
 
+#part-6{
+  background-color: #E9F0F5;
+  padding-top: 0px;
+  margin-top: -10px;
+}
+
 #part-3 h6, #part-6 h6{
   text-align: left;
   font-family: 'Roboto-Thin' !important;
