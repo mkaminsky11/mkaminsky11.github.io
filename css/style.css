@@ -86,7 +86,7 @@
   left: 0px;
   transition: padding-left 0.5s ease;
   z-index: 3;
-  box-shadow: 0 0 9px #4A4A4A;
+  box-shadow: 0 0 2px #5C5252;
   width: 35px;
   height: 35px;
 }
@@ -165,11 +165,11 @@
 .real-link{
   text-decoration: underline;
   font-family: 'Roboto';
-  color: #1ABC9C;
+  color: #95A5A6;
   transition: color 0.5s ease;
 }
-.real-link: hover{
-  color:   #16A085;
+.real-link:hover{
+  color:   #7F8C8D;
 }
 
 #part-2 h5,#part-2 h6,#part-2 .progress{
@@ -195,9 +195,7 @@
 }
 
 #part-6{
-  background-color: #E9F0F5;
   padding-top: 0px;
-  margin-top: -10px;
 }
 
 #part-3 h6, #part-6 h6{
@@ -211,10 +209,9 @@
 }
 
 #part-5{
-  background-color: #ECF0F1;
+  background-color: white;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-top: -10px;
 }
 
 body{
@@ -309,8 +306,8 @@ body{
 
 .control, .control-alt{
   box-shadow: 5px 5px 5px #C8C8DA;
-  border-bottom: solid 1px #34495E;
   margin-bottom: 10px;
+  background-color: #eee;
 }
 
 
@@ -355,13 +352,25 @@ body{
   border-radius: 50%;
   transition: border 0.5s ease;
 }
-#part-5 img:hover{
-  border: solid thick #E74C3C;
+
+#keybase_icon:hover{
+  border: solid thick #E67E22;
 }
 
-.cbp_tmlabel a{
-  color: #eee;
-  text-decoration: underline;
+#google_icon:hover{
+  border: solid thick #C0392B;
+}
+
+#nuke_icon:hover{
+  border: solid thick #F1C40F;
+}
+
+#github_icon:hover{
+  border: solid thick #34495E;
+}
+
+#wall_icon:hover{
+  border: solid thick #3498DB;
 }
 
 .part h6{
@@ -477,16 +486,6 @@ body{
 
 body{
   margin: 0;
-}
-
-.cbp_tmtime span {
-  text-align: left;
-}
-
-.time-label{
-  text-align: left !important;
-  width: calc(100% - 100px);
-  font-size: 40px !important;
 }
 
 .btn-inverse{
