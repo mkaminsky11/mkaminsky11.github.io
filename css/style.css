@@ -78,7 +78,7 @@
   left: 0;
 }
 
-#part-0 > span{
+/*#part-0 > span{
   position: absolute;
   color: white;
   font-size: 30px;
@@ -93,7 +93,7 @@
 
 #part-0 > span:hover{
   padding-left: 30px;
-}
+}*/
 
 #part-0{
   position: relative;
@@ -546,4 +546,20 @@ body{
   border: solid thick #BDC3C7;
   margin-left: calc(50% - 100px);
   border-radius: 5px;
+}
+
+
+#nav{
+  width: 100%;
+  margin: 0px;
+  position: absolute;
+  top: 10px;
+  z-index: 4;
+  text-align: center;
+  color: rgb(240, 239, 239);
+}
+
+#nav > i{
+  margin-left: 5px;
+  marign-right: 5px;
 }

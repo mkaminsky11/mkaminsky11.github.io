@@ -55,6 +55,16 @@ var clips = ["#cell-site","#cell-ware","#cell-srv","#cell-img"]
 
 
 function clip(elem){
+
+  //
+  //
+  var id = "#btn_" + elem.replace("#cell-","");
+  $(".fa-dot-circle-o").removeClass("fa-dot-circle-o").addClass("fa-circle");
+  $(id).addClass("fa-dot-circle-o");
+  //
+  //
+
+
   clip_index = clips.indexOf(elem);
 
   var left = Math.floor($(elem).width() /2);
