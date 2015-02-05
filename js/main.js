@@ -8,7 +8,7 @@ $(document).ready(function(){
         $(this).velocity({
           opacity: 1
         },{
-          duration: 100
+          duration: 200
         });
       }
       else{

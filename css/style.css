@@ -306,8 +306,9 @@ body{
 
 .control, .control-alt{
   box-shadow: 5px 5px 5px #C8C8DA;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   background-color: #eee;
+  border-bottom: solid 2px rgb(182, 182, 182);
 }
 
 
