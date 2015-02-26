@@ -11,7 +11,7 @@ body{
   top:0;
   left:0;
   overflow:hidden;
-  background-colorrgb(238, 108, 23);
+  background-color:rgb(238, 108, 23);
 }
 #main>canvas{
   background-color:#30303;
@@ -66,8 +66,8 @@ body{
   padding:40px;
   width:calc(100% - 80px);
   position:relative;
-  border-top: solid 5px #588c73;
-  border-bottom: solid 5px #588c73;
+  border-top: solid 5px #eee;
+  border-bottom: solid 5px #eee;
 }
 .center{text-align:center}
 .desc{margin-top:15px;margin-bottom:15px;font-size:2vh;font-family:"Arimo";font-weight:400;color:#4c4949}
