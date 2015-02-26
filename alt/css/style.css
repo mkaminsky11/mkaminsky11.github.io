@@ -13,7 +13,6 @@ body{
   overflow:hidden;
   background-colorrgb(238, 108, 23);
 }
-
 #main>canvas{
   background-color:#30303;
   overflow:hidden;
