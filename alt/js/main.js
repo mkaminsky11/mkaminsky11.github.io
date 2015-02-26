@@ -9,7 +9,7 @@ var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 var center = {x: 0, y:0};
 
-var max = Math.min($("#main").width() / 2, $("#main").height() / 2);
+var max = Math.min($("#main").width() / 2, $("#main").height() / 3);
 
 $(document).ready(function(){
     resize_main();
