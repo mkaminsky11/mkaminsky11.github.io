@@ -59,7 +59,7 @@ function resize_main(){
   $("#main").height($(window).height());
   $("#main").width($(window).width());
   $("#canvas").attr("width",$("#main").width()).attr("height",$("#main").height());
-  max = Math.min($("#main").width() / 2, $("#main").height() / 2);
+  max = Math.min($("#main").width() / 4, $("#main").height() / 4);
   $("#content-1").css("margin-top",$("#main").height());
 
   init();
