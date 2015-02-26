@@ -104,25 +104,20 @@ hr{width:100%;border:none;border-bottom:solid 1px rgba(15,15,15,0.1);background-
   color: white !important;
   background-color: rgba(224, 224, 224, 0.24);
 }
-
 .github-div, .github-div-dark{
   float: right;
   margin-top: -5px;
 }
-
 #contact>div>div>a, .github-div > a, .github-div-dark > a{
   font-size: 20px;
   color: white !important;
 }
-
 .github-div-dark{
   background-color: rgba(123, 123, 123, 0.24);
 }
-
 .github-div-dark > a{
   color: rgb(115, 115, 115) !important;
 }
-
 #cd-timeline, .cd-date{
   font-family: "Arimo";
 }
