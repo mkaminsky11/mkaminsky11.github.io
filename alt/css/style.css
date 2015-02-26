@@ -1,4 +1,7 @@
 html{height:100%}
+*{
+  position: relative;
+}
 body{height:100%;margin:0;background-color:#141414}
 #main{position:fixed;top:0;left:0;overflow:hidden;background-color:#30303}
 #main>canvas{background-color:#30303;overflow:hidden;position:relative;z-index:0}
@@ -44,7 +47,8 @@ hr{width:100%;border:none;border-bottom:solid 1px rgba(15,15,15,0.1);background-
 }
 
 .github-div{
-  float: right;
+  position: absolute;
+  right: 0;
 }
 
 #contact>div>div>a, .github-div > a{
