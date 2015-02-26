@@ -18,6 +18,7 @@ body{height:100%;margin:0;background-color:rgb(238, 108, 23)}
 }
 .center{text-align:center}
 .desc{margin-top:15px;margin-bottom:15px;font-size:2vh;font-family:"Arimo";font-weight:400;color:#4c4949}
+.med{margin-top:5px;margin-bottom:5px;font-size:1.75vh;font-family:"Arimo";color:#454545;font-weight:300}
 .info{margin-top:5px;margin-bottom:5px;font-size:1.5vh;font-family:"Arimo";color:#454545;font-weight:300}
 .real-link{font-weight:bold;color:#ee6c17 !important;text-decoration:underline}
 .white-link{font-weight:bold;color:white !important;text-decoration:underline}
@@ -68,5 +69,4 @@ hr{width:100%;border:none;border-bottom:solid 1px rgba(15,15,15,0.1);background-
 .github-div-dark > a{
   color: rgb(115, 115, 115) !important;
 }
-}
-}
+
