@@ -15,6 +15,13 @@ $(document).ready(function(){
     resize_main();
 
     $(window).scroll(function(){
+      if($(window).scrollTop() > ($("#about").height() + 20)){
+        $("#about").css("opacity",0);
+      }
+      else{
+        $("#about").css("opacity",1);
+      }
+      
       $(".progress-bar").each(function(index){
 
         if(onscreen($(".progress-bar")[index]) === true){
