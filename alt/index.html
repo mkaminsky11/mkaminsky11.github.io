@@ -7,26 +7,108 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-	 <script src="../js/jquery-1.8.3.min.js"></script>
-	<script src="../js/velocity.min.js"></script>
-	<script src="../js/velocity.ui.min.js"></script>
+	 <script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/velocity.ui.min.js"></script>
 
-  <script src="../js/onscreen.js"></script>
+  <script src="js/onscreen.js"></script>
 
   <link href='http://fonts.googleapis.com/css?family=Arimo:400,700|Lobster' rel='stylesheet' type='text/css'>
+  <link href='Font/css/font-awesome.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/progress.css">
+  <link href='devicons/css/devicons.css' rel='stylesheet'>
 </head>
 <body>
   <div id="main">
     <div id="about">
         <div>
             <h1>Michael Kaminsky</h1>
-            <h2>I'm a designer and programmer with plans for world domination, and who enjoys making software and websites.</h2>
+            <h2>I'm a designer and programmer with plans for world domination, and enjoy making software and websites.</h2>
+            <div id="contact">
+              <div>
+                <!--twitter-->
+                <h6><a href="" target="_blank"><i class="fa fa-twitter"></i></a></h6>
+              </div>
+
+              <div>
+                <!--email-->
+                <h6><a href="" target="_blank"><i class="fa fa-envelope"></i></a></h6>
+              </div>
+
+              <div>
+                <!--github-->
+                <h6><a href="" target="_blank"><i class="fa fa-github"></i></a></h6>
+              </div>
+
+              <div>
+                <!--google+-->
+                <h6><a href="" target="_blank"><i class="fa fa-google-plus"></i></a></h6>
+              </div>
+            </div>
         </div>
     </div>
     <canvas id="canvas"></canvas>
   </div>
 
+  <div id="content-1">
+      <h6 class="center desc">I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
+      </h6>
+      <h6 class="center desc">I am currently a junior at Marblehead High School in Marblehead, Massachusetts. My school has almost no computer science classes, so I took Java at Salem State University, Cryptography at Standford University, and Dynamic Web Applications at Harvard University. I am also the president of the <a class="real-link"  href="https://github.com/mhscomp/general">Computer and Robotics Club</a> at Marblehead High School.
+    </h6>
+
+    <hr/>
+
+    <h5 class="desc">Linux | <span class="devicons devicons-linux"></span></h5>
+  	<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 0" data-width="30"></div></div>
+
+    <br/>
+
+    <h5 class="desc">Python  | <span class="devicons devicons-python"></span></h5>
+    <div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 0" data-width="35"></div></div>
+
+    <br/>
+
+  		<h5 class="desc">Javascript | <span class="devicons devicons-javascript"></span><span class="devicons devicons-nodejs_small"></span></h5>
+  		<div class="progress"><div class="progress-bar progress-bar-info" style="width: 0" data-width="60"></div></div>
+
+     <br/>
+
+      <h5 class="desc">HMTL  | <span class="devicons devicons-html5"></span></h5>
+  		<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 0" data-width="50"></div></div>
+
+  		<br/>
+
+  		<h5 class="desc">CSS  | <span class="devicons devicons-css3"></span></h5>
+  		<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 0" data-width="50"></div></div>
+
+     <br/>
+
+     <h5 class="desc">Less  | <span class="devicons devicons-less"></span></h5>
+     <div class="progress"><div class="progress-bar progress-bar-info" style="width: 0" data-width="45"></div></div>
+
+     <br/>
+
+
+  		<h5 class="desc">Java  | <span class="devicons devicons-java"></span></h5>
+  		<div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 0" data-width="35"></div></div>
+
+      <br/>
+
+      <h5 class="desc">Other Languages</h5>
+      <h6 class="info"><span class="devicons devicons-swift"></span> Swift</h6>
+      <h6 class="info"><span class="devicons devicons-go"></span> Go</h6>
+      <h6 class="info"><span class="devicons devicons-mysql"></span> MySQL</h6>
+      <h6 class="info"><span class="devicons devicons-haskell"></span> Haskell</h6>
+      <h6 class="info"><span class="devicons devicons-scala"></span> Scala</h6>
+  </div>
+
+  <div id="content-2">
+
+  </div>
+
+  <script src="js/tween.js"></script>
+  <script src="js/ease.js"></script>
   <script src="js/poly.js"></script>
   <script src="js/main.js"></script>
 </body>

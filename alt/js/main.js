@@ -3,169 +3,115 @@ $(window).resize(function(){
   render();
 });
 
-var blues = [
-    "#3498DB",
-    "#2980B9",
-    "#0288D1",
-    "#0277BD"
-];
-
-var bright = [
-    "#F1C40F"
-];
-
-//
-//
-//
-//
 var vertices = [];
 var triangles = [];
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
-var ctx = canvas.getContext('2d');
+var center = {x: 0, y:0};
 
-context.strokeStyle = "rgba(0,0,0,0)";
+var max = Math.min($("#main").width() / 2, $("#main").height() / 2);
 
-$('#canvas').css('background-color', 'rgb(20, 20, 20)');
+$(document).ready(function(){
+    resize_main();
+
+    $(window).scroll(function(){
+      $(".progress-bar").each(function(index){
+
+        if(onscreen($(".progress-bar")[index]) === true){
+
+          var per = $(this).attr("data-width") + "%";
+          $(this).velocity({
+            width: per
+          },{
+            duration: 400
+          });
+        }
+
+      });
+    });
+});
+
+window.setInterval(render, 70);
+
+function init(){
+    center = {
+      x: $("#main").width() / 2,
+      y: $("#main").height() / 2
+    };
+
+    vertices = [];
+
+    context.clearRect(0, 0, Number(canvas.width), Number(canvas.height));
+    add(400);
+    triangles = triangulate(vertices);
+
+    for(var i = 0; i < vertices.length; i++){
+      vertices[i].originX = vertices[i].x;
+      vertices[i].originY = vertices[i].y;
+      shiftPoint(vertices[i]);
+    }
+    render();
+}
+
+$('#canvas').css('background-color', 'rgb(238,108,23)');
 
 function resize_main(){
-
   $("#main").height($(window).height());
   $("#main").width($(window).width());
-  $("#canvas").attr("width",3*$(window).width()).attr("height",3*$(window).height());
-  $("#canvas").velocity({
-     marginLeft: -1*$(window).width(),
-     marginTop: -1*$(window).height()
-  });
-  
-  reset();
+  $("#canvas").attr("width",$("#main").width()).attr("height",$("#main").height());
+  max = Math.min($("#main").width() / 2, $("#main").height() / 2);
+  $("#content-1").css("margin-top",$("#main").height());
+
+  init();
 }
 function addNode(x,y){
     vertices.push(new Vertex(x, y));
-    render();
 }
 
 function render(){
     context.clearRect(0, 0, Number(canvas.width), Number(canvas.height));
 
-    vertices.forEach(function(vertex) {
-      context.beginPath();
-      context.arc(vertex.x, vertex.y, 0, 0, Math.PI * 2, true);
-      context.closePath();
-
-      context.fillStyle = "rgba(0,0,0,0)";
-      context.fill();
-    });
-
-    triangles = triangulate(vertices);
-
     for(var i = 0; i < triangles.length; i++){
-      var triangle = triangles[i];    
-    
-      var c = getRandomInt(0, 30);
-      var clr = "#" + color(c,c,c);
-      var prob = getRandomInt(0, 100);
-      if(prob <= 4){
-          clr = bright[getRandomInt(0, bright.length - 1)];
-      }
-      
-      triangles[i].color = clr;
+      var triangle = triangles[i];
 
       context.beginPath();
-      context.moveTo(triangle.v0.x, triangle.v0.y);
-      context.lineTo(triangle.v1.x, triangle.v1.y);
-      context.lineTo(triangle.v2.x, triangle.v2.y);
-      context.closePath();
-      context.fillStyle = clr;
-      context.fill();
-      context.strokeStyle = "rgba(0,0,0,0)";
-      context.stroke();
-      
-      rotate();
-      
-    }
-}
 
-function update(){
-    context.clearRect(0, 0, Number(canvas.width), Number(canvas.height));
+      var opacity = getOpacity(triangle.v0)
+      context.strokeStyle = "rgba(238,158,42,"+opacity+")";
+      context.moveTo(triangle.v0.x, triangle.v0.y);
+
+      opacity = getOpacity(triangle.v1);
+      context.strokeStyle = "rgba(238,158,42,"+opacity+")";
+      context.lineTo(triangle.v1.x, triangle.v1.y);
+
+      opacity = getOpacity(triangle.v2);
+      context.strokeStyle = "rgba(238,158,42,"+opacity+")";
+      context.lineTo(triangle.v2.x, triangle.v2.y);
+
+      context.closePath();
+      context.fillStyle = "rgba(0,0,0,0)";
+      context.stroke();
+
+    }
 
     vertices.forEach(function(vertex) {
       context.beginPath();
-      context.arc(vertex.x, vertex.y, 0, 0, Math.PI * 2, true);
+      context.arc(vertex.x, vertex.y, 3, 0, Math.PI * 2, true);
       context.closePath();
-
-      context.fillStyle = "rgba(0,0,0,0)";
+      var opacity = getOpacity(vertex);
+      context.fillStyle = "rgba(238,158,42,"+opacity+")";
       context.fill();
     });
-
-    for(var i = 0; i < triangles.length; i++){
-      var triangle = triangles[i];    
-    
-      var clr = triangles[i].color;
-      var prob = getRandomInt(0, 10000);
-      if(bright.indexOf(clr) !== -1){
-          if(prob < 1500){
-               var c = getRandomInt(0, 30);
-               clr = "#" + color(c,c,c);
-          }
-       }
-       else{
-          if(prob < 50){
-              //switch to bright
-              clr = bright[getRandomInt(0, bright.length - 1)];
-          }
-      }
-      triangles[i].color = clr;
-
-      context.beginPath();
-      context.moveTo(triangle.v0.x, triangle.v0.y);
-      context.lineTo(triangle.v1.x, triangle.v1.y);
-      context.lineTo(triangle.v2.x, triangle.v2.y);
-      context.closePath();
-      context.fillStyle = clr;
-      context.fill();
-      context.strokeStyle = "rgba(0,0,0,0)";
-      context.stroke();
-      
-    }
 }
 
-function clear(){
-    vertices = [];
-    render();
-}
-function reset(){
-    clear();
-    add(790);
-}
 function add(n){
     var w = Number(canvas.width), h = Number(canvas.height);
     var inset = 0;
 
     for (var i = 0; i < n; i++)
       vertices.push(new Vertex(Math.random() * (w - 2 * inset) + inset, Math.random() * (h - 2 * inset) + inset));
-
-    render();
 }
 
-$(document).ready(function(){
-    resize_main();
-
-    //word-wrap: break-word;
-    //word-break: break-word;
-    window.setInterval(function(){
-        $("#main h2").css("word-wrap","break-word");
-        $("#main h2").css("word-break","break-word");
-    }, 500);
-});
-
-$( "#main" ).mousemove(function( event ) {
-
-});
-
-//
-//
-//
 function color(red, green, blue)
 {
     var decColor = red + 256 * green + 65536 * blue;
@@ -174,18 +120,41 @@ function color(red, green, blue)
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function rotate() {
-      /* ... */
-      var value = 360; //animate to  
-      var steps = 6; //animation steps per frame (1/60sec.) 
-      var time = (90000/60)*(value/steps); //animation time
-      $('#canvas').velocity({rotateZ: value}, {
-          duration:time,
-          easing:'linear',
-          loop:true,
-          progress: function(elements, c, r, s, t) {
-            update();  
-          }
-          
-      });
+
+function shiftPoint(vert){
+  TweenLite.to(vert, 1+1*Math.random(), {
+    x:vert.originX-50+Math.random()*100,
+    y: vert.originY-50+Math.random()*100,
+    ease:Circ.easeInOut,
+    onComplete: function() {
+      shiftPoint(vert);
+    },
+    onUpdate: function(){
+    }
+  });
+}
+
+function distance(vert){
+  var x = vert.x;
+  var y = vert.y;
+
+  return Math.abs(Math.sqrt(Math.pow(center.x - x, 2) + Math.pow(center.y - y, 2)));
+}
+
+function getOpacity(vert){
+  var d = distance(vert);
+
+  var max2 = 0.9*max;
+  var max3 = 0.8*max;
+
+  if(d > max){
+    return 0;
+  }
+  else if(d > max2){
+    return 0.3;
+  }
+  else if(d > max3){
+    return 0.6;
+  }
+  return 1;
 }
