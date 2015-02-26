@@ -8,7 +8,7 @@ body{height:100%;margin:0;background-color:#141414}
 #main>#about>div{max-width:90%;max-height:90%;padding:20px;border-radius:6px;text-align:center}
 #main>#about>div h1{margin:0;font-family:"Lobster";padding-bottom:10px;color:white;width:100%;word-wrap:break-word;word-break:break-word;font-size:10vh;text-shadow:-5px 5px #588c73}
 #main>#about>div h2{margin-top:10px;margin-bottom:10px;font-family:"Arimo";font-weight:500;color:#fafafa;width:100%;word-wrap:break-word;word-break:break-word}
-#content-1{
+#content-1, #content-3{
   background-color:white;
   padding:40px;
   width:calc(100% - 80px);
