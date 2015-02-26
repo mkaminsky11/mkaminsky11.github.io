@@ -14,6 +14,7 @@ body{height:100%;margin:0;background-color:#141414}
   width:calc(100% - 80px);
   position:relative;
   border-top: solid 5px #588c73;
+  border-bottom: solid 5px #588c73;
 }
 .center{text-align:center}
 .desc{margin-top:15px;margin-bottom:15px;font-size:2vh;font-family:"Arimo";font-weight:400;color:#4c4949}
