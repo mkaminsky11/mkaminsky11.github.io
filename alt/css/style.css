@@ -52,7 +52,7 @@ body{
   font-size:10vh;
   text-shadow:-5px 5px #588c73;
 }
-main>#about>div>h2{
+.me{
   margin-top:10px;
   margin-bottom:10px;
   font-family:"Arimo";
