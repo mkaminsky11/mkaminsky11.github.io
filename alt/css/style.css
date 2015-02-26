@@ -10,7 +10,7 @@ body{height:100%;margin:0;background-color:#141414}
   background-color:white;
   padding:40px;
   width:calc(100% - 80px);
-  position:relative
+  position:relative;
   border-top: solid 5px #588c73;
 }
 .center{text-align:center}
