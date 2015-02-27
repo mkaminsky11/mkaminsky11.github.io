@@ -4,17 +4,17 @@ html{
 body{
   height:100%;
   margin:0;
-  background-color:rgb(238, 108, 23);
+  background-color:rgb(19, 82, 162);
 }
 #main{
   position:fixed;
   top:0;
   left:0;
   overflow:hidden;
-  background-color:rgb(238, 108, 23);
+  background-color:rgb(19, 82, 162);
 }
 #main>canvas{
-  background-color:#30303;
+  background-color:rgb(19, 82, 162);
   overflow:hidden;
   position:relative;
   z-index:0;
