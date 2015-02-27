@@ -82,7 +82,7 @@ function init(){
     render();
 }
 
-$('#canvas').css('background-color', 'rgb(19, 82, 162)');
+$('#canvas').css('background-color', 'rgb(28, 105, 202)');
 
 function resize_main(){
   $("#main").height($(window).height());
