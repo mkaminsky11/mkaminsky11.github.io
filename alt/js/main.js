@@ -13,6 +13,39 @@ var max = Math.min($("#main").width() / 4, $("#main").height() / 4);
 
 $(document).ready(function(){
     resize_main();
+    
+    $('.circle').each(function(index){
+      $(this).hover(function(){
+        
+        var id = $(this).attr("id");
+        var interval = window.setInterval(function(){
+          var deg = Number($(this).attr("deg"));
+          if(deg === 360){
+            clearInterval(interval);
+          }
+          else{
+            deg++;
+            renderCircle(id,deg)
+          }
+        }, 100);
+        
+      }, function(){
+        
+        var id = $(this).attr("id");
+        var interval = window.setInterval(function(){
+          var deg = Number($(this).attr("deg"));
+          if(deg === 0){
+            clearInterval(interval);
+          }
+          else{
+            deg--;
+            renderCircle(id,deg)
+          }
+        }, 100);
+        
+      });
+    });
+    
     $('[data-lightbox]').each(function(index){
       
       $(this).hover(function(){
@@ -130,6 +163,19 @@ function render(){
       context.fillStyle = "rgba(33, 122, 236,"+opacity+")";
       context.fill();
     });
+}
+
+function renderCircle(id, deg){
+  var can = document.getElementById(id);
+  var con = canvas.getContext('2d');
+  
+  con.lineWidth = 4;
+  con.strokeStyle = 'white';
+  con.fillStyle= 'rgba(0,0,0,0)';
+  con.clearRect(0, 0, can.width, can.height);
+  con.beginPath();
+  con.arc(can.width/2, can.height/2, can.width/2, -(Math.PI / 2), ((Math.PI * 2) * deg) - Math.PI / 2, false);
+  context.stroke();
 }
 
 function add(n){
