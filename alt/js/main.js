@@ -171,7 +171,6 @@ function renderCircle(id, deg){
   var can = document.getElementById(id);
   var con = can.getContext('2d');
   
-  con.lineWidth = 4;
   con.strokeStyle = 'white';
   con.fillStyle= 'rgba(0,0,0,0)';
   con.clearRect(0, 0, can.width, can.height);
