@@ -18,7 +18,7 @@ $(document).ready(function(){
       
       $(this).hover(function(){
         var id = "eye-" + $(this).attr("data-svg");
-        var obt3 = new Vivus(id, {type: 'oneByOne', duration: 250});
+        var obt3 = new Vivus(id, {type: 'oneByOne', duration: 75});
         obt3.reset().play()
         
         $(this).find(".image-overlay").velocity({
@@ -106,15 +106,15 @@ function render(){
       context.beginPath();
 
       var opacity = getOpacity(triangle.v0)
-      context.strokeStyle = "rgba(28, 105, 202,"+opacity+")";
+      context.strokeStyle = "rgba(33, 122, 236,"+opacity+")";
       context.moveTo(triangle.v0.x, triangle.v0.y);
 
       opacity = getOpacity(triangle.v1);
-      context.strokeStyle = "rgba(28, 105, 202,"+opacity+")";
+      context.strokeStyle = "rgba(33, 122, 236,"+opacity+")";
       context.lineTo(triangle.v1.x, triangle.v1.y);
 
       opacity = getOpacity(triangle.v2);
-      context.strokeStyle = "rgba(28, 105, 202,"+opacity+")";
+      context.strokeStyle = "rgba(33, 122, 236,"+opacity+")";
       context.lineTo(triangle.v2.x, triangle.v2.y);
 
       context.closePath();
@@ -128,7 +128,7 @@ function render(){
       context.arc(vertex.x, vertex.y, 3, 0, Math.PI * 2, true);
       context.closePath();
       var opacity = getOpacity(vertex);
-      context.fillStyle = "rgba(238,158,42,"+opacity+")";
+      context.fillStyle = "rgba(33, 122, 236,"+opacity+")";
       context.fill();
     });
 }
