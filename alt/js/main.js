@@ -25,6 +25,7 @@ $(document).ready(function(){
           }
           else{
             deg++;
+            $(this).attr("data-deg", deg);
             renderCircle(id,deg)
           }
         }, 100);
@@ -39,6 +40,7 @@ $(document).ready(function(){
           }
           else{
             deg--;
+            $(this).attr("data-deg", deg);
             renderCircle(id,deg)
           }
         }, 100);
@@ -175,7 +177,7 @@ function renderCircle(id, deg){
   con.clearRect(0, 0, can.width, can.height);
   con.beginPath();
   con.arc(can.width/2, can.height/2, can.width/2, -(Math.PI / 2), ((Math.PI * 2) * deg) - Math.PI / 2, false);
-  context.stroke();
+  con.stroke();
 }
 
 function add(n){
