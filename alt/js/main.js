@@ -175,7 +175,7 @@ function renderCircle(id, deg){
   con.fillStyle= 'rgba(0,0,0,0)';
   con.clearRect(0, 0, can.width, can.height);
   con.beginPath();
-  con.arc(can.width/2, can.height/2, can.width/2, -(Math.PI / 2), ((Math.PI * 2) * deg) - Math.PI / 2, false);
+  con.arc(can.width/2, can.height/2, can.width/2, -(Math.PI / 2), deg*(2 * Math.PI / 360) - Math.PI / 2, false);
   con.stroke();
 }
 function add(n){
