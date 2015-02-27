@@ -82,7 +82,7 @@ function init(){
     render();
 }
 
-$('#canvas').css('background-color', 'rgb(238,108,23)');
+$('#canvas').css('background-color', 'rgb(19, 82, 162)');
 
 function resize_main(){
   $("#main").height($(window).height());
@@ -106,15 +106,15 @@ function render(){
       context.beginPath();
 
       var opacity = getOpacity(triangle.v0)
-      context.strokeStyle = "rgba(238,158,42,"+opacity+")";
+      context.strokeStyle = "rgba(28, 105, 202,"+opacity+")";
       context.moveTo(triangle.v0.x, triangle.v0.y);
 
       opacity = getOpacity(triangle.v1);
-      context.strokeStyle = "rgba(238,158,42,"+opacity+")";
+      context.strokeStyle = "rgba(28, 105, 202,"+opacity+")";
       context.lineTo(triangle.v1.x, triangle.v1.y);
 
       opacity = getOpacity(triangle.v2);
-      context.strokeStyle = "rgba(238,158,42,"+opacity+")";
+      context.strokeStyle = "rgba(28, 105, 202,"+opacity+")";
       context.lineTo(triangle.v2.x, triangle.v2.y);
 
       context.closePath();
