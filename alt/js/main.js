@@ -19,7 +19,7 @@ $(document).ready(function(){
         
         var id = $(this).attr("id");
         var interval = window.setInterval(function(){
-          var deg = Number($(this).attr("deg"));
+          var deg = Number($(this).attr("data-deg"));
           if(deg === 360){
             clearInterval(interval);
           }
@@ -33,7 +33,7 @@ $(document).ready(function(){
         
         var id = $(this).attr("id");
         var interval = window.setInterval(function(){
-          var deg = Number($(this).attr("deg"));
+          var deg = Number($(this).attr("data-deg"));
           if(deg === 0){
             clearInterval(interval);
           }
