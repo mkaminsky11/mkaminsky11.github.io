@@ -83,6 +83,7 @@ body{
 .white-link{font-weight:bold;color:white !important;text-decoration:underline}
 .white{color: #fafafa;}
 hr{width:100%;border:none;border-bottom:solid 1px rgba(15,15,15,0.1);background-color:transparent;height:0px;padding-top:10px;padding-bottom:10px;position:relative}
+
 #contact{
   -ms-box-orient: horizontal;
   display: -webkit-box;
@@ -156,4 +157,9 @@ hr{width:100%;border:none;border-bottom:solid 1px rgba(15,15,15,0.1);background-
 .flex-wrap{
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+#image-1{
+  position: relative;
+  margin-bottom: -5px;
 }

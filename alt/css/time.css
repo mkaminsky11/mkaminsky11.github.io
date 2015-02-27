@@ -258,7 +258,7 @@ Modules - reusable parts of our design
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
-    width: 39%;
+    width: 38%;
   }
   .cd-timeline-content::before {
     top: 24px;
