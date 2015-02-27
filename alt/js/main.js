@@ -2,7 +2,6 @@ $(window).resize(function(){
   resize_main();
   render();
 });
-
 var vertices = [];
 var triangles = [];
 var canvas = document.getElementById('canvas');
