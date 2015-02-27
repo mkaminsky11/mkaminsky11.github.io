@@ -179,7 +179,6 @@ function renderCircle(id, deg){
   con.arc(can.width/2, can.height/2, can.width/2, -(Math.PI / 2), ((Math.PI * 2) * deg) - Math.PI / 2, false);
   con.stroke();
 }
-
 function add(n){
     var w = Number(canvas.width), h = Number(canvas.height);
     var inset = 0;
