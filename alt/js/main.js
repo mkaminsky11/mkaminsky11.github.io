@@ -13,7 +13,6 @@ var max = Math.min($("#main").width() / 4, $("#main").height() / 4);
 
 $(document).ready(function(){
     resize_main();
-    
     $('[data-lightbox]').each(function(index){
       
       $(this).hover(function(){
