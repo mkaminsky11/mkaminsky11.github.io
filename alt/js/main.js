@@ -86,7 +86,6 @@ $(document).ready(function(){
         }
 
       });
-    });
 });
 
 window.setInterval(render, 70);
