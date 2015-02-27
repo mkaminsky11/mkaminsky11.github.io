@@ -17,7 +17,7 @@ $(document).ready(function(){
     $('[data-lightbox]').each(function(index){
       
       $(this).hover(function(){
-        var id = "#eye-" + $(this).attr("data-svg");
+        var id = "eye-" + $(this).attr("data-svg");
         var obt3 = new Vivus(id, {type: 'oneByOne', duration: 100});
         obt3.reset().play()
         
