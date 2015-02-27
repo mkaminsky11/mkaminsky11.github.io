@@ -169,7 +169,7 @@ function render(){
 
 function renderCircle(id, deg){
   var can = document.getElementById(id);
-  var con = canvas.getContext('2d');
+  var con = can.getContext('2d');
   
   con.lineWidth = 4;
   con.strokeStyle = 'white';
