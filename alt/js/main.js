@@ -13,6 +13,28 @@ var max = Math.min($("#main").width() / 4, $("#main").height() / 4);
 
 $(document).ready(function(){
     resize_main();
+    
+    $('[data-lightbox]').each(function(index){
+      
+      $(this).hover(function(){
+        var id = "#eye-" + $(this).attr("data-svg");
+        var obt3 = new Vivus(id, {type: 'oneByOne', duration: 100});
+        obt3.reset().play()
+        
+        $(this).find(".image-overlay").velocity({
+          opacity: 1
+        },{
+          duration: 50
+        });
+      },function(){
+        $(this).find(".image-overlay").velocity({
+          opacity: 0
+        },{
+          duration: 50
+        });
+      });
+      
+    });
 
     $(window).scroll(function(){
       if($(window).scrollTop() > ($("#about").height() + 20)){
