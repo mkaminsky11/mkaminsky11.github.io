@@ -18,19 +18,19 @@ $(document).ready(function(){
       
       $(this).hover(function(){
         var id = "eye-" + $(this).attr("data-svg");
-        var obt3 = new Vivus(id, {type: 'oneByOne', duration: 100});
+        var obt3 = new Vivus(id, {type: 'oneByOne', duration: 250});
         obt3.reset().play()
         
         $(this).find(".image-overlay").velocity({
           opacity: 1
         },{
-          duration: 50
+          duration: 200
         });
       },function(){
         $(this).find(".image-overlay").velocity({
           opacity: 0
         },{
-          duration: 50
+          duration: 200
         });
       });
       
