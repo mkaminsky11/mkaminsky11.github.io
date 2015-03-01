@@ -11,18 +11,19 @@ html{
 body{
   height:100%;
   margin:0;
-  background-color:rgb(189, 164, 149);
+  background-color:#D96459;
 }
 #main{
   position:fixed;
   top:0;
   left:0;
   overflow:hidden;
-  background-color:rgb(189, 164, 149);
+  background-color:#D96459;
   width: 100%;
+  z-index: 1;
 }
 #main>canvas{
-  background-color:rgb(189, 164, 149);
+  background-color:#D96459;
   overflow:hidden;
   position:relative;
   z-index:0;
@@ -47,14 +48,14 @@ body{
   justify-content:center;
 }
 
-#main>#about>div{
+#about > div{
   max-width:90%;
   max-height:90%;
   padding:20px;
   border-radius:6px;
   text-align:center;
 }
-#main>#about>div>h1{
+#about > div > h1{
   margin: 0;
   font-family: "Lobster";
   padding-bottom: 10px;
@@ -62,15 +63,14 @@ body{
   width: 100%;
   word-wrap: break-word;
   word-break: break-word;
-  font-size: 5em;
-  text-shadow: -5px 5px rgb(109, 115, 113), -10px 10px rgb(240, 120, 24);
+  font-size: 6em;
 }
 .me{
   margin-top:10px;
   margin-bottom:10px;
   font-family:"Arimo";
   font-weight:500;
-  color:#EDEAEA;
+  color:#E0CECE;
   width:100%;
   font-size: 1.5em;
   word-wrap:break-word;
@@ -83,6 +83,9 @@ body{
   position:relative;
   border-top: solid 5px #eee;
   border-bottom: solid 5px #eee;
+}
+#content-1, #content-3, #content-4{
+  z-index: 3;
 }
 .center{text-align:center}
 .header{margin-top:15px;margin-bottom:5px;font-size:1.1em;font-family:"Arimo";font-weight:600;color:#4c4949}
@@ -97,37 +100,10 @@ body{
   overflow: hidden;
   height: 20px;
   position: relative;
-  display: inline-block;
   font-size: 1em;
-  transform: translateY(6px);
 }
-.real-link:hover{
-  /*color: rgb(120, 192, 168) !important;*/
-}
-.real-link > span{
-  position: relative;
-  display: inline-block;
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s;
-}
-.real-link > span::before{
+.real-link > div{
   position: absolute;
-  color: rgb(236, 153, 24);
-  top: 100%;
-  content: attr(data-hover);
-  font-weight: 700;
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-
-
-.real-link:hover span,
-.real-link:focus span {
-	-webkit-transform: translateY(-100%);
-	-moz-transform: translateY(-100%);
-	transform: translateY(-100%);
 }
 
 .white-link{font-weight:bold;color:white !important;text-decoration:underline}
@@ -172,7 +148,6 @@ hr.color{
   width:calc(100% - 80px);
   position:relative;
 }
-
 
 
 #contact>div>div, .github-div, .github-div-dark{
@@ -283,4 +258,61 @@ hr.color{
   position: relative;
   width: 100%;
   margin-top: 50px;
+}
+
+
+#contact>div>div>canvas{
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 0.3s;
+  transition-property: transform;
+  transition-duration: 0.3s;
+
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-property: opacity;
+  -moz-transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+
+  opacity: 0;
+}
+
+#contact>div>div:hover>canvas{
+  opacity: 1;
+
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: rotate;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+* {
+  line-height: 1.5em;
 }

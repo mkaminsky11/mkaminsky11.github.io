@@ -32,19 +32,21 @@ nodes.addNode = function(x,y){
 nodes.render = function(){
     nodes.context.clearRect(0, 0, Number(nodes.canvas.width), Number(nodes.canvas.height));
 
+    var base = $("#color-picker").css("color").replace(")","").replace("rgb","rgba") + ",";
+
     for(var i = 0; i < nodes.triangles.length; i++){
       var triangle = nodes.triangles[i];
 
       nodes.context.beginPath();
 
       var opacity = nodes.getOpacity(triangle.v0)
-      nodes.context.strokeStyle = "rgba(113, 92, 79,"+opacity+")";
+      nodes.context.strokeStyle = base+opacity+")";
       nodes.context.moveTo(triangle.v0.x, triangle.v0.y);
       opacity = nodes.getOpacity(triangle.v1);
-      nodes.context.strokeStyle = "rgba(113, 92, 79,"+opacity+")";
+      nodes.context.strokeStyle = base+opacity+")";
       nodes.context.lineTo(triangle.v1.x, triangle.v1.y);
       opacity = nodes.getOpacity(triangle.v2);
-      nodes.context.strokeStyle = "rgba(113, 92, 79,"+opacity+")";
+      nodes.context.strokeStyle =  base+opacity+")";
       nodes.context.lineTo(triangle.v2.x, triangle.v2.y);
       nodes.context.closePath();
       nodes.context.fillStyle = "rgba(0,0,0,0)";
@@ -57,7 +59,7 @@ nodes.render = function(){
       nodes.context.arc(vertex.x, vertex.y, 3, 0, Math.PI * 2, true);
       nodes.context.closePath();
       var opacity = nodes.getOpacity(vertex);
-      nodes.context.fillStyle = "rgba(113, 92, 79,"+opacity+")";
+      nodes.context.fillStyle = base+opacity+")";
       nodes.context.fill();
     });
 };
