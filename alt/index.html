@@ -4,13 +4,13 @@
 	<meta charset="utf-8">
 	<title>Michael Kaminsky</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <script src="js/jquery-1.8.3.min.js"></script>
-	<script src="js/velocity.min.js"></script>
-	<script src="js/velocity.ui.min.js"></script>
+	 <script src="lib/jquery-1.8.3.min.js"></script>
+	<script src="lib/velocity.min.js"></script>
+	<script src="lib/velocity.ui.min.js"></script>
 
-  <script src="js/onscreen.js"></script>
+  <script src="lib/onscreen.js"></script>
 
-  <link href='http://fonts.googleapis.com/css?family=Arimo:400,700|Lobster' rel='stylesheet' type='text/css'>
+  <link href='fonts/font.css' rel='stylesheet' type='text/css'>
   <link href='Font/css/font-awesome.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/time.css">
   <link rel="stylesheet" href="css/img.css">
@@ -19,6 +19,7 @@
 
   <link rel="stylesheet" href="light/css/lightbox.css">
   <script src="light/js/lightbox.min.js"></script>
+  <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +32,7 @@
               <div>
                 <!--twitter-->
                 <div>
-                	<canvas width="58" height="58" id="circle-1" class="circle" data-deg="0"></canvas>
+                	<canvas width="58" height="58" id="circle-1" class="circle" data-deg="0" data-dir="="></canvas>
                 	<a href="https://twitter.com/mkaminsky11" target="_blank"><i class="fa fa-twitter"></i></a>
                	</div>
               </div>
@@ -39,7 +40,7 @@
               <div>
                 <!--email-->
                 <div>
-                	<canvas width="58" height="58" id="circle-2" class="circle" data-deg="0"></canvas>
+                	<canvas width="58" height="58" id="circle-2" class="circle" data-deg="0" data-dir="="></canvas>
                 	<a href="mailto:mkaminsky11@gmail.com" target="_top"><i class="fa fa-envelope"></i></a>
                 </div>
               </div>
@@ -47,7 +48,7 @@
               <div>
                 <!--github-->
                 <div>
-                	<canvas width="58" height="58" id="circle-3" class="circle" data-deg="0"></canvas>
+                	<canvas width="58" height="58" id="circle-3" class="circle" data-deg="0" data-dir="="></canvas>
                 	<a href="https://github.com/mkaminsky11" target="_blank"><i class="fa fa-github"></i></a>
                 </div>
               </div>
@@ -55,7 +56,7 @@
               <div>
                 <!--google+-->
                 <div>
-                	<canvas width="58" height="58" id="circle-4" class="circle" data-deg="0"></canvas>
+                	<canvas width="58" height="58" id="circle-4" class="circle" data-deg="0" data-dir="="></canvas>
                 	<a href="https://plus.google.com/u/0/+michaelkaminsky/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
                 </div>
               </div>
@@ -66,96 +67,138 @@
   </div>
 
   <div id="content-1">
+
       <h6 class="center desc">I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
       </h6>
       <h6 class="center desc">I am currently a junior at Marblehead High School in Marblehead, Massachusetts. My school has almost no computer science classes, so I took Java at Salem State University, Cryptography at Standford University, and Dynamic Web Applications at Harvard University. I am also the president of the <a class="real-link"  href="https://github.com/mhscomp/general">Computer and Robotics Club</a> at Marblehead High School.
     </h6>
 
+    <br/><br/><br/>
+    <div id="tilted-div">
+      <img src="img/software.png" class="tilted-img" id="tilted-img-1" width="40%">
+      <img src="img/frontend.png" class="tilted-img" id="tilted-img-2" width="80%">
+      <img src="img/backend.png" class="tilted-img" id="tilted-img-3" width="80%">
+
+      <!--
+      backend
+      ==
+      Good job +michael kaminsky. I will surely keep a look out for the evolution of googlejs. ﻿
+
+
+      frontend
+      ==
+      Looks awesome!
+      Personally I think this is amazing, and then some
+      the best thing is: The interconnection between devices, which allows me to store code on the cloud efficiently
+      Loving it, easy to use, and has everything i'd need for a long time
+      Great featured code editor. I really like the a built in preview option. One of the best Google Drive add ons.
+      Slick looking portfolio!
+
+      codeyourcloud: 38 stars, 33 forks
+
+      software
+      ==
+      iota: 9 stars, 1 fork
+
+
+      -->
+    </div>
+
+    <br/><br/>
+
+    <div class="section group" id="langs">
+      <div class="col span_1_of_3">
+        <h6 class="header center">Back End</h6>
+        <hr/>
+
+        <h6 class="desc center">Everything from administration to security to chat servers</h6>
+
+        <h6 class="desc"><span class="devicons devicons-linux"></span> Linux</h6>
+        <h6 class="desc"><span class="devicons devicons-python"></span> Python</h6>
+        <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
+        <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Node.js</h6>
+        <h6 class="desc"><span class="devicons devicons-scala"></span> Scala</h6>
+        <h6 class="desc"><span class="devicons devicons-haskell"></span> Haskell</h6>
+        <h6 class="desc"><span class="devicons devicons-go"></span> Go</h6>
+        <h6 class="desc"><span class="devicons devicons-mysql"></span> MySQL</h6>
+      </div>
+
+      <div class="col span_1_of_3">
+        <h6 class="header center">Front End</h6>
+        <hr/>
+
+        <h6 class="desc center">Web design that pop! I create responsive, fast, and interactive web pages</h6>
+        <h6 class="desc"><span class="devicons devicons-html5"></span> HTML</h6>
+        <h6 class="desc"><span class="devicons devicons-css3"></span> CSS</h6>
+        <h6 class="desc"><span class="devicons devicons-jquery"></span> JQuery</h6>
+        <h6 class="desc"><span class="devicons devicons-javascript"></span> Javascript</h6>
+        <h6 class="desc"><span class="devicons devicons-less"></span> Less</h6>
+      </div>
+
+      <div class="col span_1_of_3">
+        <h6 class="header center">Software</h6>
+        <hr/>
+
+        <h6 class="desc center">I make applications for mobile and desktop machines</h6>
+        <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
+        <h6 class="desc"><span class="devicons devicons-swift"></span> Node.js</h6>
+        <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Swift</h6>
+      </div>
+    </div>
+
     <hr/>
 
-    <h5 class="desc">Linux | <span class="devicons devicons-linux"></span></h5>
-  	<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 0" data-width="30"></div></div>
+    <h6 class="desc">CODE YOUR CLOUD
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/codeyourcloud" target="_blank"><i class="fa fa-github"></i></a></div>
+      <div class="github-div-dark"><a href="img/web_record.gif" data-lightbox="image-1"><i class="fa fa-eye"></i></a></div>
+      <div class="github-div-dark"><a href="https://codeyourcloud.com" target="_blank"><i class="fa fa-link"></i></a></div>
+    </h6>
+
+    <h6 class="med"><b>Users:</b><span class="inc" data-goal="1800" data-inc="100" data-start="0">0</span></h6>
+
+    <h6 class="med">This is the project on which most of my time is spent. It is a code editor for Google Drive. It allows for collaborative editing, and incorporates almost all of the skills I have learned, including mySQL and Node.js. With about 18,000 users, many people find it to be very useful, and I have used it as a testing ground, experimenting with Polymer and AngularJS, among others.</h6>
 
     <br/>
 
-    <h5 class="desc">Python  | <span class="devicons devicons-python"></span></h5>
-    <div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 0" data-width="35"></div></div>
-
-    <br/>
-
-  	<h5 class="desc">Javascript | <span class="devicons devicons-javascript"></span><span class="devicons devicons-nodejs_small"></span></h5>
-  	<div class="progress"><div class="progress-bar progress-bar-info" style="width: 0" data-width="60"></div></div>
-
-     <br/>
-
-	 <h5 class="desc">HMTL  | <span class="devicons devicons-html5"></span></h5>
-	<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 0" data-width="50"></div></div>
-
-  	<br/>
-
-  	<h5 class="desc">CSS  | <span class="devicons devicons-css3"></span></h5>
-  	<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 0" data-width="50"></div></div>
-
-     <br/>
-
-     <h5 class="desc">Less  | <span class="devicons devicons-less"></span></h5>
-     <div class="progress"><div class="progress-bar progress-bar-info" style="width: 0" data-width="45"></div></div>
-
-     <br/>
-
-	<h5 class="desc">Java  | <span class="devicons devicons-java"></span></h5>
-	<div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 0" data-width="35"></div></div>
-
-      <br/>
-
-      <h5 class="desc">Other Languages</h5>
-      <h6 class="info"><span class="devicons devicons-swift"></span> Swift</h6>
-      <h6 class="info"><span class="devicons devicons-go"></span> Go</h6>
-      <h6 class="info"><span class="devicons devicons-mysql"></span> MySQL</h6>
-      <h6 class="info"><span class="devicons devicons-haskell"></span> Haskell</h6>
-      <h6 class="info"><span class="devicons devicons-scala"></span> Scala</h6>
-  </div>
-
-  <div id="content-2">
-	<h6 class="desc center"><a href="https://codeyourcloud.com" target="_blank" class="white-link" style="font-size:3vh">Code Your Cloud</a> <div class="github-div"><a href="https://github.com/mkaminsky11/codeyourcloud" target="_blank"><i class="fa fa-github"></i></a></div></h6>
-
-  	<br/>
-
-  	<h6 class="desc white">This is the project on which most of my time is spent. It is a code editor for Google Drive. It allows for collaborative editing, and incorporates almost all of the skills I have learned, including mySQL and Node.js. With about 18,000 users, many people find it to be very useful, and I have used it as a testing ground, experimenting with Polymer and AngularJS, among others.</h6>
-
-  </div>
-
-  <div id="image-1">
-    <a href="img/web_record.gif" data-lightbox="image-1" data-svg="1">
-      <div class="image-overlay" style="opacity:0">
-        <svg id="eye-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50"><path fill="none" stroke="white" d="M25 36C13.5 36 8.3 25.9 8.1 25.4c-.1-.3-.1-.6 0-.9C8.3 24.1 13.5 14 25 14s16.7 10.1 16.9 10.6c.1.3.1.6 0 .9-.2.4-5.4 10.5-16.9 10.5zM10.1 25c1.1 1.9 5.9 9 14.9 9s13.7-7.1 14.9-9c-1.1-1.9-5.9-9-14.9-9s-13.7 7.1-14.9 9z"/><path fill="none" stroke="white" d="M25 34c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9zm0-16c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"/><path fill="none" stroke="white" d="M25 30c-2.8 0-5-2.2-5-5 0-.6.4-1 1-1s1 .4 1 1c0 1.7 1.3 3 3 3s3-1.3 3-3-1.3-3-3-3c-.6 0-1-.4-1-1s.4-1 1-1c2.8 0 5 2.2 5 5s-2.2 5-5 5z"/></svg>
-      </div>
-      <img src="img/web_still.png" width="100%">
-    </a>
-  </div>
-
-  <div id="content-3">
-  	<h6 class="desc">IOTA<div class="github-div-dark"><a href="https://github.com/mkaminsky11/iota" target="_blank"><i class="fa fa-github"></i></a></div></h6>
+  	<h6 class="desc">IOTA
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/iota" target="_blank"><i class="fa fa-github"></i></a></div>
+      <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
+    </h6>
   	<h6 class="med">A documentation browser built with <a href="http://nwjs.io/" target="_blank" class="real-link">NW.js</a></h6>
   	<br/>
 
-  	<h6 class="desc">SCRIPTS<div class="github-div-dark"><a href="https://github.com/mkaminsky11/scripts" target="_blank"><i class="fa fa-github"></i></a></div></h6>
+  	<h6 class="desc">SCRIPTS
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/scripts" target="_blank"><i class="fa fa-github"></i></a></div>
+      <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
+    </h6>
   	<h6 class="med">I am currently a member of the Lincoln Labs-MIT <a href="" class="real-link" target="_blank">Cyberpatriot</a> team. The competition consists of fixing security flaws in a variety of computer systems. To help, I made some Python scripts to automatically check for and fix vulnerabilities in Ubuntu servers</h6>
   	<br/>
 
-  	<h6 class="desc">NODEBOT<div class="github-div-dark"><a href="https://github.com/mkaminsky11/nodebot" target="_blank"><i class="fa fa-github"></i></a></div></h6>
+  	<h6 class="desc">NODEBOT
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/nodebot" target="_blank"><i class="fa fa-github"></i></a></div>
+      <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
+    </h6>
   	<h6 class="med">I regularly use <a href="http://www.uscyberpatriot.org/" class="real-link" target="_blank">ssh-chat</a>, so I made an ssh bot for it. nodebot is capable of fetching news, doing calculations, and providing information about movies</h6>
   	<br/>
 
-  	<h6 class="desc">SWIFT for CODEMIRROR<div class="github-div-dark"><a href="https://github.com/mkaminsky11/swift-codemirror" target="_blank"><i class="fa fa-github"></i></a></div></h6>
+  	<h6 class="desc">SWIFT for CODEMIRROR
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/swift-codemirror" target="_blank"><i class="fa fa-github"></i></a></div>
+      <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
+    </h6>
   	<h6 class="med">Using my knowledge of the Swift programming language, I constructed a CodeMirror mode for Swift. As far as I have found, this is the first of its kind for CodeMirror.</h6>
   	<br/>
 
-  	<h6 class="desc">SNIPSAFE<div class="github-div-dark"><a href="https://github.com/mkaminsky11/harvad-p4" target="_blank"><i class="fa fa-github"></i></a></div></h6>
+  	<h6 class="desc">SNIPSAFE
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/harvad-p4" target="_blank"><i class="fa fa-github"></i></a></div>
+      <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
+    </h6>
   	<h6 class="med">This is the final project I created for my Dynamic Web Applications class at Harvard University. It is a site for storing and editing code snippets. SnipSafe was created with Laravel, and was my one of my first experiences with PHP.</h6>
   	<br/>
 
-  	<h6 class="desc">FILEICONS<div class="github-div-dark"><a href="https://github.com/mkaminsky11/fileicons" target="_blank"><i class="fa fa-github"></i></a></div></h6>
+  	<h6 class="desc">FILEICONS
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/fileicons" target="_blank"><i class="fa fa-github"></i></a></div>
+      <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
+    </h6>
   	<h6 class="med">A small collection of flat icons that I made for the Code Your Cloud mobile app. I also published them independently for others to use.</h6>
   	<br/>
 
@@ -167,7 +210,7 @@
 
   	<section id="cd-timeline" class="cd-container">
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#E74C3C">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-graduation-cap"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -177,7 +220,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#3498DB">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-graduation-cap"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -187,7 +230,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#F39C12">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-lock"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -197,7 +240,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#E74C3C">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-flask"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -207,7 +250,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#3498DB">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-comments"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -217,7 +260,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#F39C12">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-code"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -227,7 +270,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#E74C3C">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-graduation-cap"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -237,7 +280,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#3498DB">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-rocket"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -247,7 +290,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#F39C12">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-trophy"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -257,7 +300,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#E74C3C">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-flask"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -267,7 +310,7 @@
 	        </div>
 	      </div>
 	      <div class="cd-timeline-block">
-	        <div class="cd-timeline-img" style="background-color:#3498DB">
+	        <div class="cd-timeline-img">
 	          <i class="fa fa-graduation-cap"></i>
 	        </div>
 	        <div class="cd-timeline-content">
@@ -280,13 +323,26 @@
   </div>
 
   <div id="content-4">
+    <h6 class="header center white">Get In Touch</h6>
 
+    <br/><br/>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="name" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
   </div>
 
-  <script src="js/vivus.js"></script>
-  <script src="js/tween.js"></script>
-  <script src="js/ease.js"></script>
-  <script src="js/poly.js"></script>
+  <script src="lib/vivus.js"></script>
+  <script src="lib/tween.js"></script>
+  <script src="lib/ease.js"></script>
+  <script src="lib/poly.js"></script>
+
+  <script src="js/link.js"></script>
+  <script src="js/circle.js"></script>
+  <script src="js/inc.js"></script>
+  <script src="js/nodes.js"></script>
+  <script src="js/light.js"></script>
+  <script src="js/tilted.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

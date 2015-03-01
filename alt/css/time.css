@@ -32,7 +32,7 @@ Modules - reusable parts of our design
   left: 18px;
   height: 100%;
   width: 4px;
-  background: #d7e4ed;
+  background: #E2EBF2;
 }
 
 .cd-timeline-img > *{
@@ -191,7 +191,7 @@ Modules - reusable parts of our design
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: #E9F0F5;
+  background: #E2EBF2;
   border-radius: 0.25em;
   padding: 1em;
   box-shadow: 0 3px 0 #d7e4ed;
@@ -203,6 +203,7 @@ Modules - reusable parts of our design
 }
 .cd-timeline-content h2 {
   color: #303e49;
+  word-break: break-all !important;
 }
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 13px;
@@ -238,7 +239,7 @@ Modules - reusable parts of our design
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid #E9F0F5;
+  border-right: 7px solid #E2EBF2;
 }
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
@@ -258,13 +259,13 @@ Modules - reusable parts of our design
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
-    width: 38%;
+    width: 37%;
   }
   .cd-timeline-content::before {
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: #E9F0F5;
+    border-left-color: #d7e4ed;
   }
   .cd-timeline-content .cd-read-more {
     float: left;
@@ -292,7 +293,7 @@ Modules - reusable parts of our design
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: #E9F0F5;
+    border-right-color: #d7e4ed;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;
@@ -434,4 +435,12 @@ Modules - reusable parts of our design
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.cd-timeline-img:nth-child(even){
+  background-color: rgb(240, 168, 48);
+}
+
+.cd-timeline-img:nth-child(odd){
+  background-color: rgb(240, 168, 48);
 }
