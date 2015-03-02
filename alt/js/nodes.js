@@ -14,7 +14,10 @@ nodes.init = function(){
     };
     nodes.vertices = [];
     nodes.context.clearRect(0, 0, Number(nodes.canvas.width), Number(nodes.canvas.height));
-    nodes.add(400);
+
+    var to_add = 400/1170 * Math.min($("#main").width(), $("#main").height());
+
+    nodes.add(to_add);
     nodes.triangles = triangulate(nodes.vertices);
 
     for(var i = 0; i < nodes.vertices.length; i++){

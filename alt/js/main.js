@@ -35,13 +35,13 @@ function resize_main(){
   tilted.resize();
   nodes.init();
 
-  var div = $('<div style="width: 1em;"></div>').appendTo('body');
+  /*var div = $('<div style="width: 1em;"></div>').appendTo('body');
   var em = div.width();
   div.remove();
   var width = $("#svg").width();
   var ratio = em/width;
   var shape = document.getElementsByTagName("svg")[0];
-  shape.setAttribute("viewBox", "0 0 200 " + 5*width*ratio/2);
+  shape.setAttribute("viewBox", "0 0 200 " + 5*width*ratio/2);*/
 }
 
 new Timesheet('timesheet', 2012, 2016, [

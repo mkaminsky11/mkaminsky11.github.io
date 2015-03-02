@@ -27,12 +27,11 @@ circles.renderCircle = function(elem){
     context.arc(canvas.width/2, canvas.height/2, canvas.height/2, -(Math.PI / 2), 2 * Math.PI - Math.PI / 2, false);
     context.fill();
 
-    context.fillStyle= '#FFE666';
+    context.fillStyle= '#F44142';
     context.beginPath();
     context.arc(5, canvas.height/2, 5, -(Math.PI / 2), 2 * Math.PI - Math.PI / 2, false);
     context.fill();
 
-    context.fillStyle = '#F0A467';
     context.beginPath();
     context.arc(canvas.width-5, canvas.height/2, 5, -(Math.PI / 2), 2 * Math.PI - Math.PI / 2, false);
     context.fill();

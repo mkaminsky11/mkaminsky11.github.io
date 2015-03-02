@@ -2,7 +2,7 @@ var tilted = {};
 
 tilted.init = function(){
   //tilt them correctly
-  $(".tilted-img").velocity({
+  /*$(".tilted-img").velocity({
     rotateY: "-45 deg",
     rotateX: "-45 deg",
   },{
@@ -10,8 +10,9 @@ tilted.init = function(){
       $(".tilted-img").css("position", "relative");
     },
     duration: 100
-  });
+  });*/
   //set hover effects
+
   $(".tilted-img").each(function(index){
     $(this).hover(function(){
       $(".tilted-img").not(this).velocity({
@@ -39,7 +40,7 @@ tilted.resize = function(){
 
   $("#tilted-img-2").velocity({
     translateX: "20%" ,
-    translateY: "-25%",
+    translateY: "-0%",
     marginBottom: -1*$("#tilted-img-2").height()
   },{
     duration: 100
@@ -47,7 +48,7 @@ tilted.resize = function(){
 
   $("#tilted-img-1").velocity({
     translateX: "80%" ,
-    translateY: "-55%",
+    translateY: "-0%",
     marginBottom: -1*$("#tilted-img-1").height()
   },{
     duration: 100
