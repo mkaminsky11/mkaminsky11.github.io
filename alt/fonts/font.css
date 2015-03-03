@@ -1,13 +1,13 @@
 @font-face{
-font-family: "Nexa";
-src: url("NexaRustSlab-BlackShadow01.otf") format("opentype");
-font-weight: bold;
+  font-family: "Nexa";
+  src: url("NexaRustSlab-BlackShadow01.otf") format("opentype");
+  font-weight: bold;
 }
 
 @font-face{
-font-family: "Pixel";
-src: url("slkscr.ttf");
-font-weight: 400;
+  font-family: "Pixel";
+  src: url("slkscr.ttf");
+  font-weight: 400;
 }
 
 /* latin-ext */
@@ -27,10 +27,4 @@ font-weight: 400;
   font-family: 'Arimo-Bold';
   font-weight: bold;
   src: url(Arimo-Bold.ttf) format('truetype');
-}
-/* latin */
-@font-face {
-  font-family: 'Lobster';
-  font-weight: 400;
-  src: url(lobster.woff2) format('woff');
 }

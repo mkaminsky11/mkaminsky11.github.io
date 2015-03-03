@@ -14,7 +14,6 @@
   <link href='Font/css/font-awesome.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/time.css">
   <link rel="stylesheet" href="css/img.css">
-  <link rel="stylesheet" href="css/progress.css">
   <link href='devicons/css/devicons.css' rel='stylesheet'>
 
   <link rel="stylesheet" href="light/css/lightbox.css">
@@ -23,7 +22,8 @@
   <link rel="stylesheet" href="lib/time/timesheet.css">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/text.css">
+  <link rel="stylesheet" href="css/input.css">
+  <link rel="stylesheet" href="css/tooltip.css">
 </head>
 <body>
   <span id="color-picker" style="display:none;color:rgb(57, 72, 176)"></span>
@@ -76,16 +76,16 @@
 
       <h6 class="center desc">I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
       </h6>
-      <h6 class="center desc">I am currently a junior at Marblehead High School in Marblehead, Massachusetts. My school has almost no computer science classes, so I took Java at Salem State University, Cryptography at Standford University, and Dynamic Web Applications at Harvard University. I am also the president of the
+      <h6 class="center desc">I am currently a junior at Marblehead High School in Marblehead, Massachusetts. My school has almost no computer science classes, so I took Java at Salem State University, Cryptography at Stanford University, and Dynamic Web Applications at Harvard University. I am also the president of the
         <span class="tooltip"><span class="tooltip-item"><a href="https://github.com/mhscomp/general">Computer and Robotics Club</a></span><span class="tooltip-content clearfix"><span class="tooltip-text">A club I founded to promote Computer Science education. I help students to learn the basics of Java, web design, Linux, and other topics.</span></span>
 
          at Marblehead High School.
     </h6>
 
     <div id="tilted-div">
-      <img src="img/software.png" class="tilted-img" id="tilted-img-1" width="40%">
-      <img src="img/frontend.png" class="tilted-img" id="tilted-img-2" width="80%">
-      <img src="img/backend.png" class="tilted-img" id="tilted-img-3" width="80%">
+      <img src="img/software.png" class="tilted-img software" width="40%">
+      <img src="img/frontend.png" class="tilted-img front-end" width="80%">
+      <img src="img/backend.png" class="tilted-img back-end" width="80%">
 
       <!--
       backend
@@ -115,7 +115,7 @@
     <br/><br/>
 
     <div class="section group" id="langs">
-      <div class="col span_1_of_3">
+      <div class="col span_1_of_3 back-end">
         <h6 class="header center">Back End</h6>
         <hr/>
 
@@ -131,11 +131,11 @@
         <h6 class="desc"><span class="devicons devicons-mysql"></span> MySQL</h6>
       </div>
 
-      <div class="col span_1_of_3">
+      <div class="col span_1_of_3 front-end">
         <h6 class="header center">Front End</h6>
         <hr/>
 
-        <h6 class="desc center">Web design that pops! I create responsive, fast, and interactive web pages</h6>
+        <h6 class="desc center" id="software">Web design that pops! I create responsive, fast, and interactive web pages</h6>
         <h6 class="desc"><span class="devicons devicons-html5"></span> HTML</h6>
         <h6 class="desc"><span class="devicons devicons-css3"></span> CSS</h6>
         <h6 class="desc"><span class="devicons devicons-jquery"></span> JQuery</h6>
@@ -143,7 +143,7 @@
         <h6 class="desc"><span class="devicons devicons-less"></span> Less</h6>
       </div>
 
-      <div class="col span_1_of_3">
+      <div class="col span_1_of_3 software">
         <h6 class="header center">Software</h6>
         <hr/>
 
@@ -156,7 +156,7 @@
 
     <hr/>
 
-    <h6 class="desc">CODE YOUR CLOUD
+    <h6 class="header">CODE YOUR CLOUD
       <div class="github-div-dark"><a href="https://github.com/mkaminsky11/codeyourcloud" target="_blank"><i class="fa fa-github"></i></a></div>
       <div class="github-div-dark"><a href="img/web_record.gif" data-lightbox="image-1"><i class="fa fa-eye"></i></a></div>
       <div class="github-div-dark"><a href="https://codeyourcloud.com" target="_blank"><i class="fa fa-link"></i></a></div>
@@ -168,7 +168,7 @@
 
     <br/>
 
-  	<h6 class="desc">IOTA
+  	<h6 class="header">IOTA
       <div class="github-div-dark"><a href="https://github.com/mkaminsky11/iota" target="_blank"><i class="fa fa-github"></i></a></div>
       <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
     </h6>
@@ -179,24 +179,24 @@
     </h6>
   	<br/>
 
-  	<h6 class="desc">SCRIPTS
+  	<h6 class="header">SCRIPTS
       <div class="github-div-dark"><a href="https://github.com/mkaminsky11/scripts" target="_blank"><i class="fa fa-github"></i></a></div>
       <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
     </h6>
   	<h6 class="med">I am currently a member of the Lincoln Labs-MIT
-      <span class="tooltip"><span class="tooltip-item"><a href="http://www.uscyberpatriot.org/">Cyberpatriot</a></span><span class="tooltip-content clearfix"><span class="tooltip-text">&quot;CyberPatriot is the National Youth Cyber Education Program created to inspire students toward careers in cybersecurity or other science, technology, engineering, and mathematics (STEM) disciplines. The program, created by the Air Force Association (AFA), features the National Youth Cyber Defense Competition for high school and middle school students.&quot;</span></span>
+      <span class="tooltip"><span class="tooltip-item"><a href="http://www.uscyberpatriot.org/" target="_blank">Cyberpatriot</a></span><span class="tooltip-content clearfix"><span class="tooltip-text">&quot;CyberPatriot is the National Youth Cyber Education Program created to inspire students toward careers in cybersecurity or other science, technology, engineering, and mathematics (STEM) disciplines. The program, created by the Air Force Association (AFA), features the National Youth Cyber Defense Competition for high school and middle school students.&quot;</span></span>
 
      team. The competition consists of fixing security flaws in a variety of computer systems. To help, I made some Python scripts to automatically check for and fix vulnerabilities in Ubuntu servers</h6>
   	<br/>
 
-  	<h6 class="desc">NODEBOT
+  	<h6 class="header">NODEBOT
       <div class="github-div-dark"><a href="https://github.com/mkaminsky11/nodebot" target="_blank"><i class="fa fa-github"></i></a></div>
       <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
     </h6>
   	<h6 class="med">I regularly use <a href="http://www.uscyberpatriot.org/" class="real-link" target="_blank">ssh-chat</a>, so I made an ssh bot for it. nodebot is capable of fetching news, doing calculations, and providing information about movies</h6>
   	<br/>
 
-  	<h6 class="desc">SWIFT for CODEMIRROR
+  	<h6 class="header">SWIFT for CODEMIRROR
       <div class="github-div-dark"><a href="https://github.com/mkaminsky11/swift-codemirror" target="_blank"><i class="fa fa-github"></i></a></div>
       <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
     </h6>
@@ -205,21 +205,21 @@
       .</h6>
   	<br/>
 
-  	<h6 class="desc">SNIPSAFE
+  	<h6 class="header">SNIPSAFE
       <div class="github-div-dark"><a href="https://github.com/mkaminsky11/harvad-p4" target="_blank"><i class="fa fa-github"></i></a></div>
       <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
     </h6>
   	<h6 class="med">This is the final project I created for my Dynamic Web Applications class at Harvard University. It is a site for storing and editing code snippets. SnipSafe was created with Laravel, and was my one of my first experiences with PHP.</h6>
   	<br/>
 
-  	<h6 class="desc">FILEICONS
+  	<h6 class="header">FILEICONS
       <div class="github-div-dark"><a href="https://github.com/mkaminsky11/fileicons" target="_blank"><i class="fa fa-github"></i></a></div>
       <div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div>
     </h6>
   	<h6 class="med">A small collection of flat icons that I made for the Code Your Cloud mobile app. I also published them independently for others to use.</h6>
   	<br/>
 
-  	<h6 class="desc">GOOGLE.JS<div class="github-div-dark"><a href="https://github.com/mkaminsky11/googlejs" target="_blank"><i class="fa fa-github"></i></a></div></h6>
+  	<h6 class="header">GOOGLE.JS<div class="github-div-dark"><a href="https://github.com/mkaminsky11/googlejs" target="_blank"><i class="fa fa-github"></i></a></div></h6>
   	<h6 class="med">I was annoyed at the complexity of Google's javascript APIs, which took me a long time to learn, particularly the Google Drive API. So, I created an easy-to-use wrapper to help others avoid similar trouble.</h6>
 
 
@@ -233,9 +233,26 @@
 
     <br/><br/>
 
-    <input type="text" id="name" placeholder="Name">
-    <input type="email" id="name" placeholder="Email">
-    <textarea id="message" placeholder="Message"></textarea>
+    <span class="input input--kuro">
+				<input class="input__field input__field--kuro" type="text" id="name">
+				<label class="input__label input__label--kuro" for="input-7">
+				<span class="input__label-content input__label-content--kuro">Name</span>
+				</label>
+		</span>
+    <br/>
+    <span class="input input--kuro">
+				<input class="input__field input__field--kuro" type="text" id="email">
+				<label class="input__label input__label--kuro" for="input-7">
+				<span class="input__label-content input__label-content--kuro">Email</span>
+				</label>
+		</span>
+    <br/>
+    <span class="input input--kuro">
+				<input class="input__field input__field--kuro" type="text" id="message">
+				<label class="input__label input__label--kuro" for="input-7">
+				<span class="input__label-content input__label-content--kuro">Message</span>
+				</label>
+		</span>
   </div>
 
   <script src="lib/vivus.js"></script>
@@ -249,7 +266,7 @@
   <script src="js/inc.js"></script>
   <script src="js/nodes.js"></script>
   <script src="js/light.js"></script>
-  <script src="js/tilted.js"></script>
+  <script src="js/sections.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

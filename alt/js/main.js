@@ -5,11 +5,11 @@ $(window).resize(function(){
 
 $(document).ready(function(){
     resize_main();
-    tilted.init();
+    sections.init();
     circles.init();
     light.init();
     link.init();
-	
+
 window.setTimeout(function(){
 resize_main();
 }, 1000);
@@ -36,16 +36,8 @@ function resize_main(){
   nodes.max = Math.min($("#main").width() / 4, $("#main").height() / 3);
   $("#content-1").css("margin-top",$("#main").height());
 
-  tilted.resize();
+  sections.resize();
   nodes.init();
-
-  /*var div = $('<div style="width: 1em;"></div>').appendTo('body');
-  var em = div.width();
-  div.remove();
-  var width = $("#svg").width();
-  var ratio = em/width;
-  var shape = document.getElementsByTagName("svg")[0];
-  shape.setAttribute("viewBox", "0 0 200 " + 5*width*ratio/2);*/
 }
 
 new Timesheet('timesheet', 2012, 2016, [
@@ -61,3 +53,29 @@ new Timesheet('timesheet', 2012, 2016, [
   ['11/2014', '12/2014', 'Placed 3rd in Massachusetts CyberPatriot competition', 'bar'], //state competition
   ['02/2015', '03/2015', '\"A Tour of Scala\" and  \"Languages, Compilers, and Parsers\" at MIT', 'bar'] //mit classes
 ]);
+
+function email(){
+  // gAWCzKHFlMGphDmMdsZoqA
+
+  $.ajax({
+  type: "POST",
+  url: "https://mandrillapp.com/api/1.0/messages/send.json",
+  data: {
+    'key': 'gAWCzKHFlMGphDmMdsZoqA',
+    'message': {
+      'from_email': 'YOUR@EMAIL.HERE',
+      'to': [
+          {
+            'email': 'RECIPIENT_NO_1@EMAIL.HERE',
+            'name': 'RECIPIENT NAME (OPTIONAL)',
+            'type': 'to'
+          },
+        ],
+      'autotext': 'true',
+      'subject': 'YOUR SUBJECT HERE!',
+      'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+    }
+  }
+ }).done(function(response) {
+ });
+}

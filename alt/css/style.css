@@ -1,10 +1,3 @@
-/*
-white: rgb(252, 238, 182)
-blue: rgb(120, 192, 168)
-orange: rgb(240, 120, 24)
-fire: rgb(240, 168, 48)
-*/
-
 html{
   height:100%
 }
@@ -29,7 +22,7 @@ body{
   z-index:0;
 }
 
-#main>#about{
+#about{
   position:absolute;
   z-index:1;
   top:0;
@@ -57,17 +50,16 @@ body{
   border-radius:6px;
   text-align:center;
 }
-#about > div > h1{
+h1{
   margin: 0;
-color: #F44142;
-  font-family: "Nexa";
+  color: #F44142;
+  font-family: "Pixel";
   padding-bottom: 10px;
-  /*color: rgb(245, 245, 245);*/
   width: 100%;
   word-wrap: break-word;
   word-break: break-word;
-  font-size: 6em;
-font-weight: bold;
+  font-size: 3em;
+  font-weight: bold;
 }
 .me{
   margin-top:10px;
@@ -92,7 +84,7 @@ font-weight: bold;
   z-index: 3;
 }
 .center{text-align:center}
-.header{margin-top:15px;margin-bottom:5px;font-size:1.1em;font-family:"Arimo";font-weight:600;color:#4c4949}
+.header{margin-top:15px;margin-bottom:5px;font-size:1.1em;font-family:"Pixel";font-weight:600;color:#4c4949}
 .desc{margin-top:15px;margin-bottom:15px;font-size:1em;font-family:"Arimo";font-weight:400;color:#4c4949}
 .med{margin-top:5px;margin-bottom:5px;font-size:0.9em;font-family:"Arimo";color:#454545;font-weight:300}
 .info{margin-top:5px;margin-bottom:5px;font-size:0.8em;font-family:"Arimo";color:#454545;font-weight:300}
@@ -251,15 +243,15 @@ hr.color{
 }
 
 
-#tilted-img-1{
+img.software{
   z-index: 3;
 }
 
-#tilted-img-2{
+img.front-end{
   z-index: 2;
 }
 
-#tilted-img-3{
+img.back-end{
   z-index: 1;
 }
 
