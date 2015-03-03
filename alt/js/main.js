@@ -63,19 +63,19 @@ function email(){
   data: {
     'key': 'gAWCzKHFlMGphDmMdsZoqA',
     'message': {
-      'from_email': 'YOUR@EMAIL.HERE',
+      'from_email':$("#email").val(),
       'to': [
           {
-            'email': 'RECIPIENT_NO_1@EMAIL.HERE',
-            'name': 'RECIPIENT NAME (OPTIONAL)',
+            'email': 'mkaminsky11@gmail.com',
             'type': 'to'
           },
         ],
       'autotext': 'true',
-      'subject': 'YOUR SUBJECT HERE!',
-      'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+      'subject': 'from: ' + $("#name").val(),
+      'html': $("#message").val()
     }
   }
  }).done(function(response) {
+console.log(response);
  });
 }

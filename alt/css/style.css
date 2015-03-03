@@ -125,7 +125,7 @@ hr.color{
   position:relative
 }
 
-#contact{
+.contact{
   -ms-box-orient: horizontal;
   display: -webkit-box;
   display: -moz-box;
@@ -135,9 +135,9 @@ hr.color{
   display: flex;
   padding:10px
 }
-#contact>div{width:25%}
-#contact>div>h6{text-align:center;margin-top:5px;margin-bottom:5px}
-#contact>div>h6>a{padding:15px;border-radius:50%;background-color:rgba(200,200,200,0.3);font-size:1.5em;color:white}
+.contact>div{width:25%}
+.contact>div>h6{text-align:center;margin-top:5px;margin-bottom:5px}
+.contact>div>h6>a{padding:15px;border-radius:50%;background-color:rgba(200,200,200,0.3);font-size:1.5em;color:white}
 #content-2, #content-4{
   background-color:transparent;
   padding:40px;
@@ -146,7 +146,7 @@ hr.color{
 }
 
 
-#contact>div>div, .github-div, .github-div-dark{
+.contact>div>div, .github-div, .github-div-dark{
   width: 50px;
   -ms-box-orient: horizontal;
   display: -webkit-box;
@@ -178,7 +178,7 @@ hr.color{
   width: 19px;
   height: 19px;
 }
-#contact>div>div>a, .github-div > a, .github-div-dark > a{
+.contact>div>div>a, .github-div > a, .github-div-dark > a{
   font-size: 20px;
   color: white !important;
 }
@@ -265,7 +265,7 @@ img.back-end{
 }
 
 
-#contact>div>div>canvas{
+.contact>div>div>canvas{
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 0.3s;
   -moz-transition-property: -moz-transform;
@@ -283,7 +283,7 @@ img.back-end{
   opacity: 0;
 }
 
-#contact>div>div:hover>canvas{
+.contact>div>div:hover>canvas{
   opacity: 1;
 
   -webkit-animation-name: rotate;
