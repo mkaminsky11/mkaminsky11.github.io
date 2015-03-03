@@ -1,604 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-	<script src="poly/components/platform/platform.js"></script>
-
 	<meta charset="utf-8">
 	<title>Michael Kaminsky</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <script src="lib/jquery-1.8.3.min.js"></script>
+	<script src="lib/velocity.min.js"></script>
+	<script src="lib/velocity.ui.min.js"></script>
 
+  <script src="lib/onscreen.js"></script>
 
-	 <script src="js/jquery-1.8.3.min.js"></script>
-   <script src="js/light.js"></script>
+  <link href='fonts/font.css' rel='stylesheet' type='text/css'>
+  <link href='Font/css/font-awesome.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/time.css">
+  <link rel="stylesheet" href="css/img.css">
+  <link href='devicons/css/devicons.css' rel='stylesheet'>
 
-	<script src="js/velocity.min.js"></script>
-	<script src="js/velocity.ui.min.js"></script>
+  <link rel="stylesheet" href="light/css/lightbox.css">
+  <script src="light/js/lightbox.min.js"></script>
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="lib/time/timesheet.css">
 
-  <script src="js/onscreen.js"></script>
-
-  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-
-  <link rel="stylesheet" href="fa/css/font-awesome.css">
-
-	<script src="codemirror/lib/codemirror.js"></script>
-	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
-
-	<script src = "codemirror/mode/css/css.js"></script>
-	<script src = "codemirror/mode/swift.js"></script>
-
-	<link rel='stylesheet' type='text/css' href="codemirror/theme/theme.css">
-	<link rel='stylesheet' href="fonts/font.css">
-
-
-   <link rel="import" href="poly/components/core-style/core-style.html">
-   <link rel="import" href="poly/components/paper-icon-button/paper-icon-button.html">
-   <link rel="import" href="poly/components/core-icons/core-icons.html">
-   <link rel="import" href="poly/components/paper-button/paper-button.html">
-   <link rel="import" href="poly/components/paper-ripple/paper-ripple.html">
-   <link rel="import" href="poly/components/paper-item/paper-item.html">
-   <link rel="import" href="poly/components/paper-shadow/paper-shadow.html">
-   <link rel="import" href="poly/components/icon-transition/icon-transition.html">
-
-
-   <link href="css/grid.css" rel="stylesheet">
-	   <link href="css/light.css" rel="stylesheet">
-   <link href="css/style.css" rel="stylesheet">
-
-   <!--script src="js/scroll.js"></script-->
-
-   <link href='devicons/css/devicons.css' rel='stylesheet'>
-
-   <link href="media-queries.css" rel="stylesheet">
-   <link href="css/time.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/input.css">
+  <link rel="stylesheet" href="css/tooltip.css">
 </head>
 <body>
+  <span id="color-picker" style="display:none;color:rgb(57, 72, 176)"></span>
+  <div id="main">
+    <div id="about">
+        <div>
 
+          <h1>Michael Kaminsky</h1>
 
+            <h2 class="me">I'm a designer and programmer with plans for world domination, and enjoy making software and websites</h2>
+            <div class="contact">
+              <div>
+                <!--twitter-->
+                <div>
+                	<canvas width="58" height="58" class="circle"></canvas>
+                	<a href="https://twitter.com/mkaminsky11" target="_blank"><i class="fa fa-twitter"></i></a>
+               	</div>
+              </div>
 
+              <div>
+                <!--email-->
+                <div>
+                	<canvas width="58" height="58" class="circle"></canvas>
+                	<a href="mailto:mkaminsky11@gmail.com" target="_top"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
 
-  <div class="part" id="part-name">
-    <h1 style="float:left">Michael Kaminsky</h1>
-    <h2 style="float:right"><a href="https://github.com/mkaminsky11"><i class="fa fa-github"></i></a></h2>
+              <div>
+                <!--github-->
+                <div>
+                	<canvas width="58" height="58" class="circle"></canvas>
+                	<a href="https://github.com/mkaminsky11" target="_blank"><i class="fa fa-github"></i></a>
+                </div>
+              </div>
+
+              <div>
+                <!--google+-->
+                <div>
+                	<canvas width="58" height="58" class="circle"></canvas>
+                	<a href="https://plus.google.com/u/0/+michaelkaminsky/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
   </div>
 
-  <div class="part" id="part-0">
+  <div id="content-1">
 
-    <h6 id="nav">
-      <i class="fa fa-dot-circle-o" onclick="clip('#cell-site')" id="btn_site"></i>
-      <i class="fa fa-circle" onclick="clip('#cell-ware')" id="btn_ware"></i>
-      <i class="fa fa-circle" onclick="clip('#cell-srv')" id="btn_srv"></i>
-      <i class="fa fa-circle" onclick="clip('#cell-img')" id="btn_img"></i>
+      <h6 class="center desc">I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
+      </h6>
+      <h6 class="center desc">I am currently a junior at Marblehead High School in Marblehead, Massachusetts. My school has almost no computer science classes, so I took Java at Salem State University, Cryptography at Stanford University, and Dynamic Web Applications at Harvard University. I am also the president of the
+        <span class="tooltip"><span class="tooltip-item"><a href="https://github.com/mhscomp/general">Computer and Robotics Club</a></span><span class="tooltip-content clearfix"><span class="tooltip-text">A club I founded to promote Computer Science education. I help students to learn the basics of Java, web design, Linux, and other topics.</span></span>
+
+         at Marblehead High School.
     </h6>
 
-    <div style="background-color:#F1C40F" id="cell-site">
+    <div id="tilted-div">
+      <img src="img/software.png" class="tilted-img software" width="40%">
+      <img src="img/frontend.png" class="tilted-img front-end" width="80%">
+      <img src="img/backend.png" class="tilted-img back-end" width="80%">
 
-      <div>
-        <h3>SITES</h3>
-        <h4><i class="fa fa-desktop"></i></h4>
-        <h5>I make websites and design that pop</h5>
-      </div>
+      <!--
+      backend
+      ==
+      Good job +michael kaminsky. I will surely keep a look out for the evolution of googlejs. ﻿
+
+
+      frontend
+      ==
+      Looks awesome!
+      Personally I think this is amazing, and then some
+      the best thing is: The interconnection between devices, which allows me to store code on the cloud efficiently
+      Loving it, easy to use, and has everything i'd need for a long time
+      Great featured code editor. I really like the a built in preview option. One of the best Google Drive add ons.
+      Slick looking portfolio!
+
+      codeyourcloud: 38 stars, 33 forks
+
+      software
+      ==
+      iota: 9 stars, 1 fork
+
+
+      -->
     </div>
 
-    <div style="background-color:#E74C3C;display:none" id="cell-ware">
-      <div>
-        <h3>SOFTWARE</h3>
-        <h4><i class="fa fa-terminal"></i></h4>
-        <h5>From desktops to mobile and everything in between</h5>
-      </div>
-    </div>
-
-    <div style="background-color:#2ECC71;display:none" id="cell-srv">
-      <div>
-        <h3>SERVERS</h3>
-        <h4><i class="fa fa-server"></i></h4>
-        <h5>Everything from administration to security</h5>
-      </div>
-    </div>
-
-    <div style="background-color:#3498DB;display:none" id="cell-img">
-      <div>
-        <h3>GRAPHICS</h3>
-        <h4><i class="fa fa-paint-brush"></i></h4>
-        <h5>Graphical design, mockups, and image manipulation</h5>
-      </div>
-    </div>
-
-
-    <i class="fa fa-chevron-down" style="position: absolute;z-index: 3;font-size: 54px;bottom: 5px;left: calc(50% - 27px);color: #eee;"></i>
-  </div>
-
-  <div class="part" id="part-1">
-
-
-    <h6>
-     I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
-    </h6>
-
-    <h6>
-
-     Currently, I am attending Marblehead High School, located in Marblehead, Massachusetts, and am junior. My school has almost no computer science classes, but I have managed to excel regardless. I have taken Java at Salem State University, Cryptography at Standford University, and Dynamic Web Applications at Harvard University. I am also the president of the <a class="real-link"  href="https://github.com/mhscomp/general">Computer and Robotics Club</a> at Marblehead High School.
-    </h6>
-
-    <br/>
-	</div>
-
-
-
-  <div class="control">
-    <h6>Skills</h6>
-    <div onclick="skill()"><icon-transition shape="cancel" color="#7F8C8D" id="skill"></icon-transition></div>
-  </div>
-
-
-	<div class="part" id="part-2">
-
-  <h5>Linux | <span class="devicons devicons-linux"></span></h5>
-		<h6>
-			codeyourcloud.com is run on an Ubuntu server. In addition, I participate in the <a href="http://www.uscyberpatriot.org/" class="real-link">CyberPatriot</a> program at MIT's <a href="http://engineering.mit.edu/programs/beaverworks" class="real-link">BeaverWorks</a>, and primarly work with Ubuntu machines.
-		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 30%"></div></div>
-
-  <br/>
-
-  <h5>Python  | <span class="devicons devicons-python"></span></h5>
-  <h6>
-    Recently, I have been using Python instead of bash to run commands, including several scripts designed to harden the security of an Ubuntu server.
-  </h6>
-  <div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 35%;"></div></div>
-
-  <br/>
-
-		<h5 id="goto-javascript">Javascript | <span class="devicons devicons-javascript"></span><span class="devicons devicons-nodejs_small"></span></h5>
-		<h6>
-			I love javascript. From JQuery to Node.js to io.js, I spend most of my time using it. I run Node.js on my server, and use communicate with client-side code using WebSockets. Recently, I have also begun experimenting with <a href="http://expressjs.com/" target="_blank" class="real-link">Express</a>.
-		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-info" style="width: 60%;"></div></div>
-
-   <br/>
-
-   <h5 id="goto-html">HMTL  | <span class="devicons devicons-html5"></span></h5>
-		<h6>
-			It's the backbone of the web, so I use it often.
-		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 50%;"></div></div>
-
-		<br/>
-
-		<h5 id="goto-css">CSS  | <span class="devicons devicons-css3"></span></h5>
-		<h6>
-			As I do a lot of web design, I use CSS very often.
-		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 50%;"></div></div>
-
-   <br/>
-
-   <!--add less here-->
-
-   <h5 id="goto-less">Less  | <span class="devicons devicons-less"></span></h5>
-   <h6>
-     Less is my favorite CSS preprocessor, so I use it as much as I can.
-   </h6>
-   <div class="progress"><div class="progress-bar progress-bar-info" style="width: 45%;"></div></div>
-
-   <br/>
-
-
-		<h5>Java  | <span class="devicons devicons-java"></span></h5>
-		<h6>
-			I have taken many courses in Java, including AP Computer Science during the 2013-2014 school year, but do not use it regularly for servers or applications.
-		</h6>
-		<div class="progress"><div class="progress-bar progress-bar-inverse" style="width: 35%;"></div></div>
-
-    <!--others
-    swift
-    go
-    mysql
-    haskell
-    scala
-    -->
-
-    <br/>
-
-    <h5>Other Languages</h5>
-    <h6><span class="devicons devicons-swift"></span> Swift</h6>
-    <h6><span class="devicons devicons-go"></span> Go</h6>
-    <h6><span class="devicons devicons-mysql"></span> MySQL</h6>
-    <h6><span class="devicons devicons-haskell"></span> Haskell</h6>
-    <h6><span class="devicons devicons-scala"></span> Scala</h6>
-
-	</div>
-
-
-
-
-<div class="control-alt">
-    <h6>CODE YOUR CLOUD</h6>
-    <div onclick="cyc()"><icon-transition shape="plus" color="#7F8C8D" id="cyc"></icon-transition></div>
-</div>
-
-<div class="part" id="part-3" style="display:none">
-
-		<h6>This is the project on which most of my time is spent. It is a code editor for Google Drive, available at <a class="real-link" href="https://codeyourcloud.com">codeyourcloud.com</a>. It allows for collaborative editing, and incorporates almost all of the skills I have learned, including mySQL and Node.js. With about 2,000 users on the Chrome Web Store, many people find it to be very useful, and I have used it as a testing ground, experimenting with Polymer and AngularJS, among others.</h6>
-		<br/>
-  <a href="https://github.com/mkaminsky11/codeyourcloud" class="btn btn-inverse"><i class="fa fa-github"></i> GitHub Page</a>
-		<br/><br/>
-
-
-  <div class="section group">
-    <div class="col span_1_of_5">
-      <a href="img/main.png" data-lightbox="cyc" class="light"><img src="img/main.png"></a>
-    </div>
-    <div class="col span_1_of_5">
-      <a href="img/chat.png" data-lightbox="cyc" class="light"><img src="img/chat.png"></a>
-    </div>
-    <div class="col span_1_of_5">
-      <a href="img/sidebar.png" data-lightbox="cyc" class="light"><img src="img/sidebar.png"></a>
-    </div>
-    <div class="col span_1_of_5">
-      <a href="img/color.png" data-lightbox="cyc" class="light"><img src="img/color.png"></a>
-    </div>
-    <div class="col span_1_of_5">
-      <a href="img/preview.png" data-lightbox="cyc" class="light"><img src="img/preview.png"></a>
-    </div>
-  </div>
-
-  <h6>I am getting ready to publish a mobile version of Code Your Cloud onto the Apple App Store. It is built using Apache Cordova, and should be launched in the next couple of months.</h6>
-		<br/>
-		<a href="https://github.com/mkaminsky11/codeyourcloudmobile" class="btn btn-inverse"><i class="fa fa-github"></i> GitHub Page</a>
-		<br/><br/>
-  <div class="section group">
-    <div class="col span_1_of_5">
-      <a href="img/mobile_1.png" data-lightbox="mobile" class="light"><img src="img/mobile_1.png"></a>
-    </div>
-    <div class="col span_1_of_5">
-      <a href="img/mobile_2.png" data-lightbox="mobile" class="light"><img src="img/mobile_2.png"></a>
-    </div>
-    <div class="col span_1_of_5">
-      <a href="img/mobile_3.png" data-lightbox="mobile" class="light"><img src="img/mobile_3.png"></a>
-    </div>
-    <div class="col span_1_of_5">
-      <a href="img/mobile_4.png" data-lightbox="mobile" class="light"><img src="img/mobile_4.png"></a>
-    </div>
-    <div class="col span_1_of_5">
-      <a href="img/mobile_5.png" data-lightbox="mobile" class="light"><img src="img/mobile_5.png"></a>
-    </div>
-  </div>
-
-</div>
-
-  <div class="control">
-    <h6>PROJECTS</h6>
-    <div onclick="proj()"><icon-transition shape="plus" color="#7F8C8D" id="proj"></icon-transition></div>
-  </div>
-
-	<div class="part" id="part-4" style="display:none">
-    <h5 class="header-left">iota</h5>
-    <h6 class="desc-left">iota is a documentation browser built with node webkit.</h6>
-    <br/>
-    <a href="https://github.com/mkaminsky11/iota" class="btn btn-inverse"><i class="fa fa-github"></i> Github Page</a>
     <br/><br/>
 
-    <h5 class="header-left">scripts</h5>
-    <h6 class="desc-left">To help with the Cyberpatriot competitions, I made some Python scripts to automatically check for and fix vulnerabilities in Ubuntu servers. These tasks include checking for unecessary packages, configuring OpenSSH, and checking crontab.</h6>
+    <div class="section group" id="langs">
+      <div class="col span_1_of_3 back-end">
+        <h6 class="header center">Back End</h6>
+        <hr/>
+
+        <h6 class="desc center">Everything from administration to security to chat servers</h6>
+
+        <h6 class="desc"><span class="devicons devicons-linux"></span> Linux</h6>
+        <h6 class="desc"><span class="devicons devicons-python"></span> Python</h6>
+        <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
+        <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Node.js</h6>
+        <h6 class="desc"><span class="devicons devicons-scala"></span> Scala</h6>
+        <h6 class="desc"><span class="devicons devicons-haskell"></span> Haskell</h6>
+        <h6 class="desc"><span class="devicons devicons-go"></span> Go</h6>
+        <h6 class="desc"><span class="devicons devicons-mysql"></span> MySQL</h6>
+      </div>
+
+      <div class="col span_1_of_3 front-end">
+        <h6 class="header center">Front End</h6>
+        <hr/>
+
+        <h6 class="desc center" id="software">Web design that pops! I create responsive, fast, and interactive web pages</h6>
+        <h6 class="desc"><span class="devicons devicons-html5"></span> HTML</h6>
+        <h6 class="desc"><span class="devicons devicons-css3"></span> CSS</h6>
+        <h6 class="desc"><span class="devicons devicons-jquery"></span> JQuery</h6>
+        <h6 class="desc"><span class="devicons devicons-javascript"></span> Javascript</h6>
+        <h6 class="desc"><span class="devicons devicons-less"></span> Less</h6>
+      </div>
+
+      <div class="col span_1_of_3 software">
+        <h6 class="header center">Software</h6>
+        <hr/>
+
+        <h6 class="desc center">I make applications for mobile and desktop machines</h6>
+        <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
+        <h6 class="desc"><span class="devicons devicons-swift"></span> Node.js</h6>
+        <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Swift</h6>
+      </div>
+    </div>
+
+    <hr/>
+
+    <h6 class="header">CODE YOUR CLOUD
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/codeyourcloud" target="_blank"><i class="fa fa-github"></i></a></div>
+      <div class="github-div-dark"><a href="img/web_record.gif" data-lightbox="image-1"><i class="fa fa-eye"></i></a></div>
+      <div class="github-div-dark"><a href="https://codeyourcloud.com" target="_blank"><i class="fa fa-link"></i></a></div>
+    </h6>
+
+    <h6 class="med"><b>Users:</b><span class="inc" data-goal="1800" data-inc="100" data-start="0">0</span></h6>
+
+    <h6 class="med">This is the project on which most of my time is spent. It is a code editor for Google Drive. It allows for collaborative editing, and incorporates almost all of the skills I have learned, including mySQL and Node.js. I have used it as a testing ground, experimenting with Polymer and AngularJS, among others.</h6>
+
     <br/>
-    <a href="https://github.com/mkaminsky11/scripts" class="btn btn-inverse"><i class="fa fa-github"></i> Github Page</a>
-    <br/><br/>
 
-		<h5 class="header-left">nodebot</h5>
-		<h6 class="desc-left">I regularly use <a href="https://github.com/shazow/ssh-chat" class="real-link">ssh-chat</a>, and made an ssh bot for it. nodebot is capable of fetching news, doing calculations, and providing information about movies. It is named <i>nodebot</i> because it I built it using node.js, and I often use the username <i>node</i>.</h6>
-		<br/>
-		<a href="https://github.com/mkaminsky11/nodebot" class="btn btn-inverse"><i class="fa fa-github"></i> Github Page</a>
-		<br/><br/>
+  	<h6 class="header">IOTA
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/iota" target="_blank"><i class="fa fa-github"></i></a></div>
+      <!--div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div-->
+    </h6>
+  	<h6 class="med">A documentation browser built with
 
-		<h5 class="header-left">~mkaminsky</h5>
-		<h6 class="desc-left">I have an account with the <a href="http://tilde.club/" class="real-link">tilde.club</a> clone <a href="http://totallynuclear.club/" class="real-link">totallynuclear.club</a>. On this site, I have made a blog, and a message board for the totallynuclear community.</h6>
-		<br/>
-		<a href="https://github.com/mkaminsky11/swift-codemirror" class="btn btn-inverse"><i class="fa fa-link"></i> ~mkaminsky</a>
-		<br/><br/>
+      <span class="tooltip"><span class="tooltip-item"><a href="http://nwjs.io/">NW.js</a></span><span class="tooltip-content clearfix"><span class="tooltip-text">Formerly known as <strong>node-webkit</strong>, NW.js allows the creation of desktop applications with html, css, and javascript.</span></span>
 
-		<h5 class="header-left">Swift for CodeMirror</h5>
-		<h6 class="desc-left">Using my knowledge of the Swift programming language, I constructed a CodeMirror mode for Swift. As far as I have found, this is the first of its kind for CodeMirror.</h6>
-   <br/>
-		<a href="https://github.com/mkaminsky11/swift-codemirror" class="btn btn-inverse"><i class="fa fa-github"></i> GitHub Page</a>
-		<br/><br/>
-		<div id="code"></div>
-		<br/>
+    </h6>
+  	<br/>
 
-		<h5 class="header-left">SnipSafe</h5>
-		<h6 class="desc-left">This is the final project I created for my Dynamic Web Applications class at Harvard University. It is a site for storing and editing code snippets. SnipSafe was created with Laravel, and was my one of my first experiences with PHP.</h6>
-   <br/>
-		<a href="https://github.com/mkaminsky11/harvard-p4" class="btn btn-inverse"><i class="fa fa-github"></i> GitHub Page</a>
-   <br/><br/>
-   <!--br/>
-   <img src="img/snip.png" width="100%">
+  	<h6 class="header">SCRIPTS
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/scripts" target="_blank"><i class="fa fa-github"></i></a></div>
+      <!--div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div-->
+    </h6>
+  	<h6 class="med">I am currently a member of the Lincoln Labs-MIT
+      <span class="tooltip"><span class="tooltip-item"><a href="http://www.uscyberpatriot.org/" target="_blank">Cyberpatriot</a></span><span class="tooltip-content clearfix"><span class="tooltip-text">&quot;CyberPatriot is the National Youth Cyber Education Program created to inspire students toward careers in cybersecurity or other science, technology, engineering, and mathematics (STEM) disciplines. The program, created by the Air Force Association (AFA), features the National Youth Cyber Defense Competition for high school and middle school students.&quot;</span></span>
 
-		<br/-->
+     team. The competition consists of fixing security flaws in a variety of computer systems. To help, I made some Python scripts to automatically check for and fix vulnerabilities in Ubuntu servers</h6>
+  	<br/>
 
-		<h5 class="header-left">FileIcons</h5>
-		<h6 class="desc-left">A small collection of flat icons that I made for the Code Your Cloud mobile app. I also published them independently for others to use.</h6>
-   <br/>
-   	<a href="https://github.com/mkaminsky11/fileicons" class="btn btn-inverse"><i class="fa fa-github"></i> Github Page</a>
-   <br/><br/>
+  	<h6 class="header">NODEBOT
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/nodebot" target="_blank"><i class="fa fa-github"></i></a></div>
+      <!--div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div-->
+    </h6>
+  	<h6 class="med">I regularly use <a href="http://www.uscyberpatriot.org/" class="real-link" target="_blank">ssh-chat</a>, so I made an ssh bot for it. nodebot is capable of fetching news, doing calculations, and providing information about movies</h6>
+  	<br/>
 
-   <div class="section group">
+  	<h6 class="header">SWIFT for CODEMIRROR
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/swift-codemirror" target="_blank"><i class="fa fa-github"></i></a></div>
+      <!--div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div-->
+    </h6>
+  	<h6 class="med">Using my knowledge of the Swift programming language, I constructed a CodeMirror mode for Swift. As far as I have found, this is the first of its kind for
+      <span class="tooltip"><span class="tooltip-item"><a href="http://codemirror.net/">CodeMirror</a></span><span class="tooltip-content clearfix"><span class="tooltip-text">A library to create syntax-highlighted code editors with html, css, and javascript.</span></span>
+      .</h6>
+  	<br/>
 
-    <div class="col span_1_of_8">
-      <a href="img/coffee.png" data-lightbox="file" class="no-light"><img src="img/coffee.png"></a>
-    </div>
+  	<h6 class="header">SNIPSAFE
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/harvad-p4" target="_blank"><i class="fa fa-github"></i></a></div>
+      <!--div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div-->
+    </h6>
+  	<h6 class="med">This is the final project I created for my Dynamic Web Applications class at Harvard University. It is a site for storing and editing code snippets. SnipSafe was created with Laravel, and was my one of my first experiences with PHP.</h6>
+  	<br/>
 
-    <div class="col span_1_of_8">
-      <a href="img/cpp.png" data-lightbox="file" class="no-light"><img src="img/cpp.png"></a>
-    </div>
+  	<h6 class="header">FILEICONS
+      <div class="github-div-dark"><a href="https://github.com/mkaminsky11/fileicons" target="_blank"><i class="fa fa-github"></i></a></div>
+      <!--div class="github-div-dark"><a><i class="fa fa-eye"></i></a></div-->
+    </h6>
+  	<h6 class="med">A small collection of flat icons that I made for the Code Your Cloud mobile app. I also published them independently for others to use.</h6>
+  	<br/>
 
-    <div class="col span_1_of_8">
-      <a href="img/git_folder.png" data-lightbox="file" class="no-light"><img src="img/git_folder.png"></a>
-    </div>
+  	<h6 class="header">GOOGLE.JS<div class="github-div-dark"><a href="https://github.com/mkaminsky11/googlejs" target="_blank"><i class="fa fa-github"></i></a></div></h6>
+  	<h6 class="med">I was annoyed at the complexity of Google's javascript APIs, which took me a long time to learn, particularly the Google Drive API. So, I created an easy-to-use wrapper to help others avoid similar trouble.</h6>
 
-    <div class="col span_1_of_8">
-      <a href="img/java.png" data-lightbox="file" class="no-light"><img src="img/java.png"></a>
-    </div>
 
-    <div class="col span_1_of_8">
-      <a href="img/ruby.png" data-lightbox="file" class="no-light"><img src="img/ruby.png"></a>
-    </div>
+  	<hr/>
 
-     <div class="col span_1_of_8">
-      <a href="img/arduino.png" data-lightbox="file" class="no-light"><img src="img/arduino.png"></a>
-    </div>
-
-     <div class="col span_1_of_8">
-      <a href="img/css.png" data-lightbox="file" class="no-light"><img src="img/css.png"></a>
-    </div>
-
-     <div class="col span_1_of_8">
-      <a href="img/dart.png" data-lightbox="file" class="no-light"><img src="img/dart.png"></a>
-    </div>
+  	<div id="timesheet"></div>
   </div>
 
-  <div class="section group">
+  <div id="content-4">
+<!--h6 class="header center white">Resume</h6>
+<br/>
 
-    <div class="col span_1_of_8">
-      <a href="img/haskell.png" data-lightbox="file" class="no-light"><img src="img/haskell.png"></a>
-    </div>
-
-    <div class="col span_1_of_8">
-      <a href="img/html.png" data-lightbox="file" class="no-light"><img src="img/html.png"></a>
-    </div>
-
-    <div class="col span_1_of_8">
-      <a href="img/php.png" data-lightbox="file" class="no-light"><img src="img/php.png"></a>
-    </div>
-
-    <div class="col span_1_of_8">
-      <a href="img/python.png" data-lightbox="file" class="no-light"><img src="img/python.png"></a>
-    </div>
-
-    <div class="col span_1_of_8">
-      <a href="img/js.png" data-lightbox="file" class="no-light"><img src="img/js.png"></a>
-    </div>
-
-     <div class="col span_1_of_8">
-      <a href="img/swift.png" data-lightbox="file" class="no-light"><img src="img/swift.png"></a>
-    </div>
-
-     <div class="col span_1_of_8">
-      <a href="img/img.png" data-lightbox="file" class="no-light"><img src="img/img.png"></a>
-    </div>
-
-     <div class="col span_1_of_8">
-      <a href="img/key.png" data-lightbox="file" class="no-light"><img src="img/key.png"></a>
-    </div>
-  </div>
-
-
-
-   <br/>
-
-		<h5 class="header-left">GoogleJS</h5>
-		<h6 class="desc-left">I was annoyed at the complexity of Google's javascript APIs, which took me a long time to learn, particularly the Google Drive API. So, I created an easy-to-use wrapper to help others avoid similar trouble.</h6>
-   <br/>
-   	<a href="https://github.com/mkaminsky11/googlejs" class="btn btn-inverse"><i class="fa fa-github"></i> Github Page</a>
-   <br/><br/>
-
-	</div>
-
-
-  <div class="control-alt">
-    <h6>EXPERIENCE</h6>
-    <div onclick="xp()"><icon-transition shape="plus" color="#7F8C8D" id="xp"></icon-transition></div>
+<div class="contact">
+<div style="width:33.333%">
+                <div>
+                        <canvas width="58" height="58" class="circle"></canvas>
+                        <a><i class="fa fa-file-pdf-o"></i></a>
+                </div>
+		<h6 class="med center white">PDF</h6>
 </div>
+<div style="width:33.333%">
+                <div>
+                        <canvas width="58" height="58" class="circle"></canvas>
+                        <a><i class="fa fa-file-word-o"></i></a>
+                </div>
+		<h6 class="med center white">Word</h6>
+</div>
+<div style="width:33.333%">
+                <div>
+                        <canvas width="58" height="58" class="circle"></canvas>
+                        <a><i class="fa fa-apple"></i></a>
+                </div>
+		<h6 class="med center white">Pages</h6>
+</div>
+</div-->
 
-  <div class="part" id="part-6" style="display:none">
+<h6 class="header center white">Get In Touch</h6>
+<br/>
 
+<input id="name" placeholder="Name"/>
+<input id="email" placeholder="Email"/>
+<textarea id="message" placeholder="Message"></textarea>
 
-    <section id="cd-timeline" class="cd-container">
+<button id="send" onclick="email()"><i class="fa fa-paper-plane-o"></i> SEND</button>
+  <script src="lib/vivus.js"></script>
+  <script src="lib/tween.js"></script>
+  <script src="lib/ease.js"></script>
+  <script src="lib/poly.js"></script>
+  <script src="lib/time/timesheet.js"></script>
 
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#E74C3C">
-          <i class="fa fa-graduation-cap"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Java 1 at Salem State University</h2>
-          <p>This was my first exposure to computer science as topic of study. The course was tought by <a class="real-link" target="_blank" href="http://www.salemstate.edu/academics/schools/1174.php?id=1798">Beifang Yi</a>, and was a convinced me to pursue computer science.</p>
-          <!--a href="#0" class="cd-read-more">Read more</a-->
-          <span class="cd-date">Fall 2012</span>
-        </div>
-      </div>
-
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#3498DB">
-          <i class="fa fa-graduation-cap"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Java 2 at Salem State University</h2>
-          <p>After Java 1, it took this course. As a freshman, I also placed 4th at the <a class="real-link" target="_blank" href="http://salemstatelog.org/wordpress/2013/03/08/computer-science-hosts-department-wide-programming-contest/">Salem State Computer Science Competition</a>.</p>
-          <span class="cd-date">Spring 2013</span>
-        </div>
-      </div>
-
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#F39C12">
-          <i class="fa fa-lock"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Cryptography at Stanford University</h2>
-          <p>Through Stanford University's <a class="real-link" target="_blank" href="http://epgy.stanford.edu/">EPGY</a> program, I spent 3 weeks on campus studying cryptography, alongside other high school students from across the nation. Taught by Simon Rubinstein-Salzedo, a Stanford graduate and professor at Dartmouth College, the course taught me a lot about internet security. Although the course wasn't explicitly programming-focused, I used my Java knowledge to write programs to solve many of the problems which my counterparts could not.</p>
-          <span class="cd-date">Summer 2013</span>
-        </div>
-      </div>
-
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#E74C3C">
-          <i class="fa fa-flask"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Science Fair Project Started</h2>
-          <p>With the help of <a class="real-link" target="_blank" href="https://cee.mit.edu/cross">Eben Cross</a>, Research Scientist at MIT, my brother and I started to build a project to enter into the Massachusetts State Science and   Engineering Fair. Our goal of our project was to find the corellation between weather patterns and air pollution. To do this, I bought a <a class="real-link" target="_blank" href="http://www.raspberrypi.org/">Raspberry Pi</a>, and attached an <a class="real-link" target="_blank" href="http://airpi.es/">AirPi</a> module. The code for the AirPi was written in Python, and I modified it to fit our needs (specifically, so that it recorded the data onto a file).  The Raspberry Pi was then launched via weather balloon to collect data. The project was ultimately successful, and advanced past the regional level to the state fair.</p>
-          <span class="cd-date">September 2013</span>
-        </div>
-      </div>
-
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#3498DB">
-          <i class="fa fa-comments"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Ultimate Developer Event</h2>
-          <p>I attended the <a class="real-link" target="_blank" href="https://ultimatedeveloperevent.com/boston-2013/">Ultimate Developer Event</a>, located in Boston, in 2013. The event had several focuses: APIs, web apps, mobile apps, and startups. This was my first real interaction with "real" programmers. They were encouraging, and provided me with advice and help. My favorite talk during the conferences was by Chris Toomey, and called "Vim: an old tool for modern web dev," as it introduced me to Vim, which has been very useful.</p>
-          <span class="cd-date">November 20th 2013</span>
-        </div>
-      </div>
-
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#F39C12">
-          <i class="fa fa-code"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Code Your Cloud started</h2>
-          <p>Seeking to pursue other options in computer science, such as web development, I registered <a class="real-link" target="_blank" href="https://codeyourcloud.com">codeyourcloud.com</a>. This was mainly intended to be a playground for my ideas, but morphed into a full-fledged product.</p>
-          <span class="cd-date">November 26th 2013</span>
-        </div>
-      </div>
-
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#E74C3C">
-          <i class="fa fa-graduation-cap"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Dynamic Web Applications At Harvard</h2>
-          <p>During the summer, through the Harvard Summer School, I took the <a class="real-link" target="_blank" href="http://dwa15.com/">Dynamic Web Applications</a> course for 7 weeks. The course was taught by <a class="real-link" target="_blank" href="http://susanbuck.net/">Susan Buck</a>, and was my first formal introduction to web development. The course focused primarily on PHP, and used the Laravel framework. My <a class="real-link" target="_blank" href="https://github.com/mkaminsky11/harvard-p4">final project</a> was a code-snippet storage system.</p>
-          <span class="cd-date">Summer 2014</span>
-        </div>
-      </div>
-
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#3498DB">
-          <i class="fa fa-rocket"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Computer/Robotics Club Started</h2>
-          <p>Disappointed with the lack of computer science courses at my school, I decided to start a <a class="real-link" target="_blank" href="https://github.com/mhscomp/general">computer/robotics club</a> with the help of Edward Futcher, a math teacher at Marblehead High School, who has worked for many years at various tech companies. So far, the main goal of the club is education. This means not only teaching those people how to program, but to convince the school as a whole that computer science is worth their time.</p>
-          <span class="cd-date">September 2014</span>
-        </div>
-      </div>
-
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#F39C12">
-          <i class="fa fa-trophy"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>CyberPatriot Statewide Competition</h2>
-          <p>I started participation in the <a class="real-link" target="_blank" href="http://www.uscyberpatriot.org/">CyberPatriot</a> competition with MIT's Lincoln Labs. The goal of the competition is to fix security flaws in 3 virual machine images: Ubuntu, Windows 7, and Windows Vista. My team placed 3rd in the State, advancing to the regional level.</p>
-          <span class="cd-date">December 7 2014</span>
-        </div>
-      </div>
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#E74C3C">
-          <i class="fa fa-flask"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Radar Workship</h2>
-          <p>A precursor to the radar-building program at Lincoln Laboratories hosted in the Summer, the workshop used MATLab to interact with 3D-printed radar systems.</p>
-          <span class="cd-date">Fedruary 14 2015</span>
-        </div>
-      </div>
-
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img" style="background-color:#3498DB">
-          <i class="fa fa-graduation-cap"></i>
-        </div>
-        <div class="cd-timeline-content">
-          <h2>Classes at MIT</h2>
-          <p>These classes are taught by MIT students through the <a href="https://esp.mit.edu/learn/index.html" class="real-link" target="_blank">HSSP</a> program. The classes I took include "Compilers and Parsers"(taught with Haskell) and "A Tour of Scala".</p>
-          <span class="cd-date">Spring 2015</span>
-        </div>
-      </div>
-
-
-    </section> <!-- cd-timeline -->
-
-
-
-  </div>
-
-	<div class="part" id="part-5">
-		  <div class="section group">
-        <div class="col span_1_of_5">
-            <a href="https://keybase.io/mkaminsky11" target="_blank">
-              <img src="img/keybase.png" id="keybase_icon">
-            </a>
-        </div>
-
-        <div class="col span_1_of_5">
-            <a href="https://plus.google.com/u/0/+michaelkaminsky/posts" target="_blank">
-              <img src="img/google.png" id="google_icon">
-            </a>
-        </div>
-
-        <div class="col span_1_of_5">
-            <a href="https://github.com/mkaminsky11" target="_blank">
-              <img src="img/github.png" id="github_icon">
-            </a>
-        </div>
-
-        <div class="col span_1_of_5">
-            <a href="http://totallynuclear.club/~mkaminsky" target="_blank">
-              <img src="img/nuclear.png" id="nuke_icon">
-            </a>
-        </div>
-
-        <div class="col span_1_of_5">
-            <a href="https://coderwall.com/mkaminsky11" target="_blank">
-              <img src="img/wall.png" id="wall_icon">
-            </a>
-        </div>
-    </div>
-
-    <!--hr id="sep"/-->
-    <h3 id="email">mkaminsky11@gmail.com</h3>
-    <h3 id="email">michael@codeyourcloud.com</h3>
-	</div>
-
-	<script src="lib/fit.js"></script>
-
-	<script src="js/main.js"></script>
-
-	<!--script>
-	var s = skrollr.init({
-		edgeStrategy: 'set',
-		easing: {
-		}
-	});
-	</script-->
+  <script src="js/link.js"></script>
+  <script src="js/circle.js"></script>
+  <script src="js/inc.js"></script>
+  <script src="js/nodes.js"></script>
+  <script src="js/light.js"></script>
+  <script src="js/sections.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

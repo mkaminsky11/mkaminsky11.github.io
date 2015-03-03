@@ -1,0 +1,100 @@
+.tooltip {
+	display: inline;
+	position: relative;
+	z-index: 999;
+}
+
+/* Trigger text */
+
+.tooltip-item {
+	background: #F44142;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	padding: 0px;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-right: 6px;
+	font-size: 0.9em;
+	font-family: "Pixel";
+}
+.tooltip-item > a {
+  color: rgb(231, 231, 231) !important;
+  text-decoration: none;
+}
+
+/* Gap filler */
+
+.tooltip-item::after {
+	content: '';
+	position: absolute;
+	width: 360px;
+	height: 20px;
+	bottom: 100%;
+	left: 50%;
+	pointer-events: none;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.tooltip:hover .tooltip-item::after {
+	pointer-events: auto;
+}
+
+/* Tooltip */
+
+.tooltip-content {
+	position: absolute;
+	z-index: 9999;
+	width: 360px;
+	left: 30px;
+	margin: -7px 0 -3px -180px;
+	bottom: 100%;
+	text-align: left;
+	font-size: 0.8em;
+	line-height: 1.4;
+	box-shadow: -2px 6px 26px rgba(33, 35, 37, 0.5);
+	background: rgba(244, 65, 66, 0.85);
+	padding: 7px;
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+	font-family: "Arimo";
+	margin-bottom: 1px;
+}
+
+.tooltip-content {
+	-webkit-transform: translate3d(0,-10px,0);
+	transform: translate3d(0,-10px,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip:hover .tooltip-content {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+	transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+}
+
+.tooltip.tooltip-effect-2:hover .tooltip-content {
+	-webkit-transform: perspective(1000px) rotate3d(1,0,0,0deg);
+	transform: perspective(1000px) rotate3d(1,0,0,0deg);
+}
+
+.tooltip-text {
+	font-size: 12px;
+	line-height: 1.35;
+	display: block;
+	padding: 1.31em 1.21em 1.21em 0;
+	color: #fff;
+	font-weight: 600;
+}
+
+.tooltip-text {
+	padding: 1.4em;
+}
+
+.tooltip-text a {
+	font-weight: bold;
+}

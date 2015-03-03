@@ -1,9 +1,0 @@
-/node_modules
-/docs
-
-/test.bat
-
-/build/platform*
-*.min.js*
-*.concat.js*
-build.bat
