@@ -24,11 +24,29 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/input.css">
   <link rel="stylesheet" href="css/tooltip.css">
+  <link rel="stylesheet" href="css/menu.css">
 
   <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 </head>
 <body>
   <span id="color-picker" style="display:none;color:rgb(57, 72, 176)"></span>
+
+  <span id="menu-button" class="menu" onclick="menu.toggle()"><i class="fa fa-bars"></i></span>
+  <ul id="menu-dropdown" class="menu" style="display:none">
+    <!--
+    about-me
+    skills
+    projects
+    xp
+    contact-me
+    -->
+    <li><a href="#about-me">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#xp">Experience</a></li>
+    <li><a href="#contact-me">Contact</a></li>
+  </ul>
+
   <div id="main">
     <div id="about">
         <div>
@@ -76,13 +94,15 @@
 
   <div id="content-1">
 
-      <h6 class="center desc">I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
+      <h6 class="center desc" id="about-me">I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
       </h6>
       <h6 class="center desc">I am currently a junior at Marblehead High School in Marblehead, Massachusetts. My school has almost no computer science classes, so I took Java at Salem State University, Cryptography at Stanford University, and Dynamic Web Applications at Harvard University. I am also the president of the
         <span class="tooltip"><span class="tooltip-item"><a href="https://github.com/mhscomp/general">Computer and Robotics Club</a></span><span class="tooltip-content clearfix"><span class="tooltip-text">A club I founded to promote Computer Science education. I help students to learn the basics of Java, web design, Linux, and other topics.</span></span>
 
          at Marblehead High School.
     </h6>
+
+    <br id="skills">
 
     <div id="tilted-div">
       <img src="img/software.png" class="tilted-img software" width="40%">
@@ -156,7 +176,7 @@
       </div>
     </div>
 
-    <hr/>
+    <hr id="projects"/>
 
     <h6 class="header">CODE YOUR CLOUD
       <div class="github-div-dark"><a href="https://github.com/mkaminsky11/codeyourcloud" target="_blank"><i class="fa fa-github"></i></a></div>
@@ -224,7 +244,7 @@
   	<h6 class="med">I was annoyed at the complexity of Google's javascript APIs, which took me a long time to learn, particularly the Google Drive API. So, I created an easy-to-use wrapper to help others avoid similar trouble.</h6>
 
 
-  	<hr/>
+  	<hr id="xp"/>
 
   	<div id="timesheet"></div>
   </div>
@@ -257,15 +277,18 @@
 </div>
 </div-->
 
-<h6 class="header center white">Get In Touch</h6>
+<h6 class="header center white" id="contact-me">Get In Touch</h6>
 <br/>
 
 <input id="name" placeholder="Name"/>
 <input id="email" placeholder="Email"/>
 <textarea id="message" placeholder="Message"></textarea>
 
+<br/><br/>
+
 <button id="send" onclick="email()"><i class="fa fa-paper-plane-o"></i> SEND</button>
-  <script src="lib/vivus.js"></script>
+
+<script src="lib/vivus.js"></script>
   <script src="lib/tween.js"></script>
   <script src="lib/ease.js"></script>
   <script src="lib/poly.js"></script>
@@ -277,6 +300,7 @@
   <script src="js/nodes.js"></script>
   <script src="js/light.js"></script>
   <script src="js/sections.js"></script>
+  <script src="js/menu.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

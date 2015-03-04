@@ -36,7 +36,7 @@ timesheet.color-scheme-default .bubble-ipsum{background-color:RGBA(60, 182, 227,
 
 .timesheet .data li .label{font-weight:lighter;font-size:14px;padding-left:5px;line-height:21px;color:#979796;white-space:nowrap}
 
-.timesheet .data li .bubble{width:24px;height:7px;display:block;float:left;position:relative;top:7px;border-radius:4px;margin:0 10px 0 0;opacity:0.7}
+.timesheet .data li .bubble{width:24px;height:7px;display:block;float:left;position:relative;top:7px;border-radius:4px;margin:0 10px 0 0;/*opacity:0.7*/}
 
 #timesheet-alternative{background-color:RGBA(247, 247, 247, 1);border-radius:5px}
 

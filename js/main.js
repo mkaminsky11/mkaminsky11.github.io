@@ -30,8 +30,8 @@ window.setInterval(nodes.render, 70);
 $('#canvas').css('background-color', 'rgba(94, 65, 47, 0)');
 
 function resize_main(){
-  $("#main").height($(window).height());
-  $("#main").width($(window).width());
+  $("#main").height($("body").height());
+  $("#main").width($("body").width());
   $("#canvas").attr("width",$("#main").width()).attr("height",$("#main").height());
   nodes.max = Math.min($("#main").width() / 4, $("#main").height() / 3);
   $("#content-1").css("margin-top",$("#main").height());
@@ -55,8 +55,6 @@ new Timesheet('timesheet', 2012, 2016, [
 ]);
 
 function email(){
-  // gAWCzKHFlMGphDmMdsZoqA
-
   $.ajax({
   type: "POST",
   url: "https://mandrillapp.com/api/1.0/messages/send.json",

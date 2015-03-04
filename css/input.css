@@ -12,6 +12,13 @@ background-color: rgba(255, 255, 255, 0.04);
 border: solid 2px rgb(244, 65, 66);
 border-color: rgba(210, 210, 210, 0.42);
 color: white;
+
+-webkit-transition-property: border-color;
+-webkit-transition-duration: 1s;
+-moz-transition-property: border-color;
+-moz-transition-duration: 1s;
+transition-property: border-color;
+transition-duration: 1s;
 }
 
 input:focus, textarea:focus{
@@ -19,7 +26,7 @@ outline: none !important;
 border-color: rgb(244, 65, 66);
 }
 
-::-webkit-input-placeholder,:-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {  
+::-webkit-input-placeholder,:-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
    font-family: "Pixel";
 }
 
