@@ -43,7 +43,7 @@ function resize_main(){
 new Timesheet('timesheet', 2012, 2016, [
   ['09/2012', '11/2012', 'Java 1 at Salem State University', 'bar'],
   ['03/2013', '06/2013', 'Java 2 at Salem State University', 'bar'],
-  ['06/2013', '07/2012', 'Cryptography at Stanford University', 'bar'],
+  ['06/2013', '07/2013', 'Cryptography at Stanford University', 'bar'],
   ['09/2013', '11/2013', 'Science fair project with MIT researcher', 'bar'],
   ['09/2013', '10/2013', 'Ultimate Developer Event 2013', 'bar'],
   ['11/2013', '03/2015', 'Code Your Cloud active', 'bar'], //cyc
