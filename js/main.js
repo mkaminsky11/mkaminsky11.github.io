@@ -46,12 +46,12 @@ new Timesheet('timesheet', 2012, 2016, [
   ['06/2013', '07/2013', 'Cryptography at Stanford University', 'bar'],
   ['09/2013', '11/2013', 'Science fair project with MIT researcher', 'bar'],
   ['09/2013', '10/2013', 'Ultimate Developer Event 2013', 'bar'],
-  ['11/2013', '03/2015', 'Code Your Cloud active', 'bar'], //cyc
+  ['11/2013', '04/2015', 'Code Your Cloud active', 'bar'], //cyc
   ['09/2013', '06/2014', 'AP Computer Science', 'bar'], //ap comp sci
   ['06/2014', '09/2014', 'Dynamic Web Applications at Harvard', 'bar'], //dwa
-  ['09/2014', '03/2015', 'Marblehead High School Computer/Robotics club', 'bar'], //computer robotics club
+  ['09/2014', '04/2015', 'Marblehead High School Computer/Robotics club', 'bar'], //computer robotics club
   ['11/2014', '12/2014', 'Placed 3rd in Massachusetts CyberPatriot competition', 'bar'], //state competition
-  ['02/2015', '03/2015', '\"A Tour of Scala\" and  \"Languages, Compilers, and Parsers\" at MIT', 'bar'] //mit classes
+  ['02/2015', '04/2015', '\"A Tour of Scala\" and  \"Languages, Compilers, and Parsers\" at MIT', 'bar'] //mit classes
 ]);
 
 function email(){
