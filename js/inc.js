@@ -8,7 +8,7 @@ inc.increment = function(curr, goal, elem, up){
 
     window.setTimeout(function(){
       inc.increment(next, goal, elem, up);
-    }, 100);
+    }, 200);
 
   }
 };
