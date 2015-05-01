@@ -1,3 +1,11 @@
+var color_combos = [
+	["#00BCD4","#038C9B","#FFEE58"],
+	["#795548","#5D4037","#FF4081"],
+	["#607D8B","#455A64","#536DFE"],
+	["#FFEB3B","#FBC02D","#009688"],
+	["#673AB7","#512DA8","#00BCD4"]
+];
+
 $(window).resize(function(){
   resize_main();
   nodes.render();
