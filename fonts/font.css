@@ -1,10 +1,4 @@
 @font-face{
-  font-family: "Nexa";
-  src: url("NexaRustSlab-BlackShadow01.otf") format("opentype");
-  font-weight: bold;
-}
-
-@font-face{
   font-family: "Pixel";
   src: url("slkscr.ttf");
   font-weight: 400;
@@ -46,4 +40,10 @@
   font-family: 'Arimo-Bold';
   font-weight: bold;
   src: url(Arimo-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Slabo';
+  font-weight: bold;
+  src: url(Slabo.ttf) format('truetype');
 }

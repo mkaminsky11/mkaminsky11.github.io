@@ -30,7 +30,7 @@ body{
   background-color:transparent;
   width:100%;
   height:100%;
-  
+
   -ms-box-orient: horizontal;
   display: -webkit-box;
   display: -moz-box;
@@ -50,6 +50,7 @@ body{
   padding:20px;
   border-radius:6px;
   text-align:center;
+  position: relative;
 }
 h1{
   margin: 0;
@@ -65,7 +66,7 @@ h1{
 .me{
   margin-top:10px;
   margin-bottom:10px;
-  font-family:"Arimo";
+  font-family:"Arial";
   font-weight:500;
   color:#E0CECE;
   width:100%;
@@ -85,10 +86,14 @@ h1{
   z-index: 3;
 }
 .center{text-align:center}
+
 .header{margin-top:15px;margin-bottom:5px;font-size:1.1em;font-family:"Pixel";font-weight:600;color:#4c4949}
-.desc{margin-top:15px;margin-bottom:15px;font-size:1em;font-family:"Arimo";font-weight:400;color:#4c4949}
-.med{margin-top:5px;margin-bottom:5px;font-size:0.9em;font-family:"Arimo";color:#454545;font-weight:300}
-.info{margin-top:5px;margin-bottom:5px;font-size:0.8em;font-family:"Arimo";color:#454545;font-weight:300}
+
+.desc{margin-top:15px;margin-bottom:15px;font-size:1em;font-family:"Slabo";font-weight:400;color:#4c4949}
+
+.med{margin-top:5px;margin-bottom:5px;font-size:0.9em;font-family:"Slabo";color:#454545;font-weight:300}
+
+.info{margin-top:5px;margin-bottom:5px;font-size:0.8em;font-family:"Slabo";color:#454545;font-weight:300}
 
 .real-link{
   font-weight: bold;
@@ -187,7 +192,7 @@ hr.color{
   color: rgb(115, 115, 115) !important;
 }
 #cd-timeline, .cd-date{
-  font-family: "Arimo";
+  font-family: "Slabo";
 }
 .flex{
   -ms-box-orient: horizontal;
@@ -325,4 +330,20 @@ img.back-end{
 
 .name, svg{
   font-family: "Lobster", Arial !important;
+}
+
+#contact-div{
+
+}
+
+.contact{
+
+}
+
+#contact-1{
+
+}
+
+#contact-2{
+
 }
