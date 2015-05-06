@@ -22,9 +22,7 @@
   font-weight: 400;
 }
 
-
-/* latin-ext */
-@font-face {
+/*@font-face {
   font-family: 'Arimo';
   font-weight: 400;
   src: url(Arimo-Regular.ttf) format('truetype');
@@ -40,7 +38,7 @@
   font-family: 'Arimo-Bold';
   font-weight: bold;
   src: url(Arimo-Bold.ttf) format('truetype');
-}
+}*/
 
 @font-face {
   font-family: 'Slabo';
