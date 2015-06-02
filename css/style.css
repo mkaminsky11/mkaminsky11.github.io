@@ -66,7 +66,7 @@ h1{
 .me{
   margin-top:10px;
   margin-bottom:10px;
-  font-family:"Arial";
+  font-family:"San-Fran";
   font-weight:500;
   color:#E0CECE;
   width:100%;
@@ -87,15 +87,15 @@ h1{
 }
 .center{text-align:center}
 
-.header{margin-top:15px;margin-bottom:5px;font-size:1.1em;font-family:"Roboto-Slab";font-weight:bold;color:#4c4949}
+.header{margin-top:15px;margin-bottom:5px;font-size:1.1em;font-family:"San-Fran";font-weight:bold;color:#4c4949}
 
 .pixel{font-family:"Pixel"}
 
-.desc{margin-top:15px;margin-bottom:15px;font-size:1em;font-family:"Roboto-Slab";font-weight:400;color:#4c4949}
+.desc{margin-top:15px;margin-bottom:15px;font-size:1em;font-family:"San-Fran";font-weight:400;color:#4c4949}
 
-.med{margin-top:5px;margin-bottom:5px;font-size:0.9em;font-family:"Roboto-Slab";color:#454545;font-weight:300}
+.med{margin-top:5px;margin-bottom:5px;font-size:0.9em;font-family:"San-Fran";color:#454545;font-weight:300}
 
-.info{margin-top:5px;margin-bottom:5px;font-size:0.8em;font-family:"Roboto-Slab";color:#454545;font-weight:300}
+.info{margin-top:5px;margin-bottom:5px;font-size:0.8em;font-family:"San-Fran";color:#454545;font-weight:300}
 
 .real-link{
   font-weight: bold;
@@ -194,7 +194,7 @@ hr.color{
   color: rgb(115, 115, 115) !important;
 }
 #cd-timeline, .cd-date{
-  font-family: "Roboto-Slab";
+  font-family: "San-Fran";
 }
 .flex{
   -ms-box-orient: horizontal;
@@ -348,4 +348,64 @@ img.back-end{
 
 #contact-2{
 
+}
+
+
+#rotate{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+
+#rotate > div{
+  flex: 33%;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+#rotate > div > img{
+  height: 100%;
+  width: 100%;
+}
+
+#rotate-1{
+  z-index: 1;
+  position: relative;
+}
+
+#rotate-2{
+  position: absolute;
+  z-index: 2;
+
+  /*-moz-box-shadow: 0 4px 2px -2px #4A4A4A;
+	-webkit-box-shadow: 0 4px 2px -2px #4A4A4A;
+  	box-shadow: 0 4px 2px -2px #4A4A4A;*/
+
+    display: none;
+}
+
+#blur-top, #blur-bottom{
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  background-color: white;
+  filter: blur(5px);
+  -webkit-filter: blur(10px);
+  z-index: 3;
+}
+
+#blur-top{
+  top: -20px;
+}
+
+#blur-bottom{
+  bottom: -20px;
 }

@@ -46,26 +46,41 @@
   src: url("roboto-slab/RobotoSlab-Thin.ttf") format('truetype');
 }
 
-/*@font-face {
-  font-family: 'Arimo';
-  font-weight: 400;
-  src: url(Arimo-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Arimo';
-  font-weight: bold;
-  src: url(Arimo-Bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Arimo-Bold';
-  font-weight: bold;
-  src: url(Arimo-Bold.ttf) format('truetype');
-}*/
-
 @font-face {
   font-family: 'Slabo';
   font-weight: bold;
   src: url(Slabo.ttf) format('truetype');
+}
+
+/*
+SAN FRAN
+*/
+@font-face{
+  font-family: 'San-Fran';
+  font-weight: 400;
+  src: url("sanfran/San_Text_Reg.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'San-Fran';
+  font-weight: 700;
+  src: url("sanfran/San_Text_Bold.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'San-Fran';
+  font-weight: 100;
+  src: url("sanfran/San_Text_Thin.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'San-Fran';
+  font-weight: 800;
+  src: url("sanfran/San_Text_Heavy.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'San-Fran';
+  font-weight: 500;
+  src: url("sanfran/San_Text_Med.ttf") format("truetype");
 }

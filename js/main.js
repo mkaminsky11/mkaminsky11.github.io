@@ -9,6 +9,7 @@ var color_combos = [
 $(window).resize(function(){
   resize_main();
   nodes.render();
+	rotate.resize();
 });
 
 $(document).ready(function(){
@@ -17,6 +18,7 @@ $(document).ready(function(){
     circles.init();
     light.init();
     link.init();
+		rotate.init();
 
 window.setTimeout(function(){
 resize_main();
@@ -94,7 +96,7 @@ function switch_contact(){
 			//remove contact-2
 			$("#contact-2").velocity("transition.slideRightOut", {
 			complete: function(){
-				$("#contact-2").css("display","none"); 
+				$("#contact-2").css("display","none");
 				$("#contact-1").css("opacity",0).css("display","inline-block").velocity("transition.slideLeftIn",{display:"flex"});
 			}
 		});
