@@ -11,7 +11,7 @@ rotate.init = function(){
 
 rotate.files = [
   "sketch", "jquery", "kali", "linux", "kinect", "atom",
-  "node.js", "meteor"
+  "node.js", "meteor", "codemirror", "keybase", "stackoverflow"
 ];
 
 rotate.rotate = function(){
