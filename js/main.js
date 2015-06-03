@@ -86,29 +86,7 @@ function email(){
     }
   }
  }).done(function(response) {
-	//console.log(response);
-	if(response[0].status === "sent"){
-		$("#name, #email, #message").val("");
-	}
  });
-}
 
-function switch_contact(){
-	if($("#contact-1").css("display") === "none"){
-			//remove contact-2
-			$("#contact-2").velocity("transition.slideRightOut", {
-			complete: function(){
-				$("#contact-2").css("display","none");
-				$("#contact-1").css("opacity",0).css("display","inline-block").velocity("transition.slideLeftIn",{display:"flex"});
-			}
-		});
-	}
-	else{
-		$("#contact-1").velocity("transition.slideLeftOut", {
-			complete: function(){
-				$("#contact-1").css("display","none");
-				$("#contact-2").css("opacity",0).velocity("transition.slideLeftIn",{display:"flex"});
-			}
-		});
-	}
+$("#name, #email, #message").val("");
 }
