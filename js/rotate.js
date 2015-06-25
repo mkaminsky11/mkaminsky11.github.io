@@ -19,14 +19,14 @@ rotate.rotate = function(){
   $("#rotate-2").attr("src", new_file);
   $("#rotate-2").css("display","block");
 
-  $("#rotate-1").velocity({
+  $("#rotate-1").animate({
     marginTop: "100%"
   },{
     duration: 500,
     queue: false
   })
 
-  $("#rotate-2").velocity({
+  $("#rotate-2").animate({
     bottom: 0
   },{
     duration: 500,

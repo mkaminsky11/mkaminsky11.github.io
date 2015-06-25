@@ -18,6 +18,7 @@ $(document).ready(function(){
     circles.init();
     light.init();
     link.init();
+    github.init();
 		rotate.init();
 
 window.setTimeout(function(){
