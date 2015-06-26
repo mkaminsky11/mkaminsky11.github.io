@@ -122,10 +122,12 @@ h1{
     font-family: "San-Fran";
     color: #C5BFBF;
     overflow-wrap: break-word;
+    font-weight: 400;
 }
 .github-info > i{
-    margin-left: 12px;
-    margin-right: 3px;
+    margin-right: 12px;
+    margin-left: 5px;
+    font-size: 20px;
 }
 
 .real-link{

@@ -8,8 +8,8 @@ github.init = function(){
 		_repo.fetch(function (err, res) {
 		    if(err) { console.log("github info error...") }
 		   	else{
-		   		var html = "<i class=\"fa fa-star\"></i>" + res.watchers_count;
-		   		html += "<i class=\"fa fa-code-fork\"></i>" + res.forks_count;
+		   		var html = res.watchers_count + "<i class=\"fa fa-star\"></i>";
+		   		html +=  res.forks_count + "<i class=\"fa fa-code-fork\"></i>";
 		   		$(elem).html(html);
 		   	}
 		});
