@@ -63,8 +63,8 @@ new Timesheet('timesheet', 2012, 2016, [
   ['09/2014', '07/2015', 'Marblehead High School Computer/Robotics club', 'bar'], //computer robotics club
   ['11/2014', '12/2014', 'Placed 3rd in Massachusetts CyberPatriot competition', 'bar'], //state competition
   ['02/2015', '04/2015', '\"A Tour of Scala\" and  \"Languages, Compilers, and Parsers\" at MIT', 'bar'], //mit classes
-  ['06/2015', '07/2015', '\"Introduction to Semiconductor Device Physics\" at Harvard']
-	//TODO: LLRISE
+  ['06/2015', '07/2015', '\"Introduction to Semiconductor Device Physics\" at Harvard', 'bar'],
+  ['07/2015', '08/2015', '\" Lincoln Laboratory Radar Introduction for Student Engineers\"', 'bar']
 ]);
 
 function email(){
