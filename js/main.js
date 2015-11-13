@@ -21,9 +21,9 @@ $(document).ready(function(){
     github.init();
 		rotate.init();
 
-window.setTimeout(function(){
-resize_main();
-}, 1000);
+    window.setTimeout(function(){
+        resize_main();
+    }, 1000);
 });
 
 $(window).scroll(function(){
