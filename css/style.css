@@ -368,7 +368,7 @@ img.back-end{
 }
 
 #contact-div{
-
+  margin-bottom: 12px;
 }
 
 .contact{
@@ -441,4 +441,20 @@ img.back-end{
 
 #blur-bottom{
   bottom: -20px;
+}
+
+.resume{
+  padding: 10px;
+  font-size: .8em;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: calc(.4em + 10px);   
+  -webkit-appearance: none;
+  outline: none !important;
+  font-family: "San-Fran";
+  font-weight: 600;
+  color: white;
+  background-color: rgba(244, 65, 66, 0.6);
+  border: solid 2px rgb(244, 65, 66);
+  text-decoration: none !important;
 }
