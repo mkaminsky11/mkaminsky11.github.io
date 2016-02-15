@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+
+ <!--
+  ==============
+  =HELLO THERE!=
+  ==============
+  I guess you decided to actually check out my code!
+ -->
+
 	<meta charset="utf-8">
 	<title>Michael Kaminsky</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <script src="lib/jquery-1.8.3.min.js"></script>
 	<script src="lib/velocity.min.js"></script>
 	<script src="lib/velocity.ui.min.js"></script>
-
   <script src="lib/onscreen.js"></script>
-
   <link href='fonts/font.css' rel='stylesheet' type='text/css'>
   <link href='Font/css/font-awesome.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/time.css">
   <link rel="stylesheet" href="css/img.css">
   <link href='devicons/css/devicons.css' rel='stylesheet'>
-
   <link rel="stylesheet" href="light/css/lightbox.css">
   <script src="light/js/lightbox.min.js"></script>
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="lib/time/timesheet.css">
-
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/input.css">
   <link rel="stylesheet" href="css/tooltip.css">
@@ -29,17 +33,10 @@
   <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 </head>
 <body>
-  <span id="color-picker" style="display:none;color:rgb(57, 72, 176)"></span>
+  <span id="color-picker" style="display:none;color:rgb(57, 72, 176)"></span> <!--this picks the colors-->
 
   <span id="menu-button" class="menu" onclick="menu.toggle()"><i class="fa fa-bars"></i></span>
   <ul id="menu-dropdown" class="menu" style="display:none">
-    <!--
-    about-me
-    skills
-    projects
-    xp
-    contact-me
-    -->
     <li><a href="#about-me">About Me</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -63,13 +60,12 @@
 
           <h1>Michael Kaminsky</h1>
 
-            <h2 class="me">I'm a designer and programmer who likes design, security, and making software and websites</h2>
+            <h2 class="me">I'm a designer and programmer who likes UI, security, and making software and websites</h2>
           <div id="contact-div">
 
 
             <div class="contact" id="contact-1">
               <div>
-                <!--twitter-->
                 <div>
                 	<canvas width="58" height="58" class="circle"></canvas>
                 	<a href="https://twitter.com/mkaminsky11" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -77,7 +73,6 @@
               </div>
 
               <div>
-                <!--email-->
                 <div>
                 	<canvas width="58" height="58" class="circle"></canvas>
                 	<a href="mailto:mkaminsky11@gmail.com" target="_top"><i class="fa fa-envelope"></i></a>
@@ -85,7 +80,6 @@
               </div>
 
               <div>
-                <!--github-->
                 <div>
                 	<canvas width="58" height="58" class="circle"></canvas>
                 	<a href="https://github.com/mkaminsky11" target="_blank"><i class="fa fa-github"></i></a>
@@ -93,7 +87,6 @@
               </div>
 
               <div>
-                <!--google+-->
                 <div>
                 	<canvas width="58" height="58" class="circle"></canvas>
                 	<a href="https://plus.google.com/u/0/+michaelkaminsky/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
@@ -182,7 +175,6 @@
     <div class="section group" id="langs">
       <div class="col span_1_of_3 back-end">
         <h6 class="header center">Back End</h6>
-        <hr/>
 
         <h6 class="desc center">Everything from administration to security to chat servers</h6>
 
@@ -190,16 +182,16 @@
         <h6 class="desc"><span class="devicons devicons-python"></span> Python</h6>
         <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
         <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Node.js</h6>
-        <h6 class="desc"><span class="devicons devicons-scala"></span> Scala (work in progress)</h6>
+        <h6 class="desc"><span class="devicons devicons-mongodb"></span> MongoDB</h6>
+        <!--h6 class="desc"><span class="devicons devicons-scala"></span> Scala (work in progress)</h6>
         <h6 class="desc"><span class="devicons devicons-haskell"></span> Haskell (work in progress)</h6>
-        <h6 class="desc"><span class="devicons devicons-go"></span> Go (work in progress)</h6>
+        <h6 class="desc"><span class="devicons devicons-go"></span> Go (work in progress)</h6-->
         <h6 class="desc"><span class="devicons devicons-mysql"></span> MySQL</h6>
-        <h6 class="desc"><span class="devicons devicons-terminal"></span> C++ (work in progress)</h6>
+        <!--h6 class="desc"><span class="devicons devicons-terminal"></span> C++ (work in progress)</h6-->
       </div>
 
       <div class="col span_1_of_3 front-end">
         <h6 class="header center">Front End</h6>
-        <hr/>
 
         <h6 class="desc center" id="software">Web design that pops! I create responsive, fast, and interactive web pages</h6>
         <h6 class="desc"><span class="devicons devicons-html5"></span> HTML</h6>
@@ -207,22 +199,23 @@
         <h6 class="desc"><span class="devicons devicons-jquery"></span> JQuery</h6>
         <h6 class="desc"><span class="devicons devicons-javascript"></span> Javascript</h6>
         <h6 class="desc"><span class="devicons devicons-less"></span> Less</h6>
-        <h6 class="desc"><span class="devicons devicons-meteor"></span> Meteor (work in progress)</h6>
       </div>
 
       <div class="col span_1_of_3 software">
         <h6 class="header center">Software</h6>
-        <hr/>
 
-        <h6 class="desc center">I make applications for mobile and desktop machines</h6>
+        <h6 class="desc center">I make applications for mobile and desktop platforms</h6>
         <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
         <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Node.js</h6>
-        <h6 class="desc"><span class="devicons devicons-swift"></span> Swift (work in progress)</h6>
+        <!--h6 class="desc"><span class="devicons devicons-swift"></span> Swift (work in progress)</h6-->
         <h6 class="desc"><span class="devicons devicons-phonegap"></span> PhoneGap</h6>
-        <h6 class="desc"><span class="devicons devicons-terminal"></span> C# (work in progress)</h6>
-        <h6 class="desc"><span class="devicons devicons-terminal"></span> C++ (work in progress)</h6>
+        <!--h6 class="desc"><span class="devicons devicons-terminal"></span> C# (work in progress)</h6>
+        <h6 class="desc"><span class="devicons devicons-terminal"></span> C++ (work in progress)</h6-->
       </div>
     </div>
+
+    <h6 class="desc"><b>In the future:</b> Scala, Haskell, Go, C++, Swift, and C#</h6>
+
 
     <h3 class="title" id="projects">PROJECTS</h3>
 
@@ -381,7 +374,6 @@
   <script src="lib/poly.js"></script>
   <script src="lib/time/timesheet.js"></script>
   <script src="lib/github-stars.js"></script>
-
   <script src="js/github.js"></script>
   <script src="js/link.js"></script>
   <script src="js/circle.js"></script>
