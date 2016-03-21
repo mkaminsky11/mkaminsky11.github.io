@@ -368,13 +368,13 @@
 <h6 class="header center white pixel" id="contact-me">Get In Touch</h6>
 <br/>
 
-<input id="name" placeholder="Name"/>
-<input id="email" placeholder="Email"/>
-<textarea id="message" placeholder="Message"></textarea>
-
-<br/><br/>
-
-<button id="send" onclick="email()"><i class="fa fa-paper-plane-o"></i> SEND</button>
+<form action="https://formspree.io/mkaminsky11@gmail.com" method="POST">
+    <input type="text" name="name" id="name" placeholder="Name">
+    <input type="email" name="_replyto" id="email" placeholder="Email">
+    <textarea name="body" id="message" placeholder="Message"></textarea>
+    <br><br>
+    <button type="submit" id="send"><i class="fa fa-paper-plane-o"></i> SEND</button>
+</form>
 
   <script src="lib/tween.js"></script>
   <script src="lib/ease.js"></script>

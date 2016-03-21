@@ -59,6 +59,7 @@ new Timesheet('timesheet', 2012, 2016, [
   ['07/2015', '08/2015', '\" Lincoln Laboratory Radar Introduction for Student Engineers\"', 'bar']
 ]);
 
+/*
 function email(){
   $.ajax({
   type: "POST",
@@ -83,3 +84,4 @@ function email(){
 
 $("#name, #email, #message").val("");
 }
+*/
