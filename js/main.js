@@ -58,30 +58,3 @@ new Timesheet('timesheet', 2012, 2016, [
   ['06/2015', '07/2015', '\"Introduction to Semiconductor Device Physics\" at Harvard', 'bar'],
   ['07/2015', '08/2015', '\" Lincoln Laboratory Radar Introduction for Student Engineers\"', 'bar']
 ]);
-
-/*
-function email(){
-  $.ajax({
-  type: "POST",
-  url: "https://mandrillapp.com/api/1.0/messages/send.json",
-  data: {
-    'key': 'gAWCzKHFlMGphDmMdsZoqA',
-    'message': {
-      'from_email':$("#email").val(),
-      'to': [
-          {
-            'email': 'mkaminsky11@gmail.com',
-            'type': 'to'
-          },
-        ],
-      'autotext': 'true',
-      'subject': 'from: ' + $("#name").val(),
-      'html': $("#message").val()
-    }
-  }
- }).done(function(response) {
- });
-
-$("#name, #email, #message").val("");
-}
-*/
