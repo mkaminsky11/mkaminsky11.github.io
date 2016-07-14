@@ -119,9 +119,16 @@ h1{
     overflow-wrap: break-word;
 }
 
+.project{
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+.shadow{
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
 .emph{
-    padding: 10px;
-    border: solid 2px #EAEAEA;
     border-radius: 2px;
     background-color: #FDFDFD;
 }
@@ -420,18 +427,16 @@ img.back-end{
 
   position: relative;
   overflow: hidden;
-  justify-content: center;
-}
-
-#rotate > div{
-  flex: 33%;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
   overflow: hidden;
-  max-width: 300px;
+  height: 200px;
 }
 
-#rotate > div > img{
+#rotate > img{
   height: 100%;
-  width: 100%;
 }
 
 #rotate-1{

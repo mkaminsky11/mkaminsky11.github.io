@@ -3,23 +3,23 @@ $(window).resize(function(){
   nodes.render();
 	rotate.resize();
 });
-
+var template;
 $(document).ready(function(){
     resize_main();
     circles.init();
-    light.init();
-    link.init();
-    github.init();
-		rotate.init();
+	rotate.init();
+	
+	template = Handlebars.compile($('#project-template').html());
+	$.getJSON('js/projects.json', function(data) {
+		console.log("here");
+		console.log(data);
+		$('#all-projects').html(template(data));
+		github.init();
+	});
 
     window.setTimeout(function(){
         resize_main();
     }, 1000);
-
-    template = Handlebars.compile($('#project-template').html());
-    $.getJSON('js/projects.json', function(data) {
-          $('#projects').html(template(data));
-    });
 });
 
 $(window).scroll(function(){

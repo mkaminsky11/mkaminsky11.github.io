@@ -6,7 +6,7 @@
 	<title>Michael Kaminsky</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="lib/jquery-1.8.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="lib/velocity.min.js"></script>
 	<script src="lib/velocity.ui.min.js"></script>
   <script src="lib/onscreen.js"></script>
@@ -106,21 +106,7 @@
   <div id="content-1">
 
       <div id="rotate">
-        <div>
-          <img src="img/rotate/i.png">
-        </div>
-        <div>
-          <img src="img/rotate/heart.png">
-        </div>
-        <div>
-
-          <span id="blur-top"></span>
-
-          <img id="rotate-1">
-          <img id="rotate-2">
-
-          <span id="blur-bottom"></span>
-        </div>
+        
       </div>
 
       <br/>
@@ -183,18 +169,23 @@
     <script id="project-template" type="text/x-handlebars-template">
         {{#each projects}}
             {{#if important}}
-              <div class="project emph">
+              <div class="project emph shadow">
                 <span class="ex">!</span>
             {{else}}
             <div class="project">
             {{/if}}
               <h6 class="header">{{{title}}}
               {{#if github}}
-
+				<div class="github-div-dark"><a href="https://github.com/{{{github}}}" target="_blank"><i class="fa fa-github"></i></a></div>
               {{/if}}
               {{#if link}}
-
+				<div class="github-div-dark"><a href="{{{link}}}" target="_blank"><i class="fa fa-link"></i></a></div>
               {{/if}}
+			  </h6>
+			  {{#if stars}}
+			  <h6 class="github-info" github-info="{{{github}}}"></h6>
+			  {{/if}}
+			  <h6 class="med">{{{text}}}</h6>
             </div>
         {{/each}}
     </script>
