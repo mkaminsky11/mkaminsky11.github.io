@@ -6,7 +6,6 @@ $(window).resize(function(){
 
 $(document).ready(function(){
     resize_main();
-    sections.init();
     circles.init();
     light.init();
     link.init();
@@ -16,6 +15,11 @@ $(document).ready(function(){
     window.setTimeout(function(){
         resize_main();
     }, 1000);
+
+    template = Handlebars.compile($('#project-template').html());
+    $.getJSON('js/projects.json', function(data) {
+          $('#projects').html(template(data));
+    });
 });
 
 $(window).scroll(function(){
@@ -38,8 +42,6 @@ function resize_main(){
   $("#canvas").attr("width",$("#main").width()).attr("height",$("#main").height());
   nodes.max = Math.min($("#main").width() / 4, $("#main").height() / 3);
   $("#content-1").css("margin-top",$("#main").height());
-
-  sections.resize();
   nodes.init();
 }
 
