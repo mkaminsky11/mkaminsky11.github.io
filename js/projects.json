@@ -6,14 +6,14 @@
 			"link": "https://codeyourcloud.com/about",
 			"github": "mkaminsky11/codeyourcloud",
 			"stars": true,
-			"img": "/img/arisense.gif",
+			"img": "img/cyc.gif",
 			"text": "This project arose from a person frustration, namely the lack of online code editors which use Google Drive. In developing this project, I learned how to use Node.js, MongoDB, MySQL, and Polymer. It currently has about 15,000 monthly users"
 		},
 		{
 			"title": "ARISense",
 			"important": true,
 			"link": "http://45.55.209.63",
-			"img": "/img/web_record.gif",
+			"img": "img/ari.gif",
 			"text": "ARISense is a device developed by Aerodyne Research (where I interned). It is a low-cost pollution-monitoring device. I created the database which stores the tens of thousands of data points each node creates, along with the map and API which allow users to interact with the data"
 		},
 		{
@@ -25,7 +25,7 @@
 		{
 			"title": "Iota",
 			"github": "mkaminsky11/iota",
-			"img": "/img/iota.gif",
+			"img": "img/iota.gif",
 			"stars": true,
 			"text": "A documentation browser I created using Node-Webkit (now NW.js)"
 		},
@@ -37,7 +37,7 @@
 		{
 			"title": "Imgurize",
 			"github": "mkaminsky11/imgurize",
-			"img": "/img/imgurize.gif",
+			"img": "img/imgurize.gif",
 			"stars": true,
 			"text": "Imgurize is a fun project which renders images from the image-posting site imgur in ASCII art within a terminal"
 		},
@@ -50,7 +50,7 @@
 			"title": "Prompted",
 			"github": "mkaminsky11/prompted",
 			"link": "http://mkaminsky11.github.io/prompted/",
-			"img": "/img/Prompted.gif",
+			"img": "img/Prompted.gif",
 			"text": "Another silly project, prompted simulates a basic linux shell in pure javascript"
 		},
 		{
@@ -62,7 +62,7 @@
 		{
 			"title": "Nodebot",
 			"github": "mkaminsky11/nodebot",
-			"img": "/img/nodebot.gif",
+			"img": "img/nodebot.gif",
 			"text": "A bot I made for <a class='real-link' href='https://github.com/shazow/ssh-chat'>ssh-chat</a>"
 		}
 	]

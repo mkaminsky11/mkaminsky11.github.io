@@ -27,11 +27,12 @@ rotate.random = function(){
 };
 
 rotate.shift = function(){
-	var first_img = $("#rotate img").get(0);
+	/*var first_img = $("#rotate img").get(0);
 	var _w = -1 * $(first_img).width();
 	$(first_img).velocity({
 		marginLeft: _w
 	}, {
+		duration: 1000,
 		complete: function(){
 			$($("#rotate img").get(0)).css("margin-left",0);
 			var old_first_html = $($("#rotate img").get(0))[0].outerHTML;
@@ -41,5 +42,5 @@ rotate.shift = function(){
 				rotate.shift();
 			}
 		}
-	});
+	});*/
 }

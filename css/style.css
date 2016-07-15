@@ -6,26 +6,71 @@ body{
   margin:0;
   background-color:#2D398A;
 }
-#main{
-  position:fixed;
-  top:0;
-  left:0;
+#tabs{
+    position: fixed;
+    z-index: 4;
+    background-color: #273382;
+    top: 0;
+    height: 50px;
+    width: 100%;
+}
+#tab-container{
+	width: calc(100% - 20px);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height: 26px;	
+}
+#tab-container > div{
+	flex: 1;
+	color: white;
+	text-align: center;
+    font-family: "San-Fran";
+    font-size: 16px;
+}
+#slider-container{
+	width: 100%;
+	height: 4px;
+	position: relative;
+}
+#slider-container > div{
+	width: 20%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background-color: #f44142;
+    bottom: 0;
+}
+#canvas{
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	position: absolute;
+}
+#root{
+	overflow: auto;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	height: calc(100% - 50px);
+    z-index: 1;
+    top: 50px;
+}
+#root > div{
+	 min-height: calc(100% - 80px);
+}
+#home{
   overflow:hidden;
-  background-color:#2D398A;
   width: 100%;
   z-index: 1;
-}
-#main>canvas{
-  background-color:#2D398A;
-  overflow:hidden;
-  position:relative;
-  z-index:0;
+  position: relative;
+  height: 100%;
 }
 .mit2020{
   width: 53px;
   position: absolute;
   right: 10px;
-  top: 10px;
+  bottom: 10px;
 }
 #about{
   position:absolute;
@@ -79,17 +124,28 @@ h1{
   word-wrap:break-word;
   word-break:break-word;
 }
-#content-1, #content-3{
+#about-me, #experience{
   background-color:white;
   padding:40px;
   width:calc(100% - 80px);
   position:relative;
-  border-top: solid 5px #eee;
-  border-bottom: solid 5px #eee;
 }
-#content-1, #content-3, #content-4{
+#projects{
+	background-color: #eee;
+	padding:40px;
+	width:calc(100% - 80px);
+	position:relative;
+}
+#about-me, #projects, #experience, #contact-me, .content{
   z-index: 3;
 }
+#contact-me{
+  background-color:transparent;
+  padding:40px;
+  width:calc(100% - 80px);
+  position:relative;
+}
+
 .center{text-align:center}
 
 .header{margin-top:15px;margin-bottom:5px;font-size:1.1em;font-family:"San-Fran";font-weight:bold;color:#4c4949}
@@ -106,22 +162,28 @@ h1{
     font-family: "San-Fran";
     font-size: 24px;
     color: #D6D3D3;
-    /*border: solid thin #D6D3D3;*/
     padding-bottom: 9px;
     margin-top: -8px;
     padding-top: 14px;
     padding-left: 20px;
-    /*background-color: rgba(191, 187, 187, 0.07);*/
     margin-top: 21px;
     margin-bottom: 30px;
-    /*box-shadow: rgba(0, 0, 0, 0.2) -1px 2px 16px;*/
     border-radius: 5px;
     overflow-wrap: break-word;
 }
 
 .project{
 	margin-bottom: 15px;
+	border-radius: 2px;
+    background-color: #FDFDFD;
+    overflow: hidden;
+}
+.project-info{
 	padding: 10px;
+}
+.project-img{
+	width: 100%;
+	margin-bottom: -8px;
 }
 
 .shadow{
@@ -129,8 +191,6 @@ h1{
 }
 
 .emph{
-    border-radius: 2px;
-    background-color: #FDFDFD;
 }
 
 .ex{
@@ -138,12 +198,14 @@ h1{
     text-align: center;
     color: white;
     background-color: #F44142;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    border: solid 2px #D8393A;
-    margin-left: -20px;
-    margin-top: -20px;
+    margin-left: -10px;
+    margin-top: -10px;
 }
 
 .github-info{
@@ -211,13 +273,6 @@ hr.color{
 .contact>div{width:25%}
 .contact>div>h6{text-align:center;margin-top:5px;margin-bottom:5px}
 .contact>div>h6>a{padding:15px;border-radius:50%;background-color:rgba(200,200,200,0.3);font-size:1.5em;color:white}
-#content-2, #content-4{
-  background-color:transparent;
-  padding:40px;
-  width:calc(100% - 80px);
-  position:relative;
-}
-
 
 .contact>div>div, .github-div, .github-div-dark{
   width: 50px;
@@ -433,26 +488,14 @@ img.back-end{
   
   overflow: hidden;
   height: 200px;
+  position: relative;
+  background-color: white;
+  z-index: 3;
+  padding-top: 20px;
 }
 
 #rotate > img{
   height: 100%;
-}
-
-#rotate-1{
-  z-index: 1;
-  position: relative;
-}
-
-#rotate-2{
-  position: absolute;
-  z-index: 2;
-
-  /*-moz-box-shadow: 0 4px 2px -2px #4A4A4A;
-	-webkit-box-shadow: 0 4px 2px -2px #4A4A4A;
-  	box-shadow: 0 4px 2px -2px #4A4A4A;*/
-
-    display: none;
 }
 
 #blur-top, #blur-bottom{
@@ -473,18 +516,18 @@ img.back-end{
   bottom: -20px;
 }
 
-.resume{
-  padding: 10px;
-  font-size: .8em;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: calc(.4em + 10px);   
-  -webkit-appearance: none;
-  outline: none !important;
-  font-family: "San-Fran";
-  font-weight: 600;
-  color: white;
-  background-color: rgba(244, 65, 66, 0.6);
-  border: solid 2px rgb(244, 65, 66);
-  text-decoration: none !important;
+.red-button{
+    padding: 10px;
+    font-size: .8em;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    outline: none !important;
+    font-family: "San-Fran";
+    font-weight: 600;
+    color: white;
+    background-color: rgb(244, 65, 66);
+    text-decoration: none !important;
+    border: none;
 }

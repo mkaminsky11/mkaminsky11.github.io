@@ -1,246 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-
 	<meta charset="utf-8">
 	<title>Michael Kaminsky</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="lib/velocity.min.js"></script>
 	<script src="lib/velocity.ui.min.js"></script>
-  <script src="lib/onscreen.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<script src="lib/onscreen.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<link href='fonts/font.css' rel='stylesheet' type='text/css'>
+	<link href='Font/css/font-awesome.min.css' rel='stylesheet'>
 
-  <link href='fonts/font.css' rel='stylesheet' type='text/css'>
-  <link href='Font/css/font-awesome.min.css' rel='stylesheet'>
-
-  <link rel="stylesheet" href="css/time.css">
-  <link rel="stylesheet" href="css/img.css">
-
-  <link href='devicons/css/devicons.css' rel='stylesheet'>
-  <link rel="stylesheet" href="light/css/lightbox.css">
-  <script src="light/js/lightbox.min.js"></script>
-
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="lib/time/timesheet.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/input.css">
-  <link rel="stylesheet" href="css/tooltip.css">
-  <link rel="stylesheet" href="css/menu.css">
-
-  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+	<link href='devicons/css/devicons.css' rel='stylesheet'>
+	<link rel="stylesheet" href="light/css/lightbox.css">
+	<script src="light/js/lightbox.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="lib/time/timesheet.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/input.css">
+	<link rel="stylesheet" href="css/tooltip.css">
+	<link rel="stylesheet" href="css/menu.css">
+	
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 </head>
 <body>
-  <span id="color-picker" style="display:none;color:rgb(37, 50, 140)"></span> <!--this picks the colors-->
+  <span id="color-picker" style="display:none;color:rgb(28, 41, 134)"></span> <!--this picks the colors-->
 
-  <span id="menu-button" class="menu" onclick="menu.toggle()"><i class="fa fa-bars"></i></span>
-  <ul id="menu-dropdown" class="menu">
-    <li><a href="#about-me">About Me</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#cont">Contributions</a></li>
-    <li><a href="#xp">Experience</a></li>
-    <li><a href="#contact-me">Contact</a></li>
-  </ul>
-
-  <div id="main">
-    <div id="about">
-      <img src="img/mit2020.png" class="mit2020">
-
-    	<i class="fa fa-angle-double-down" style="
-	    position: absolute;
-	    bottom: 10px;
-	    color: #eee;
-	    font-size: 32px;
-	    bottom: 20px;
-	    left: calc(50% - 10px);
-	"></i>
-        <div>
-
-          <h1>Michael Kaminsky</h1>
-
-            <h2 class="me">I'm a designer and programmer who likes databases and security and is interested in AI and machine learning</h2>
-          <div id="contact-div">
-
-
-            <div class="contact" id="contact-1">
-              <div>
-                <div>
-                	<canvas width="58" height="58" class="circle"></canvas>
-                	<a href="https://twitter.com/mkaminsky11" target="_blank"><i class="fa fa-twitter"></i></a>
-               	</div>
-              </div>
-
-              <div>
-                <div>
-                	<canvas width="58" height="58" class="circle"></canvas>
-                	<a href="mailto:mkaminsky11@gmail.com" target="_top"><i class="fa fa-envelope"></i></a>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                	<canvas width="58" height="58" class="circle"></canvas>
-                	<a href="https://github.com/mkaminsky11" target="_blank"><i class="fa fa-github"></i></a>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                	<canvas width="58" height="58" class="circle"></canvas>
-                	<a href="https://plus.google.com/u/0/+michaelkaminsky/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <a class="resume" download href="docs/resume.pdf">RÉSUMÉ</a>
-
-          </div>
-
-        </div>
-    </div>
-    <canvas id="canvas"></canvas>
+  <div id="tabs">
+	  <div id="tab-container">
+		  <div data-div="home" class="selected-tab">HOME</div>
+		  <div data-div="about-me">ABOUT ME</div>
+		  <div data-div="projects">PROJECTS</div>
+		  <div>UPDATES</div>
+		  <div data-div="contact-me">CONTACT</div>
+	  </div>
+	  <div id="slider-container">
+		  <div></div>
+	  </div>
   </div>
+  
+  <canvas id="canvas"></canvas>
 
-  <div id="content-1">
+<div id="root">
+	  <div id="home" class="selected-div">
+	    <div id="about">
+	      <img src="img/mit2020.png" class="mit2020">
+	        <div>
+	          <h1>Michael Kaminsky</h1>
+	            <h2 class="me">I'm a designer and programmer who likes databases and security and is interested in AI and machine learning</h2>
+	          <div id="contact-div">
+	            <div class="contact" id="contact-1">
+	              <div>
+	                <div>
+	                	<canvas width="58" height="58" class="circle"></canvas>
+	                	<a href="https://twitter.com/mkaminsky11" target="_blank"><i class="fa fa-twitter"></i></a>
+	               	</div>
+	              </div>
+	
+	              <div>
+	                <div>
+	                	<canvas width="58" height="58" class="circle"></canvas>
+	                	<a href="mailto:mkaminsky11@gmail.com" target="_top"><i class="fa fa-envelope"></i></a>
+	                </div>
+	              </div>
+	
+	              <div>
+	                <div>
+	                	<canvas width="58" height="58" class="circle"></canvas>
+	                	<a href="https://github.com/mkaminsky11" target="_blank"><i class="fa fa-github"></i></a>
+	                </div>
+	              </div>
+	
+	              <div>
+	                <div>
+	                	<canvas width="58" height="58" class="circle"></canvas>
+	                	<a href="https://plus.google.com/u/0/+michaelkaminsky/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+	                </div>
+	              </div>
+	            </div>
+	
+	            <a class="red-button shadow" download href="docs/resume.pdf">RÉSUMÉ</a>
+	
+	          </div>
+	
+	        </div>
+	    </div>
+	  </div>
+	
+	  <div id="about-me" style="display:none">
+	      <h6 class="center desc">
+	        <img src="img/profile.jpeg" style="float:left;border-radius:50%" height="200px" title="An artistic rendering of my face. Triangles!" id="profile">
+	        I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
+	        <br/><br/>
+	        I am going to a freshman at the Massachusetts Insitute of Technology, studying computer science. I am also interning at Aerodyne Research, a company which specialized in building scientific equipment and conducting research on areas such as methane emissions and air pollution.
+	    </h6>
+	
+	    <br/><br/>
+	
+	    <div class="section group">
+	      <div class="col span_1_of_3 back-end">
+	        <h6 class="header center">Back End</h6>
+	
+	        <h6 class="desc center">Everything from administration to security to chat servers</h6>
+	
+	        <h6 class="desc"><span class="devicons devicons-linux"></span> Linux</h6>
+	        <h6 class="desc"><span class="devicons devicons-python"></span> Python</h6>
+	        <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
+	        <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Node.js</h6>
+	        <h6 class="desc"><span class="devicons devicons-mongodb"></span> MongoDB</h6>
+	        <h6 class="desc"><span class="devicons devicons-mysql"></span> Cassandra</h6>
+	      </div>
+	
+	      <div class="col span_1_of_3 front-end">
+	        <h6 class="header center">Front End</h6>
+	
+	        <h6 class="desc center" id="software">Web design that pops! I create responsive, fast, and interactive web pages</h6>
+	        <h6 class="desc"><span class="devicons devicons-html5"></span> HTML</h6>
+	        <h6 class="desc"><span class="devicons devicons-css3"></span> CSS</h6>
+	        <h6 class="desc"><span class="devicons devicons-jquery"></span> JQuery</h6>
+	        <h6 class="desc"><span class="devicons devicons-javascript"></span> Javascript</h6>
+	        <h6 class="desc"><span class="devicons devicons-less"></span> Less</h6>
+	      </div>
+	
+	      <div class="col span_1_of_3 software">
+	        <h6 class="header center">Software</h6>
+	
+	        <h6 class="desc center">I make applications for mobile and desktop platforms</h6>
+	        <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
+	        <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Node.js</h6>
+	        <h6 class="desc"><span class="devicons devicons-phonegap"></span> PhoneGap</h6>
+	      </div>
+	    </div>
+	
+	    <h6 class="desc"><b>In the future:</b> Scala, Haskell, Go, C++, Swift, and C#</h6>
+	    
+		<h3 class="title">EXPERIENCE</h3>
+	  	<div id="timeline-embed"></div>
+	  </div>
+	  
+	  <div id="projects" style="display:none">
+	    <script id="project-template" type="text/x-handlebars-template">
+	        {{#each projects}}
+	            {{#if important}}
+	              <div class="project emph shadow">
+	                <span class="ex shadow"><i class="fa fa-star"></i></span>
+	            {{else}}
+	            <div class="project shadow">
+	            {{/if}}
+	            	<div class="project-info">
+		              <h6 class="header">{{{title}}}
+		              {{#if github}}
+						<div class="github-div-dark"><a href="https://github.com/{{{github}}}" target="_blank"><i class="fa fa-github"></i></a></div>
+		              {{/if}}
+		              {{#if link}}
+						<div class="github-div-dark"><a href="{{{link}}}" target="_blank"><i class="fa fa-link"></i></a></div>
+		              {{/if}}
+					  </h6>
+					  {{#if stars}}
+					  <h6 class="github-info" github-info="{{{github}}}"></h6>
+					  {{/if}}
+					  <h6 class="med">{{{text}}}</h6>
+	            	</div>
+	            	{{#if img}}
+	            	<img class="project-img" src="{{{img}}}">
+	            	{{/if}}
 
-      <div id="rotate">
-        
-      </div>
+	            </div>
+	        {{/each}}
+	    </script>
+	    <div id="all-projects">
+	    </div>
+	    <h3 class="title">CONTRIBUTIONS</h3>
+	    <h6 class="header">Codemirror
+	      <div class="github-div-dark"><a href="https://github.com/codemirror/CodeMirror" target="_blank"><i class="fa fa-github"></i></a></div>
+	    </h6>
+	    <h6 class="github-info" github-info="codemirror/CodeMirror"></h6>
+	    <h6 class="med">CodeMirror is "a JavaScript component that provides a code editor in the browser." I created the <a href="https://github.com/codemirror/CodeMirror/commit/60879eed092be6ff4513d9816d84706003162ab0" class="real-link">Swift mode</a> among others, several themes, and added other improvements.</h6>
+	    <br/>
+	    <h6 class="header">ssh-chat
+	      <div class="github-div-dark"><a href="https://github.com/shazow/ssh-chat" target="_blank"><i class="fa fa-github"></i></a></div>
+	    </h6>
+	    <h6 class="github-info" github-info="shazow/ssh-chat"></h6>
+	    <h6 class="med">ssh-chat is "Custom SSH server written in Go. Instead of a shell, you get a chat prompt." I helped to fix a bug which would slow the server to a crawl.</h6>
+	
+	  </div>
+	
+	  <div id="contact-me" style="display:none">
+	
+		<h6 class="header center title white">GET IN TOUCH</h6>
+		<br/>
+		
+		<form action="https://formspree.io/mkaminsky11@gmail.com" method="POST">
+		    <input type="text" name="name" id="name" placeholder="Name">
+		    <input type="email" name="_replyto" id="email" placeholder="Email">
+		    <textarea name="body" id="message" placeholder="Message"></textarea>
+		    <br><br>
+		    <button type="submit" class="red-button shadow" id="send"><i class="fa fa-paper-plane-o"></i> SEND</button>
+		</form>
+	  </div>
+</div>
 
-      <br/>
-
-      <h6 class="center desc" id="about-me">
-
-        <img src="img/profile.jpeg" style="float:left;border-radius:50%" height="200px" title="An artistic rendering of my face. Triangles!" id="profile">
-
-        I enjoy creating things which allow users to create, experiment, and learn. I also believe in free and open-source code, as without the generosity of other developers, I would never have reached the point of giving back to the open-source community.
-
-        <br/><br/>
-
-        I am going to a freshman at the Massachusetts Insitute of Technology, studying computer science. I am also interning at Aerodyne Research, a company which specialized in building scientific equipment and conducting research on areas such as methane emissions and air pollution.
-    </h6>
-
-    <br id="skills">
-
-    <br/><br/>
-
-    <div class="section group" id="langs">
-      <div class="col span_1_of_3 back-end">
-        <h6 class="header center">Back End</h6>
-
-        <h6 class="desc center">Everything from administration to security to chat servers</h6>
-
-        <h6 class="desc"><span class="devicons devicons-linux"></span> Linux</h6>
-        <h6 class="desc"><span class="devicons devicons-python"></span> Python</h6>
-        <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
-        <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Node.js</h6>
-        <h6 class="desc"><span class="devicons devicons-mongodb"></span> MongoDB</h6>
-        <h6 class="desc"><span class="devicons devicons-mysql"></span> Cassandra</h6>
-      </div>
-
-      <div class="col span_1_of_3 front-end">
-        <h6 class="header center">Front End</h6>
-
-        <h6 class="desc center" id="software">Web design that pops! I create responsive, fast, and interactive web pages</h6>
-        <h6 class="desc"><span class="devicons devicons-html5"></span> HTML</h6>
-        <h6 class="desc"><span class="devicons devicons-css3"></span> CSS</h6>
-        <h6 class="desc"><span class="devicons devicons-jquery"></span> JQuery</h6>
-        <h6 class="desc"><span class="devicons devicons-javascript"></span> Javascript</h6>
-        <h6 class="desc"><span class="devicons devicons-less"></span> Less</h6>
-      </div>
-
-      <div class="col span_1_of_3 software">
-        <h6 class="header center">Software</h6>
-
-        <h6 class="desc center">I make applications for mobile and desktop platforms</h6>
-        <h6 class="desc"><span class="devicons devicons-java"></span> Java</h6>
-        <h6 class="desc"><span class="devicons devicons-nodejs_small"></span> Node.js</h6>
-        <h6 class="desc"><span class="devicons devicons-phonegap"></span> PhoneGap</h6>
-      </div>
-    </div>
-
-    <h6 class="desc"><b>In the future:</b> Scala, Haskell, Go, C++, Swift, and C#</h6>
-
-
-    <h3 class="title" id="projects">PROJECTS</h3>
-
-    <script id="project-template" type="text/x-handlebars-template">
-        {{#each projects}}
-            {{#if important}}
-              <div class="project emph shadow">
-                <span class="ex">!</span>
-            {{else}}
-            <div class="project">
-            {{/if}}
-              <h6 class="header">{{{title}}}
-              {{#if github}}
-				<div class="github-div-dark"><a href="https://github.com/{{{github}}}" target="_blank"><i class="fa fa-github"></i></a></div>
-              {{/if}}
-              {{#if link}}
-				<div class="github-div-dark"><a href="{{{link}}}" target="_blank"><i class="fa fa-link"></i></a></div>
-              {{/if}}
-			  </h6>
-			  {{#if stars}}
-			  <h6 class="github-info" github-info="{{{github}}}"></h6>
-			  {{/if}}
-			  <h6 class="med">{{{text}}}</h6>
-            </div>
-        {{/each}}
-    </script>
-
-    <div id="all-projects">
-
-      <!--div class="project emph">
-        <span class="ex">!</span>
-
-        <h6 class="header">Code Your Cloud
-          <div class="github-div-dark"><a href="https://github.com/mkaminsky11/codeyourcloud" target="_blank"><i class="fa fa-github"></i></a></div>
-          <div class="github-div-dark"><a href="img/web_record.gif" data-lightbox="demos"><i class="fa fa-eye"></i></a></div>
-          <div class="github-div-dark"><a href="https://codeyourcloud.com" target="_blank"><i class="fa fa-link"></i></a></div>
-        </h6>
-        <h6 class="github-info" github-info="mkaminsky11/codeyourcloud"></h6>
-        <h6 class="med"><b>Monthly users:</b><span class="inc" data-goal="20000" data-inc="500" data-start="0">0</span></h6>
-        <h6 class="med">This is the project on which most of my time is spent. It is a code editor for Google Drive. It allows for collaborative editing, and incorporates almost all of the skills I have learned, including mySQL and Node.js. I have used it as a testing ground, experimenting with Polymer and AngularJS, among others.</h6>
-      </div-->
-
-    </div>
-
-    <h3 class="title" id="cont">CONTRIBUTIONS</h3>
-
-    <h6 class="header">Codemirror
-      <div class="github-div-dark"><a href="https://github.com/codemirror/CodeMirror" target="_blank"><i class="fa fa-github"></i></a></div>
-    </h6>
-    <h6 class="github-info" github-info="codemirror/CodeMirror"></h6>
-    <h6 class="med">CodeMirror is "a JavaScript component that provides a code editor in the browser." I created the <a href="https://github.com/codemirror/CodeMirror/commit/60879eed092be6ff4513d9816d84706003162ab0" class="real-link">Swift mode</a> among others, several themes, and added other improvements.</h6>
-
-    <br/>
-
-    <h6 class="header">ssh-chat
-      <div class="github-div-dark"><a href="https://github.com/shazow/ssh-chat" target="_blank"><i class="fa fa-github"></i></a></div>
-    </h6>
-    <h6 class="github-info" github-info="shazow/ssh-chat"></h6>
-    <h6 class="med">ssh-chat is "Custom SSH server written in Go. Instead of a shell, you get a chat prompt." I helped to fix a bug which would slow the server to a crawl.</h6>
-
-  	<h3 class="title" id="xp">EXPERIENCE</h3>
-
-  	<div id="timesheet"></div>
-  </div>
-
-  <div id="content-4">
-
-<h6 class="header center white pixel" id="contact-me">Get In Touch</h6>
-<br/>
-
-<form action="https://formspree.io/mkaminsky11@gmail.com" method="POST">
-    <input type="text" name="name" id="name" placeholder="Name">
-    <input type="email" name="_replyto" id="email" placeholder="Email">
-    <textarea name="body" id="message" placeholder="Message"></textarea>
-    <br><br>
-    <button type="submit" id="send"><i class="fa fa-paper-plane-o"></i> SEND</button>
-</form>
-
+  <script src="js/tabs.js"></script>
   <script src="lib/tween.js"></script>
   <script src="lib/ease.js"></script>
   <script src="lib/poly.js"></script>
@@ -256,5 +219,6 @@
   <script src="js/menu.js"></script>
   <script src="js/main.js"></script>
   <script src="js/rotate.js"></script>
+  <script type="text/javascript" src="https://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
 </body>
 </html>

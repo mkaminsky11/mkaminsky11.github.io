@@ -3,19 +3,19 @@ var nodes = {
   triangles : [],
   canvas : document.getElementById('canvas'),
   center : {x: 0, y:0},
-  max : Math.min($("#main").width() / 4, $("#main").height() / 4)
+  max : Math.min($("body").width() / 4, $("body").height() / 4)
 };
 nodes.context =  nodes.canvas.getContext('2d'),
 
 nodes.init = function(){
     nodes.center = {
-      x: $("#main").width() / 2,
-      y: $("#main").height() / 2
+      x: $("body").width() / 2,
+      y: $("body").height() / 2
     };
     nodes.vertices = [];
     nodes.context.clearRect(0, 0, Number(nodes.canvas.width), Number(nodes.canvas.height));
 
-    var to_add = 400/1170 * Math.min($("#main").width(), $("#main").height());
+    var to_add = 400/1170 * Math.min($("body").width(), $("body").height());
 
     nodes.add(to_add);
     nodes.triangles = triangulate(nodes.vertices);
@@ -107,10 +107,10 @@ nodes.getOpacity = function(vert){
     return 0;
   }
   else if(d > max2){
-    return 0.3;
+    return 0.5;
   }
   else if(d > max3){
-    return 0.6;
+    return 0.8;
   }
   return 1;
 };

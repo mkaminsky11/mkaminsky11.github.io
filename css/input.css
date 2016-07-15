@@ -29,18 +29,3 @@ border-color: rgb(244, 65, 66);
 ::-webkit-input-placeholder,:-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
    font-family: "Pixel";
 }
-
-#send{
-padding: 10px;
-font-size: .8em;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: calc(.4em + 10px);
--webkit-appearance: none;
-outline: none !important;
-font-family: "Pixel";
-font-weight: 600;
-color: white;
-background-color: rgba(244, 65, 66, 0.6);
-border: solid 2px rgb(244, 65, 66);
-}
