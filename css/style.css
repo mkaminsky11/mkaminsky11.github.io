@@ -130,7 +130,7 @@ h1{
   width:calc(100% - 80px);
   position:relative;
 }
-#projects{
+#projects, #updates{
 	background-color: #eee;
 	padding:40px;
 	width:calc(100% - 80px);
@@ -173,7 +173,7 @@ h1{
 }
 
 .project{
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 	border-radius: 2px;
     background-color: #FDFDFD;
     overflow: hidden;

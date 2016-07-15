@@ -38,7 +38,7 @@ tabs.init = function(){
 						height:     '400',
 						source:     'js/timeline.json',
 						embed_id:   'timeline-embed',
-						font: 		'DroidSerif-DroidSans',
+						font:       'Arvo-PTSans',
 						maptype:    'watercolor',
 						start_at_end:true
 					});
