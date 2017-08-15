@@ -1,33 +1,19 @@
 {
 	"projects": [
 		{
+			"title": "ARISense",
+			"link": "https://arisense.io",
+			"img": "img/ari.gif",
+			"text": "ARISense is a device developed by Aerodyne Research (where I interned). It is a low-cost pollution-monitoring device. I created the database which stores the tens of thousands of data points each node creates, along with the map and API which allow users to interact with the data"
+		},
+
+		{
 			"title": "Code Your Cloud",
-			"important": true,
 			"link": "https://codeyourcloud.com/about",
 			"github": "mkaminsky11/codeyourcloud",
 			"stars": true,
 			"img": "img/cyc.gif",
 			"text": "This project arose from a person frustration, namely the lack of online code editors which use Google Drive. In developing this project, I learned how to use Node.js, MongoDB, MySQL, and Polymer. It currently has about 15,000 monthly users"
-		},
-		{
-			"title": "ARISense",
-			"important": true,
-			"link": "http://45.55.209.63",
-			"img": "img/ari.gif",
-			"text": "ARISense is a device developed by Aerodyne Research (where I interned). It is a low-cost pollution-monitoring device. I created the database which stores the tens of thousands of data points each node creates, along with the map and API which allow users to interact with the data"
-		},
-		{
-			"title": "HOW2.I2P",
-			"important": true,
-			"github": "HOW2-I2P/HOW2.I2P",
-			"text": "i2p is an anonymous internet protocol similar to Tor. HOW2.I2P is an attempt to provide an introduction to this technology"
-		},
-		{
-			"title": "Iota",
-			"github": "mkaminsky11/iota",
-			"img": "img/iota.gif",
-			"stars": true,
-			"text": "A documentation browser I created using Node-Webkit (now NW.js)"
 		},
 		{
 			"title": "Scripts",
@@ -42,28 +28,11 @@
 			"text": "Imgurize is a fun project which renders images from the image-posting site imgur in ASCII art within a terminal"
 		},
 		{
-			"title": "RMDR",
-			"github": "mkaminsky11/rmdr",
-			"text": "A fun command-line utility which I made to easily set reminders"
+			"title": "Iota",
+			"github": "mkaminsky11/iota",
+			"img": "img/iota.gif",
+			"stars": true,
+			"text": "A documentation browser I created using Node-Webkit (now NW.js)"
 		},
-		{
-			"title": "Prompted",
-			"github": "mkaminsky11/prompted",
-			"link": "http://mkaminsky11.github.io/prompted/",
-			"img": "img/prompted.gif",
-			"text": "Another silly project, prompted simulates a basic linux shell in pure javascript"
-		},
-		{
-			"title": "CodeMirror Themes",
-			"link": "https://mkaminsky11.github.io/codemirror-themes",
-			"github": "mkaminsky11/codemirror-themes",
-			"text": "A tool I made to create CodeMirror syntax highlighting themese"
-		},
-		{
-			"title": "Nodebot",
-			"github": "mkaminsky11/nodebot",
-			"img": "img/nodebot.gif",
-			"text": "A bot I made for <a class='real-link' href='https://github.com/shazow/ssh-chat'>ssh-chat</a>"
-		}
 	]
 }

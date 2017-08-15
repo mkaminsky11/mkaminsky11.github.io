@@ -105,13 +105,14 @@ body{
 h1{
   margin: 0;
   color: #F44142;
-  font-family: "Pixel";
+  font-family: "San-Fran";
   padding-bottom: 10px;
   width: 100%;
   word-wrap: break-word;
   word-break: break-word;
   font-size: 3em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .me{
   margin-top:10px;
@@ -270,7 +271,7 @@ hr.color{
   display: flex;
   padding:10px
 }
-.contact>div{width:25%}
+.contact>div{width:50%}
 .contact>div>h6{text-align:center;margin-top:5px;margin-bottom:5px}
 .contact>div>h6>a{padding:15px;border-radius:50%;background-color:rgba(200,200,200,0.3);font-size:1.5em;color:white}
 
